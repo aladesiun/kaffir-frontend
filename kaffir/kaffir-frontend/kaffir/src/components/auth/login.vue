@@ -51,7 +51,16 @@
 
 <script>
 export default {
+    data() {
+        return {
 
+        }
+    },
+    methods:{
+        login(){
+
+        }
+    }
 }
 </script>
 

@@ -11,17 +11,17 @@ icons.forEach((icon) => {
     icons.forEach((i) => {
         i.classList.remove('icon--expanded');
     });
-    icon.classList.add('icon--expanded')
+    icon.classList.add('icon--expanded')    
     })
 })
 
 
 
 var elem = document.querySelector('.grid-slider-wrap');
-var flkty = new Flickity( elem, {
-    // options
-    cellAlign: 'left',
-    autoPlay:true,
-    autoPlay: 1500,
-    contain: true
-});
+// var flkty = new Flickity( elem, {
+//     // options
+//     cellAlign: 'left',
+//     autoPlay:true,
+//     autoPlay: 1500,
+//     contain: true
+// });

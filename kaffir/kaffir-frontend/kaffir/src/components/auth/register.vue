@@ -11,10 +11,11 @@
                         <div class="card fat">
                             <div class="card-body">
                                 <h4 class="card-title">Register</h4>
-                                <form method="POST" class="my-login-validation" novalidate="">
+                                <notification/>
+                                <form method="" class="my-login-validation" @submit.prevent="signup()" >
                                     <div class="form-group">
                                         <label for="name">Name</label>
-                                        <input id="name" type="text" class="form-control" name="name" required autofocus>
+                                        <input id="name" type="text" v-model="user.name" class="form-control" name="name" required autofocus>
                                         <div class="invalid-feedback">
                                             What's your name?
                                         </div>
@@ -22,7 +23,7 @@
 
                                     <div class="form-group">
                                         <label for="email">E-Mail Address</label>
-                                        <input id="email" type="email" class="form-control" name="email" required>
+                                        <input id="email" type="email" v-model="user.email" class="form-control" name="email" required>
                                         <div class="invalid-feedback">
                                             Your email is invalid
                                         </div>
@@ -30,7 +31,7 @@
 
                                     <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input id="password" type="password" class="form-control" name="password" required data-eye>
+                                        <input id="password" type="password" v-model="user.password" class="form-control" name="password" required data-eye>
                                         <div class="invalid-feedback">
                                             Password is required
                                         </div>
@@ -38,7 +39,7 @@
 
                                     <div class="form-group">
                                         <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
+                                            <input type="checkbox" name="agree" id="agree" class="custom-control-input" >
                                             <label for="agree" class="custom-control-label">I agree to the <a href="#">Terms and Conditions</a></label>
                                             <div class="invalid-feedback">
                                                 You must agree with our Terms and Conditions
@@ -46,7 +47,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group m-0">
+                                    <div class=" m-0">
                                         <button type="submit" class="btn btn-primary btn-block">
                                             Register
                                         </button>
@@ -69,7 +70,35 @@
 
 <script>
 export default {
+    data(){
+        return {
+            user:{
+                name: 'Oluwapelumi',
+                email: 'aladesiunpelumi@gmail.com',
+                password: 'aladesiun11',
+            }
+        }
+    },
 
+    methods:{
+        signup(){
+            if(this.user.name.length == 0 || this.user.email.length == 0 || this.user.password.length == 0 ){
+                this.$store.commit('setNotification', {type:2, message:"All fields are required"});
+                return false;
+            }
+
+            this.$store.dispatch('post', {
+                endpoint: 'signup',
+                details: this.user
+            })
+            .then((data) => {
+                console.log(data.data);
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+        }
+    }
 }
 </script>
 

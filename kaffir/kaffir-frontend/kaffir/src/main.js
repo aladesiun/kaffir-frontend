@@ -4,7 +4,6 @@ import App from './App.vue'
 import routes from './routes.js'
 import store from './store/index'
 import notification from './components/layouts/notification'
-
 Vue.config.productionTip = false
 Vue.component('notification', notification);
 

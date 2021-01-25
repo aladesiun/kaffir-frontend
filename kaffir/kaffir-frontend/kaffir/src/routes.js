@@ -1,9 +1,11 @@
-import Vue from 'vue'
+ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import layout from './components/layouts/layout'
 import home from './components/public/home'
 import login from './components/auth/login'
 import register from './components/auth/register'
+import profile from './components/public/profile'
+import chat from './components/public/chat'
 
 Vue.use(VueRouter);
 
@@ -28,6 +30,16 @@ var routes = [
     {
         path:'/register',
         component: register
+    },
+
+    {
+        path:'/profile',
+        component: profile
+    },
+
+    {
+        path:'/chat',
+        component: chat
     }
 ];
 

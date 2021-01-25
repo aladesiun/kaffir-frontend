@@ -4,6 +4,7 @@ import layout from './components/layouts/layout'
 import home from './components/public/home'
 import login from './components/auth/login'
 import register from './components/auth/register'
+import contact from './components/public/contact'
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,10 @@ var routes = [
                 component: home,
         
             },
+            {
+                path: '/contact',
+                component: contact,
+            }
         ]
     },    
 

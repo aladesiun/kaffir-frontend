@@ -4,7 +4,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-12 img-sec-sm">
-                <img src="/img/Component 1 – 1@2x.png" alt="" class="img-fluid">
+                    <img src="../../assets/img/fs1.png" alt="" class="img-fluid">
             </div>
             </div>
             <div class="row hero mt-5">
@@ -19,15 +19,14 @@
                     </div>
                 </div>
                 <div class="col-md-5 img-sec">
-                    <img src="/img/Component 1 – 1@2x.png" alt="" class="img-fluid">
+                    <img src="../../assets/img/fs1.png" alt="" class="img-fluid">
+                    
                 </div>
-            </div>
+            </div>  
         </div>
         <!-- carousel -->
         <section class="cards-section">
-            <!-- <img src="img/Path 619.png" class="img2" alt=""> -->
-
-            <div class="container-lg mt-4 mb-5">
+            <div class="container-lg mb-5">
             <div class=" card-row  grid-slider-wrap carousel p-0" data-flickity='{ "wrapAround": true }'>
                 <div class=" grid-slide">
                 <div class="cards bb">
@@ -136,7 +135,8 @@
                 <h1 class="text-center">connect with us</h1>
                 <div class="row">
                     <div class="col-md-5 col-sm-1">
-                    <img src="img/foll2.png" class="img-fluid ff" alt="">
+                    <!-- <img src="img/foll2.png" class="img-fluid ff" alt=""> -->
+                    <img src="../../assets/img/foll2.png" alt="" class="img-fluid ff">
                     </div>
                     <div class="col-md-7 col-sm-12">
                     <div>
@@ -212,19 +212,45 @@
                 </div>
             </div>
             <div class="col-md-6 faq-img-sec">
-                <img src="img/Component 3 – 1.png" alt="" class=" cy">
-                <img src="img/asset1.png" alt="" class=" ast">
-                <!-- <img src="img/Component 2 – 1.png" alt="" class="img-fluid"> -->
+                
+                    <img src="../../assets/img/cir.png" alt="" class="cy">
+                    <img src="../../assets/img/asset1.png" alt="" class="ast">
             </div>
             </div>
         </div>
         </div>
 </template>
 
-<script>
-export default {
 
-}
+<script>
+window.addEventListener("scroll", function(){ 
+ const scrollnav= document.querySelector('nav');
+    scrollnav.style.transition= 'all .8s';
+   scrollnav.classList.toggle('scroll', window.scrollY >200);
+})
+
+const icons = Array.from(document.querySelectorAll('.icon'))
+icons.forEach((icon) => {
+  icon.addEventListener('click', () => {
+    icons.forEach((i) => {
+      i.classList.remove('icon--expanded');
+    });
+    icon.classList.add('icon--expanded')
+  })
+})
+
+
+
+// var elem = document.querySelector('.grid-slider-wrap');
+// var t= new Flickity( elem, {
+//   // options
+//   cellAlign: 'left',
+//   autoPlay:true,
+// //   autoPlay: 1500,
+//   contain: true
+// });
+
+
 </script>
 
 <style>

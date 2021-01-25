@@ -2,6 +2,7 @@ window.addEventListener("scroll", function(e){
 const scrollnav= document.querySelector('nav');
     scrollnav.style.transition= 'all .8s';
     scrollnav.classList.toggle('scroll', window.scrollY >200);
+    alert('hello');
 })
 
 

@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="row kff_row_2">
-                    <div class="col-sm-6 col-md-6 col-lg-3">
+                    <div class="col-sm-6 col-md-6">
                         <div class="kaff_col_cont kff_cont_1">
                         <h4 class="text-left">
                             Kaffir
@@ -64,7 +64,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
+                    <div class="col-sm-6 col-md-6">
                         <div class="kaff_col_cont kff_cont_2">
                         <div class="kff_wrap">
                             <h4 class="text-left">
@@ -79,36 +79,6 @@
                             <li class="kff_li">Join Anonymousymous Chat</li>
                         </ul>
                         </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="kaff_col_cont kff_cont_3">
-                        <h4 class="text-left">
-                            Services
-                        </h4>
-                        <div class="kff_line">
-                        </div>
-                        <ul class="kff_ul">
-                            <li class="kff_li">Bulk Messages</li>
-                            <li class="kff_li">Anonymous Messages</li>
-                            <li class="kff_li">Anonymous Group Chat</li>
-                            <li class="kff_li">Join Anonymousymous Chat</li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="kaff_col_cont kff_cont_4"> 
-                        <h4 class="text-left">
-                            Services
-                        </h4>
-                        <div class="kff_line">
-                        </div>
-                        <ul class="kff_ul">
-                            <li class="kff_li">Bulk Messages</li>
-                            <li class="kff_li">Anonymous Messages</li>
-                            <li class="kff_li">Anonymous Group Chat</li>
-                            <li class="kff_li">Join Anonymous Chat</li>
-                        </ul>
                         </div>
                     </div>
                 </div> 

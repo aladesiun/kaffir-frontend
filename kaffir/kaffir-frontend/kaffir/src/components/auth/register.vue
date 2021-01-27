@@ -53,7 +53,7 @@
                                         </button>
                                     </div>
                                     <div class="mt-4 text-center">
-                                        Already have an account? <a href="login.html">Login</a>
+                                        Already have an account? <a href="/login">Login</a>
                                     </div>
                                 </form>
                             </div>
@@ -76,7 +76,8 @@ export default {
                 name: 'Oluwapelumi',
                 email: 'aladesiunpelumi@gmail.com',
                 password: 'aladesiun11',
-            }
+            },
+            loading: false,
         }
     },
 
@@ -87,12 +88,19 @@ export default {
                 return false;
             }
 
+            this.loading = true;
+
             this.$store.dispatch('post', {
                 endpoint: 'signup',
                 details: this.user
             })
             .then((data) => {
-                console.log(data.data);
+                if(data.data.status){
+                    var user = data.data.data;
+                    this.$store.commit('setUser', user);
+                    this.$store.commit('setNotification',{type:1, message:'Registration Successful'});
+                }
+                this.loading = false;
             })
             .catch((error) => {
                 console.log(error)

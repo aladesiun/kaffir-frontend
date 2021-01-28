@@ -1,8 +1,7 @@
 <template>
     <div>
-        <br>
         <div class="container mt-5">
-            <div class="row">
+            <div class="row pt-5">
                 <div class="col-md-12 img-sec-sm">
                     <img src="../../assets/img/fs1.png" alt="" class="img-fluid">
             </div>

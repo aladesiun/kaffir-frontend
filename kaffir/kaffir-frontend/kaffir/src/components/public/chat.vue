@@ -210,6 +210,7 @@
                         
                         <div class="message-feed media">
                             <div class="pull-left">
+                                
                                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
                             </div>
                             <div class="media-body">
@@ -231,7 +232,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bot">
+                    <div class="bot container">
                         <div class="action-heade clearfix bot-cnt">
                             <i class="far fa-images"></i>
                             <i class="fas fa-microphone"></i>
@@ -243,7 +244,7 @@
                             <i class="far fa-paper-plane"></i>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
 </template>
@@ -535,16 +536,17 @@ text-align: right;
 .bot-cnt{
     display: flex;
     align-items: center;
-    justify-content:stretch;
+    justify-content:space-around;
     width: 100%;
     margin-top: auto;
+    padding: 10px
 }
 .bot{
-    position: fixed;
-    bottom: 0;
     z-index: 1;
     margin-top: auto;
-    /* background: #fff!important; */
+    /* width: 764px; */
+   /* max-width: calc(100% - 543px); */
+    background: #fff!important;
 }
 .bot .inp-sec{
     position: relative;

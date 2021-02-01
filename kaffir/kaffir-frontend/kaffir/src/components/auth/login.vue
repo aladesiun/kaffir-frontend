@@ -56,7 +56,7 @@ export default {
         return {
             user:{
                 email: 'aladesiunpelumi@gmail.com',
-                password: 'oluwapelumi'
+                password: 'aladesiun11'
             },
             loading: false,
         }

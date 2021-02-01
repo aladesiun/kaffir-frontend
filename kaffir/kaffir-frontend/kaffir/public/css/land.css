@@ -14,6 +14,7 @@ html{
 .navbar{
     background-color: white;
     z-index: 9;
+    padding: 10px;
     width: 100vw;
     height: max-content;
     position: fixed!important;
@@ -114,7 +115,7 @@ nav .sign-btn:hover{transition: all .3s;
 }
 /* cards */
 .cards-section{
-    background: url(/kaffir/kaffir-frontend/kaffir/src/assets/img/Component\ 1\ –\ 1@2x.png);
+    /* background: url(/kaffir/kaffir-frontend/kaffir/src/assets/img/Component\ 2\ –\ 1@2x.png); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90px;
@@ -168,7 +169,7 @@ nav .sign-btn:hover{transition: all .3s;
     
 }
 .bb{
-    background: url(img/Path\ 624.png);
+        /* background: url(../../src/assets/img/Component\ 4\ –\ 1.png)!important; */
     background-position: center;
     background: #4f52ff;
     background-size: cover;
@@ -330,10 +331,10 @@ nav .sign-btn:hover{transition: all .3s;
 }
 .f-us ul li{
     list-style: none;
-    font-size: 30px;
-    background: url(img/Path\ 624.png);
+    font-size: 35px;
+    background: #4F52FF;
     background-position: center;
-    width: 100px;
+    width: 95px;
     height: 100px;
     display: flex;
     margin-top: 1rem;

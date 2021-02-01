@@ -1,7 +1,8 @@
 <template>
-    <div>
-        <div class="container mt-5">
-            <div class="row pt-5">
+   <div>
+     <div class="row hrr">
+        <div class="container p-0 mt-5">
+            <div class="row pt-5 text-center">
                 <div class="col-md-12 img-sec-sm">
                     <img src="../../assets/img/fs1.png" alt="" class="img-fluid">
             </div>
@@ -10,7 +11,6 @@
                 <div class="col-lg-7 col-md-12">
                     <h1>Send anonymous messages and bulk sms.</h1>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandi
-                        
                     </p>
                     <div class="lkns">
                         <a href="#" class="sign-btn">sign up</a>
@@ -23,9 +23,13 @@
                 </div>
             </div>  
         </div>
+     </div>
         <!-- carousel -->
         <section class="cards-section">
-            <div class="container-lg mb-5">
+            <div class="container mb-5">
+                <div class="head-y text-center">
+                    <h2>why you must join the society</h2>
+                </div>
             <div class=" card-row  grid-slider-wrap carousel p-0" data-flickity='{ "wrapAround": true }'>
                 <div class=" grid-slide">
                 <div class="cards bb">
@@ -133,7 +137,7 @@
             <div class="container">
                 <h1 class="text-center">connect with us</h1>
                 <div class="row">
-                    <div class="col-md-5 col-sm-1">
+                    <div class="col-md-5 col-sm-1 f-us-img">
                     <!-- <img src="img/foll2.png" class="img-fluid ff" alt=""> -->
                     <img src="../../assets/img/foll2.png" alt="" class="img-fluid ff">
                     </div>
@@ -175,11 +179,12 @@
                     <div class="i-cont"  data-mdb-toggle="collapse" data-mdb-target="#collapsetwo" aria-expanded="true" aria-controls="collapseOne" > 
                     <i class="fas fa-plus" type="button"></i>
                     </div>
-                    <p>How do I know I will be anonymous</p>
+                    <p>if i send a voice won't i be detected</p>
                 </div>
                 <div id="collapsetwo" class="accordion-collapse collapse " aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity</p>
+                        <p>you can not be detected if you use our voicenote because after your voice has be recorded you will be ask to choose a robotic voice that disguise your voice from been detected its you</p>
+                    <!-- <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity</p> -->
                 </div>
                 </div>
                 </div>
@@ -188,11 +193,12 @@
                     <div class="i-cont"  data-mdb-toggle="collapse" data-mdb-target="#collapsethree" aria-expanded="true" aria-controls="collapseOne" > 
                     <i class="fas fa-plus" type="button"></i>
                     </div>
-                    <p>How do I know I will be anonymous</p>
+                    <p>can i create a room</p>
                 </div>
                 <div id="collapsethree" class="accordion-collapse collapse " aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity</p>
+                        <p>definietly you can create a room, Every user is entitled to create a room/group chat for friends and family</p>
+                    <!-- <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity</p> -->
                 </div>
                 </div>
                 </div>
@@ -201,18 +207,19 @@
                     <div class="i-cont"  data-mdb-toggle="collapse" data-mdb-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne" > 
                     <i class="fas fa-plus" type="button"></i>
                     </div>
-                    <p>How do I know I will be anonymous</p>
+                    <p>what if i am offended</p>
                 </div>
                 <div id="collapsefour" class="accordion-collapse collapse " aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
                     <div class="accordion-body">
-                    <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity</p>
+                        <p>if you are offended by what a user sent you can send report the user in the report section </p>
+                    <!-- <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity</p> -->
                 </div>
                 </div>
                 </div>
             </div>
             <div class="col-md-6 faq-img-sec">
                 
-                    <img src="../../assets/img/cir.png" alt="" class="cy">
+                    <img src="../../assets/img/ask.png" alt="" class="img-fluid">
                     <img src="../../assets/img/asset1.png" alt="" class="ast">
             </div>
             </div>

@@ -22,68 +22,55 @@
 
         <!-- footer -->
         <footer class="kff_cont">
-            <div class="kff_content">
-                <div class="row kff_row_1">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="kff_col_box">
-                        <h3 class="text">Get Started Now!</h3> 
-                    </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="kff_col_box ">
-                        <div class="d-flex">
-                        <input type="email" class="form-control kff_input" placeholder="Your Email Address">
-                        <button class="btn btn-primary kff_btn"><p class="text-uppercase  kff_butt_p">subscribe now</p></button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="row kff_row_2">
-                    <div class="col-sm-6 col-md-6">
-                        <div class="kaff_col_cont kff_cont_1">
-                        <h4 class="text-left">
-                            Kaffir
-                        </h4>
-                        <div class="kff_line">
-                        </div>
-                        <p class="text-left">
-                            A one access world class website 
-                            that offer you the chance to send anonymous 
-                            message at anytime from anywhere in the world.
-                        </p>
-                        <div class="d-flex">
-                            <div class="kff_icon_cont">
-                            <i class="fab fa-facebook-f"></i>
-                            </div>
-                            <div class="kff_icon_cont" >
-                                <i class="fab fa-twitter"></i>
-                            </div>
-                            <div class="kff_icon_cont">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6">
-                        <div class="kaff_col_cont kff_cont_2">
-                        <div class="kff_wrap">
-                            <h4 class="text-left">
-                            Services
-                            </h4>
-                            <div class="kff_line">
-                            </div>
-                        <ul class="kff_ul">
-                            <li class="kff_li">Bulk Messages</li>
-                            <li class="kff_li">Anonymous Messages</li>
-                            <li class="kff_li">Anonymous Group Chat</li>
-                            <li class="kff_li">Join Anonymousymous Chat</li>
-                        </ul>
-                        </div>
-                        </div>
-                    </div>
-                </div> 
+   <div class="kff_content">
+     <div class="row kff_row_1">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="kff_col_box">
+              <h3 class="text">Get Started Now!</h3> 
             </div>
-        </footer>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="kff_col_box ">
+              <div class="d-flex">
+                <input type="email" class="form-control kff_input" placeholder="Your Email Address">
+                <button class="btn btn-primary kff_btn"><p class="text-uppercase  kff_butt_p">subscribe now</p></button>
+              </div>
+            </div>
+        </div>
+     </div>
+     <div class="container-fluid content-wrap">
+       <div class="content-box">
+         <h5>
+           <a href="#">Vist us</a>
+         </h5>
+       </div>
+       <div class="content-box">
+        <h5>
+          <a href="#">Contact Us</a>
+        </h5>
+        <div class="d-flex">
+          <div class="kff_icon_cont">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div class="kff_icon_cont sp">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="kff_icon_cont">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+       </div>
+       <div class="content-box">
+        <h5>
+          <a href="#">Info on Kaffir</a>
+        </h5>
+      </div>
+     </div>
+     <div class="container-fluid end-text">
+      <p><i>Kaffir always there for you....</i></p>
+     </div>
+   </div> 
+ </footer>
     </div>
     
 </template>

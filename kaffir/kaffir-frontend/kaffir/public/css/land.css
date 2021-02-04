@@ -8,10 +8,13 @@ body{
     height: 100%;
     background-color: white!important;
 }
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: none!important;
+    content: " ";
+}
 .container{
     width: 1320px;
     margin: auto;
-    padding: 15px;
 }
 *{
     height: fit-content;
@@ -61,36 +64,7 @@ nav .navbar-brand img{
     border-bottom: 2px solid whitesmoke;
     position: relative;
     font-size: 5rem;
-    -webkit-text-stroke:.5px #fddfbe;
-  }
-  nav .navbar-brand img::before{
-    content: '<img src="/img/logo 2.d06da226.png" alt="" class="img-fluid">';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9;
-    width: 0;
-    bottom: 0;
-    height: 5rem;
-    background: linear-gradient(#ffffff, #eeeeee);
-    /* color: #ffffff; */
-    -webkit-text-fill-color:transparent;
-    /* -webkit-background-clip: ; */
-    -webkit-text-stroke:0 #b46107;
-    border-right: 3px solid #f3cba0 ;
-    overflow: hidden;
-    animation: animate 6s linear infinite;
-  
-  }
-  @keyframes animate 
-  {
-    0%,10%,100%{
-      width: 0;
-    }
-    70%,90%{
-      width: 100%;
-    }
+    /* -webkit-text-stroke:.5px #fddfbe; */
   }
 nav .sign-btn{
     font-size: 16px;
@@ -105,7 +79,8 @@ nav .sign-btn{
     justify-content: center;
     align-items: center;
 }
-nav .sign-btn:hover{transition: all .3s;
+nav .sign-btn:hover{
+    transition: all .3s;
     background: white;
     color: #4F52FF!important;
     border: 2px solid #4F52FF;
@@ -612,6 +587,7 @@ nav .sign-btn:hover{transition: all .3s;
     }
     .hero p, .hero h1{
         padding: 10px;
+        padding-left: 25px;
     }
 }
 
@@ -647,6 +623,7 @@ nav .sign-btn:hover{transition: all .3s;
         margin: 20px auto;
         justify-content: center;
         /* text-align: center!important; */
+        padding-left: 25px;
     }
 }
 @media only screen and (max-width:350px){
@@ -699,9 +676,16 @@ nav .sign-btn:hover{transition: all .3s;
 }
 .kff_btn{
     width: 25%;
-    background: linear-gradient(45deg,#91B3FA,#4345E7);
-    border-radius: 8px;
+    background: linear-gradient(
+45deg
+,#91B3FA,#4345E7);
+    border-radius: 3px;
+    height: 34px;
     opacity: 1;
+    color: white;
+    text-transform: capitalize;
+    border: none;
+    font-size: 14px; 
 }
 
 .text-left{

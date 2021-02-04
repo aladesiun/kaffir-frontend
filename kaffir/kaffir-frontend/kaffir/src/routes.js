@@ -8,6 +8,7 @@ import contact from './components/public/contact'
 import profile from './components/public/profile'
 import chat from './components/public/chat'
 import sendmsg from './components/public/sendmsg'
+import message from './components/public/message'
 
 Vue.use(VueRouter);
 
@@ -51,6 +52,10 @@ var routes = [
     {
         path:'/sendmsg',
         component: sendmsg
+    },
+    {
+        path:'/message',
+        component: message
     }
 ];
 

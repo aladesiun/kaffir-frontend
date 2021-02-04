@@ -32,8 +32,8 @@
         <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="kff_col_box ">
               <div class="d-flex">
-                <input type="email" class="form-control kff_input" placeholder="Your Email Address">
-                <button class="btn btn-primary kff_btn"><p class="text-uppercase  kff_butt_p">subscribe now</p></button>
+                <input type="email" class="form-control kff_input" placeholder="Your feedback">
+                <button class="kff_btn">Submit</button>
               </div>
             </div>
         </div>

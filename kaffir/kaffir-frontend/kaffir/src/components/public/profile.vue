@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container text-center mt-5 contents">
+    <div class=" text-center mt-5 contents">
       <div class="head">
         <h2>user's profile</h2>
         <p>share your  below  profile link for your friends to send you anonymous messages
@@ -70,6 +70,7 @@ background: linear-gradient(280deg, rgba(2,0,36,1) 0%, rgba(170,12,172,0.9947002
     padding: 2rem;
     color: white;
     background:  #4F52FF;
+    margin: auto;
     border-radius: 10px;
 }
 .contents .head h2{
@@ -87,7 +88,7 @@ background: linear-gradient(280deg, rgba(2,0,36,1) 0%, rgba(170,12,172,0.9947002
     position: relative;
 }
 .btns:hover i, a{
-    margin-left: 5px;
+    margin-right: 5px;
     transition: .5s;
 }
 .btns a{
@@ -128,9 +129,9 @@ background: linear-gradient(280deg, rgba(2,0,36,1) 0%, rgba(170,12,172,0.9947002
 }
 .btns i{
     font-size: 1.5rem;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);  */
 }
 
 

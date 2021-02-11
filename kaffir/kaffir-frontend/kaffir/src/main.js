@@ -13,4 +13,7 @@ new Vue({
     router: routes,
     store:store,
     render: h => h(App),
+        data:{
+          sendvalue:'',
+        }
 }).$mount('#app')

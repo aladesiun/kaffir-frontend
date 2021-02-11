@@ -1,5 +1,5 @@
 <template>
-    <div class="cont">
+    <div class="cont" id="cntt">
         <div class="ead text-center">
             <h2 class="abt">
                 send message
@@ -7,7 +7,8 @@
         </div>
         <div class="sendinp">
             <!-- <i type="text" class="text-inp" placeholder="type your message"> -->
-                <textarea name="" class="text-inp" placeholder="type..."></textarea>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione soluta voluptatibus temporibus veritatis repellendus laborum totam quo laboriosam ut animi!{{sendvalue}}</p>
+                <input name="" class="text-inp" placeholder="type..." v-model="sendvalue">
             <div class="btn-to-send">
                 <button  class="sndbtn-msg">send</button>
             </div>
@@ -15,7 +16,13 @@
     </div>
 </template>
 
+<script>
+
+
+</script>
+
     <style>
+
 .holder{
      width: 100vw;
     height: 100vh;
@@ -45,7 +52,7 @@ input,button,textarea{
     border-radius: 20px;
     margin: 20px auto;
 
-    background-color: #060106;
+    background-color: #071F44;
     align-items: center;
     justify-content: flex-start;
     padding:5px 10px;
@@ -79,7 +86,9 @@ input,button,textarea{
     color: #4542ff;
 }
 .sendinp .sndbtn-msg{
-    background-color: #4542ff;
+       background: linear-gradient( 
+45deg
+ ,#91B3FA,#4345E7);
     width: 80%;
     border-radius: 20px;
     border: none;

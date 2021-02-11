@@ -50,7 +50,7 @@ var routes = [
     },
 
     {
-        path:'/sendmsg',
+        path:'/write-anonymous/:token',
         component: sendmsg
     },
     {

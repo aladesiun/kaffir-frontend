@@ -10,10 +10,11 @@
                         <div class="card fat">
                             <div class="card-body">
                                 <h4 class="card-title">Login</h4>
-                                <form method="POST" class="my-login-validation" novalidate="">
+                                <notification/>
+                                <form method="POST" class="my-login-validation" novalidate="" @submit.prevent="login()">
                                     <div class="form-group">
                                         <label for="email">E-Mail Address</label>
-                                        <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+                                        <input id="email" type="email" v-model="user.email" class="form-control" name="email" value=""  autofocus>
                                         <div class="invalid-feedback"> Email is invalid </div>
                                     </div>
 
@@ -21,7 +22,7 @@
                                         <label for="password">Password
                                             <a href="forgot.html" class="float-right"> Forgot Password? </a>
                                         </label>
-                                        <input id="password" type="password" class="form-control" name="password" required data-eye>
+                                        <input id="password" type="password" v-model="user.password" class="form-control" name="password"  data-eye>
                                         <div class="invalid-feedback"> Password is required </div>
                                     </div>
 
@@ -33,10 +34,10 @@
                                     </div>
 
                                     <div class="form-group m-0">
-                                        <a href="/realprofile.html" class="btn btn-primary btn-block">Login</a>
+                                        <button type="submit" class="btn btn-primary btn-block">Login</button>
                                     </div>
                                     <div class="mt-4 text-center"> Don't have an account? 
-                                        <a href="register.html">Create One</a>
+                                        <router-link to="/register">Create One</router-link>
                                     </div>
                                 </form>
                             </div>
@@ -51,14 +52,50 @@
 
 <script>
 export default {
-    data() {
+    data(){
         return {
-
+            user:{
+                email: 'aladesiunpelumi@gmail.com',
+                password: 'aladesiun11'
+            },
+            loading: false,
         }
     },
     methods:{
         login(){
+            if(this.user.email.length == 0 || this.user.password.length == 0){
+               this.$store.commit('setNotification',{type:2, message:'Email and Password fields are required'});
+               return false;
+            }
 
+            this.loading = true;
+    
+            this.$store.dispatch('post', {
+                endpoint: 'login',
+                details: this.user
+            }).then((data) =>{
+                if(data.data.status){
+                    var result = data.data.data;
+                    localStorage.setItem('token', data.data.token);
+                    result.token=data.data.token;
+                    this.$store.commit('setUser', result);
+                    window.location.href = "/";
+                    
+                }else{
+                    var e_msg = data.data.message;
+                    this.$store.commit('setNotification',{type:2, message: e_msg})
+                }
+                this.loading = false;
+            }).catch((error) =>{
+                console.log('error');
+                console.log(error.request);
+                if(error.request.status == 422){
+                    var error_date = JSON.parse(error.request.response);
+                    error_date = error_date.message;
+                    this.error_message = error_date;
+                    this.loading = false;
+                }
+            });
         }
     }
 }

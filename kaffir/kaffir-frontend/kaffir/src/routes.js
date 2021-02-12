@@ -25,6 +25,30 @@ var routes = [
             {
                 path: '/contact',
                 component: contact,
+            },
+            {
+                path:'/profile',
+                component: profile,
+                meta:{
+                    AuthRequired:true
+                }
+            },
+        
+            {
+                path:'/chat',
+                component: chat
+            },
+        
+            {
+                path:'/write-anonymous/:token',
+                component: sendmsg
+            },
+            {
+                path:'/message',
+                component: message,
+                meta:{
+                    AuthRequired:true
+                }
             }
         ]
     },    
@@ -38,25 +62,6 @@ var routes = [
         path:'/register',
         component: register
     },
-
-    {
-        path:'/profile',
-        component: profile
-    },
-
-    {
-        path:'/chat',
-        component: chat
-    },
-
-    {
-        path:'/write-anonymous/:token',
-        component: sendmsg
-    },
-    {
-        path:'/message',
-        component: message
-    }
 ];
 
 const router = new VueRouter({

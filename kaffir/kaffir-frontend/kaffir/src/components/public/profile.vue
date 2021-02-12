@@ -89,7 +89,7 @@ body{
     width: 100%;
     overflow-X: hidden;
     /* background: rgb(2,0,36);
-background: linear-gradient(280deg, rgba(2,0,36,1) 0%, rgba(170,12,172,0.9947002282303371) 0%, rgba(238,2,126,1) 18%, rgba(5,40,74,1) 37%, rgba(9,90,121,1) 52%, rgba(252,0,255,1) 75%);
+    background: linear-gradient(280deg, rgba(2,0,36,1) 0%, rgba(170,12,172,0.9947002282303371) 0%, rgba(238,2,126,1) 18%, rgba(5,40,74,1) 37%, rgba(9,90,121,1) 52%, rgba(252,0,255,1) 75%);
     background: linear-gradient(to right,#00515b,#00d4c1,#00515b); */
 }
  .hero{

@@ -8,7 +8,7 @@
       </div>
       <div class="btn-container">
         <div class="btns view">
-          <a href="message.html">view messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+            <router-link  to="/message"> view messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
         </div>
         <div class="btns share">
           <a href="#"><i class="fas fa-share-alt"></i>  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Share My Profile</a>
@@ -26,7 +26,10 @@
           <a href="#"><i class="fab fa-twitter-square"></i>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Share on twitter</a>
         </div> 
         <div class="btns view">
-          <a href="message.html">join room&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+            <form action="" class="grp-form" @submit.prevent="createGroup()">
+                <input type="text" v-model="group.name" name="name" style="width:75%; margin:auto; height:40px" class="form-control" placeholder="group name"> 
+                <button class="grp-btn" type="submit">Create Group&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></button>
+            </form>
         </div>
         <div class="c"> 
             <input type="text" style="width:75%; margin:auto;" v-model="user.anonymous_link" class="form-control" placeholder="Generated link wiil appear here">
@@ -44,7 +47,9 @@ import { mapState } from 'vuex'
 export default {
     data(){
         return{
-            
+            group:{
+                name: "Nacoss Class'21",
+            }
         }
     },
     methods:{
@@ -65,6 +70,22 @@ export default {
             .catch((error) => {
                 console.log(error);
             })
+        },
+
+        createGroup(){
+            this.$store.dispatch('post', {
+                endpoint: 'create-group', 
+                details: this.group
+            })
+            .then((data) => {
+                
+                    console.log(data.data.data);
+                   
+                
+            })
+            .catch((error) => {
+                console.log(error);
+            })
         }
     },
     computed:{
@@ -81,6 +102,22 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+.grp-form{
+    width: 100%;
+}
+
+.grp-btn{
+    padding: 10px 50px;
+    background: #ffffff;
+    white-space: nowrap;
+    text-decoration: none;
+    border-radius: 1rem;
+    color: #4F52FF;
+    font-family: 'Secular One', sans-serif;
+    width: 100%;
+    border: none;
+}
 
 body{
     padding: 0;

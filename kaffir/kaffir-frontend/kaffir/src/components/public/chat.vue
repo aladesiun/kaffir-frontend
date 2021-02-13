@@ -251,8 +251,30 @@
 
 <script>
 export default {
-
-     
+    data() {
+        return {
+            chat_message:{
+                message: '',
+                token: '',
+            }
+        }
+    },
+    methods:{
+        verifyToken(){
+            this.$store.dispatch('get', 'verify-group-chat-token?token='+this.$route.params.token)
+            .then((data)=>{
+                if(data.data.status){
+                    console.log(data.data)
+                    this.chat_message.token=this.$route.params.token;
+                }else{
+                    this.$store.commit('setNotification',{type:2, message:'Expired or Invalid link.'});  
+                }
+            })
+        }
+    },
+    created(){
+        this.verifyToken();
+    }
 }
 
 </script>

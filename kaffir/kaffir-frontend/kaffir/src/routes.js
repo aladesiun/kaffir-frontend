@@ -1,4 +1,4 @@
- import Vue from 'vue'
+import Vue from 'vue'
 import VueRouter from 'vue-router'
 import layout from './components/layouts/layout'
 import home from './components/public/home'
@@ -35,7 +35,7 @@ var routes = [
             },
         
             {
-                path:'/chat',
+                path:'/group-chat/:token',
                 component: chat
             },
         

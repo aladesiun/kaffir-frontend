@@ -137,4 +137,19 @@ input::placeholder{
     color:white;
     font-size:10px;
 }
+
+  @media only screen and (max-width:560px){
+      .g-cont{
+          width:90%;
+      }
+      .grd-box-groups {
+    width: 99%;
+    margin: 10px auto;
+    
+    }
+    .grd-box-groups .a-g-card[data-v-37fb475a] {
+ width: 43%;
+    margin: 5px;
+}
+        }
 </style>

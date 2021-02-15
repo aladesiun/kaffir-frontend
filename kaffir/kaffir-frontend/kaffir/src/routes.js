@@ -9,6 +9,7 @@ import profile from './components/public/profile'
 import chat from './components/public/chat'
 import sendmsg from './components/public/sendmsg'
 import message from './components/public/message'
+import groups from './components/public/groups'
 
 Vue.use(VueRouter);
 
@@ -56,6 +57,10 @@ var routes = [
     {
         path:'/message',
         component: message
+    },
+    {
+        path:'/groups',
+        component: groups
     }
 ];
 

@@ -556,7 +556,11 @@ nav .sign-btn:hover{
     } */
    
 }
-
+@media only screen and (max-width:991px){
+    .img-sec{
+        display: none;
+    }
+}
 @media only screen and (max-width:789px){
     .cards p{
         font-size: 15px;

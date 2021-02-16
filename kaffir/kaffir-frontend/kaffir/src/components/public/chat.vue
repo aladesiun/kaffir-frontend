@@ -1,4 +1,5 @@
 <template>
+<<<<<<< Updated upstream
     <div class="container bootstrap snippets bootdey">
             <div class="tile tile-alt" id="messages-main">
                 <div class="ms-menu">
@@ -112,6 +113,9 @@
             
                     
                 </div>               
+=======
+     <div class="container">            
+>>>>>>> Stashed changes
                 <div class="ms-body">
                     <div class="header-hoolder-sm">
                         <div class="action-header clearfix">
@@ -128,6 +132,21 @@
                             </div>
                              
                             <ul class="ah-actions actions">
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-check"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-clock-o"></i>
+                                    </a>
+                                </li>
                                 <li class="dropdown">
                                     <a href="" data-toggle="dropdown" aria-expanded="false">
                                         <i class="fa fa-sort"></i>
@@ -210,7 +229,6 @@
                         
                         <div class="message-feed media">
                             <div class="pull-left">
-                                
                                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
                             </div>
                             <div class="media-body">
@@ -232,7 +250,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bot container">
+                    <div class="bot">
                         <div class="action-heade clearfix bot-cnt">
                             <i class="far fa-images"></i>
                             <i class="fas fa-microphone"></i>
@@ -244,8 +262,8 @@
                             <i class="far fa-paper-plane"></i>
                         </div>
                     </div>
-                </div> 
-            </div>
+                </div>
+            
         </div>
 </template>
 
@@ -256,13 +274,14 @@ export default {
 }
 
 </script>
-<style>
+<style scoped>
 
 body {
 font-family: Roboto,sans-serif;
 font-size: 13px;
 line-height: 1.42857143;
 color: #767676;
+overflow-x: hidden;
 /* background-image: -webkit-linear-gradient(45deg, #f920ac 0, #68029b 100%); */
 
 }
@@ -291,13 +310,9 @@ height: 100%;
 width: 240px;
 background: #fff;
 }
-@media (min-width:768px) {
-#messages-main .ms-body {
-padding-left: 240px;
-}
-@media (min-width: 500px){
+@media only screen and  (min-width: 390px){
 .container {
-width: 1000px;
+/* margin: 0!important; */
 padding: 0!important;
 }
 .bot i{
@@ -306,22 +321,14 @@ padding: 0!important;
     color: #2196f3;
 }
 }
-
-
-}@media (max-width:767px) {
+@media (max-width:767px) {
 #messages-main .ms-menu {
 height: calc(100% - 58px);
 display: none;
 z-index: 1;
 top: 58px;
 }
-.header-hoolder-sm{
-    position: fixed;
-right: 14px;
-left: 14px;
-z-index: 9;
-top: 0;
-}
+
 .bot{
     position: fixed;
     right: 14px;
@@ -339,7 +346,6 @@ z-index: 5;
 }
 #messages-main .ms-menu.toggled {
 display: block;
-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
 height: auto!important;
 }
 #messages-main .ms-body {
@@ -536,17 +542,20 @@ text-align: right;
 .bot-cnt{
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content:stretch;
     width: 100%;
+    padding: 15px 13px 15px 17px;
     margin-top: auto;
-    padding: 10px
 }
 .bot{
+    position: sticky;
+    bottom: 0;
     z-index: 1;
     margin-top: auto;
-    /* width: 764px; */
-   /* max-width: calc(100% - 543px); */
-    background: #fff!important;
+    background: #f8f8f8!important;
+    width: 100%;
+    align-items: center;
+    height: 68px;
 }
 .bot .inp-sec{
     position: relative;
@@ -574,5 +583,6 @@ text-align: right;
 .bot .fa-paper-plane{
     margin-left: auto;
 }
+
 
 </style>

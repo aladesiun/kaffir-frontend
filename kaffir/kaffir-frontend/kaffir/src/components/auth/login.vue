@@ -83,16 +83,16 @@ export default {
                     
                 }else{
                     var e_msg = data.data.message;
+                    console.log(e_msg);
                     this.$store.commit('setNotification',{type:2, message: e_msg})
                 }
                 this.loading = false;
             }).catch((error) =>{
-                console.log('error');
-                console.log(error.request);
                 if(error.request.status == 422){
                     var error_date = JSON.parse(error.request.response);
                     error_date = error_date.message;
                     this.error_message = error_date;
+                    this.$store.commit('setNotification',{type:2, message: this.error_message})
                     this.loading = false;
                 }
             });

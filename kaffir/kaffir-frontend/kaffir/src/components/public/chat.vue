@@ -1,5 +1,6 @@
 <template>
     <div class="container bootstrap snippets bootdey">
+        <notification/>
             <div class="tile tile-alt" id="messages-main">
                 <div class="ms-menu">
                     <div class="ms-user clearfix">
@@ -233,16 +234,19 @@
                         </div>
                     </div>
                     <div class="bot container">
-                        <div class="action-heade clearfix bot-cnt">
-                            <i class="far fa-images"></i>
-                            <i class="fas fa-microphone"></i>
-                            <div class="inp-sec">
-                                <input type="text">
-                                <i class="far fa-smile"></i>
+                        <form action="" @submit.prevent="sendMessage()">
+                            <div class="action-heade clearfix bot-cnt">
+                                <i class="far fa-images"></i>
+                                <i class="fas fa-microphone"></i>
+                                <div class="inp-sec">
+                                    <input type="text" v-model="chat.message">
+                                    <!-- <i class="far fa-smile"></i> -->
+                                    <button type="submit"><i class="far fa-paper-plane"></i></button>
+                                </div>
+                                <!-- <i class="fal fa-paper-plane"></i> -->
+                                <i class="far fa-paper-plane"></i>
                             </div>
-                            <!-- <i class="fal fa-paper-plane"></i> -->
-                            <i class="far fa-paper-plane"></i>
-                        </div>
+                        </form>
                     </div>
                 </div> 
             </div>
@@ -253,7 +257,7 @@
 export default {
     data() {
         return {
-            chat_message:{
+            chat:{
                 message: '',
                 token: '',
             }
@@ -270,6 +274,26 @@ export default {
                     this.$store.commit('setNotification',{type:2, message:'Expired or Invalid link.'});  
                 }
             })
+            .catch((error) =>{
+                if(error.request.status == 422){
+                    var error_date = JSON.parse(error.request.response);
+                    error_date = error_date.message;
+                    this.error_message = error_date;    
+                    this.$store.commit('setNotification',{type:2, message: this.error_message})
+                    this.loading = false;
+                }
+            });
+        },
+        sendMessage(){
+            this.chat.token = this.$route.params.token;
+            this.$store.dispatch('post', {
+                endpoint: 'send-group-message',
+                details: this.chat
+            }).then((data) => {
+                console.log(data.data.data);
+            }).catch((error) => {
+                console.log(error);
+            });
         }
     },
     created(){

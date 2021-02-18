@@ -39,11 +39,6 @@ var routes = [
                 component: groups
             },
             {
-                path:'/group-chat/:token',
-                component: chat
-            },
-        
-            {
                 path:'/write-anonymous/:token',
                 component: sendmsg
             },
@@ -53,8 +48,23 @@ var routes = [
                 meta:{
                     AuthRequired:true
                 }
-            }
+            },
         ]
+    },
+    {
+        path: '/login',
+        component: login
+    },
+    {
+        path: '/register',
+        component: register
+    },
+    {
+        path:'/group-chat/:token',
+        component: chat,
+        meta:{
+            AuthRequired:true
+        }
     },    
 ];
 

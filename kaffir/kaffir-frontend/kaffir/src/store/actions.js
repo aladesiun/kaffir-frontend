@@ -36,7 +36,7 @@ export default{
             msg = 'Oops! server error, Please try again';
             context.commit('setNotification', { type: 2, message: msg });
         }
-    },
+    }, 
     
     post(context, data){
         return new Promise((resolve, reject) => {

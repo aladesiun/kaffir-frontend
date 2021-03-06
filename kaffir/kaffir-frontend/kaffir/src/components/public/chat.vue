@@ -161,19 +161,19 @@
                         </div>
                     </div>
                     <div class="all-messages">
-                        <div class="message-feed media">
+                        <div class="message-feed media" v-for="(message, index) in chats" :key="index">
                             <div class="pull-left">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
                             </div>
                             <div class="media-body">
                                 <div class="mf-content">
-                                    Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.
+                                    {{message.messages}}
                                 </div>
-                                <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 09:00</small>
+                                <small class="mf-date"><i class="fa fa-clock-o"></i> {{message.created_at}}</small>
                             </div>
                         </div>
                         
-                        <div class="message-feed right">
+                        <!-- <div class="message-feed right">
                             <div class="pull-right">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
                             </div>
@@ -231,7 +231,7 @@
                                 </div>
                                 <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 10:24</small>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="bot container">
                         <form action="" @submit.prevent="sendMessage()">
@@ -260,7 +260,8 @@ export default {
             chat:{
                 message: '',
                 token: '',
-            }
+            },
+            chats:{}
         }
     },
     methods:{
@@ -291,13 +292,30 @@ export default {
                 details: this.chat
             }).then((data) => {
                 console.log(data.data.data);
+                this.chat.message = '';
             }).catch((error) => {
                 console.log(error);
             });
+        },
+
+        getMessages(){
+            this.$store.dispatch('get', 'get-messages')
+            .then((data) => {
+                console.log(data.data.data);
+                this.chats = data.data.data;
+            })
+            .catch((error) => {
+                console.log(error);
+            })
         }
     },
     created(){
         this.verifyToken();
+        this.getMessages();
+        this.$echo.join('channel_new')
+        .listen('chat',(event) => {
+            this.chats.push(event.chat);
+        })
     }
 }
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="cont">
+    <div class="cont" id="cntt">
         <div class="ead text-center">
             <h2 class="abt">
                 send message
@@ -71,10 +71,6 @@
         }
     }
 </script>
-export default{
-
-}
-
 <style>
     .holder{
         width: 100vw;

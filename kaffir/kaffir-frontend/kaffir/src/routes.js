@@ -19,7 +19,7 @@ var routes = [
         component: layout,
         children: [
             {
-                path: '',
+                path: '/',
                 component: home,
         
             },

@@ -17,9 +17,8 @@
                         <a href="#" class="sign-btn2">login</a>
                     </div>
                 </div>
-                <div class="col-md-5 img-sec">
+                <div class="col-md-5 img-sec"> 
                     <img src="../../assets/img/fs1.png" alt="" class="img-fluid">
-                    
                 </div>
             </div>  
         </div>

@@ -11,7 +11,7 @@
                     <a class="nav-link" href="#">Home</a>
                     <a class="nav-link" href="#">About us</a>
                     <a class="nav-link" href="#">Anonymous</a>
-                    <a class="sign-btn" href="login.html" tabindex="-1" aria-disabled="true">sign up</a>
+                    <a class="sign-btn" href="/login" tabindex="-1" aria-disabled="true">sign up</a>
 
                 </div>
             </div>

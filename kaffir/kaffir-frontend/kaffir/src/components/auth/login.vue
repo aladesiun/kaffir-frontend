@@ -34,7 +34,7 @@
                                     </div>
 
                                     <div class="form-group m-0">
-                                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                        <button class="btn-block sub-btn">Login</button>
                                     </div>
                                     <div class="mt-4 text-center"> Don't have an account? 
                                         <router-link to="/register">Create One</router-link>
@@ -112,6 +112,7 @@ export default {
         background-image: -webkit-linear-gradient(45deg,#fff 0, #4F52FF 100%);
         border: none;
         font-size: 14px;
+        height: 100vh;
     }
     
     input:focus{
@@ -147,15 +148,17 @@ export default {
     .my-login-page .card.fat {
         padding: 10px;
     }
-    .btn-primary {
-        transition:all .3s!important;
+    .sub-btn {
+        transition:all .2s!important;
         color: #fff;
+        padding: 5px 2px;
+        border-radius: 5px;
         border: none;
         background: #4F52FF;
 
         /* background-image: -webkit-linear-gradient(45deg,#f920ac 0,#be09f6 100%); */
     }
-    .btn-primary:hover {
+    .sub-btn:hover {
         color:#4F52FF;
         border: 2px solid #4F52FF!important;
         background-color: white!important;

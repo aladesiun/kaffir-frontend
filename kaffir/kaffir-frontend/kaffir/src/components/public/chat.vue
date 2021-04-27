@@ -1,578 +1,1098 @@
 <template>
-    <div class="container bootstrap snippets bootdey">
-            <div class="tile tile-alt" id="messages-main">
-                <div class="ms-menu">
-                    <div class="ms-user clearfix">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar pull-left">
-                        <div>Signed in as <br> m-hollaway@gmail.com</div>
-                    </div>
-                    <div class="p-15">
-                        <div class="dropdown">
-                            <a class="btn btn-primary btn-block" href="" data-toggle="dropdown">active rooms <i class="caret m-l-5"></i></a>
-            
-                            <ul class="dropdown-menu dm-icon w-100">
-                                <li><a href=""><i class="fa fa-envelope"></i> Messages</a></li>
-                                <li><a href=""><i class="fa fa-users"></i> Contacts</a></li>
-                                <li><a href=""><i class="fa fa-format-list-bulleted"> </i>Todo Lists</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="list-group lg-alt">
-                        <a class="list-group-item media" href="">
-                            <div class="pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
+    <div class="main-wrapper">
+	
+        <!-- content -->
+        <div class="content main_content">
+		
+            <!-- sidebar group -->
+            <div class="sidebar-group left-sidebar chat_sidebar">
+                <!-- Chats sidebar -->
+                <div id="chats" class="left-sidebar-wrap sidebar active">
+                    <div class="header">
+                        <div class="header-top">
+                            <div class="logo ml-2 mt-3">
+                                <a href="index.html">
+                                    <img src="../../../public/assets/img/logo.png" class="header_image img-fluid" alt="">
+                                </a>
                             </div>
-                            <div class="media-body">
-                                <small class="list-group-item-heading">Davil Parnell</small>
-                                <small class="list-group-item-text c-gray">Fierent fastidii recteque ad pro</small>
-                            </div>
-                        </a>
-                        
-                        <a class="list-group-item media" href="">
-                            <div class="pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="list-group-item-heading">Ann Watkinson</div>
-                                <small class="list-group-item-text c-gray">Cum sociis natoque penatibus </small>
-                            </div>
-                        </a>
-                        
-                        <a class="list-group-item media" href="">
-                            <div class="pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="list-group-item-heading">Marse Walter</div>
-                                <small class="list-group-item-text c-gray">Suspendisse sapien ligula</small>
-                            </div>
-                        </a>
-                        
-                        <a class="list-group-item media" href="">
-                            <div class="lv-avatar pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="list-group-item-heading">Jeremy Robbins</div>
-                                <small class="list-group-item-text c-gray">Phasellus porttitor tellus nec</small>
-                            </div>
-                        </a>
-                        
-                        <a class="list-group-item media" href="">
-                            <div class="lv-avatar pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="list-group-item-heading">Reginald Horace</div>
-                                <small class="list-group-item-text c-gray">Quisque consequat arcu eget</small>
-                            </div>
-                        </a>
-                        
-                        <a class="list-group-item media" href="">
-                            <div class="pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="list-group-item-heading">Shark Henry</div>
-                                <small class="list-group-item-text c-gray">Nam lobortis odio et leo maximu</small>
-                            </div>
-                        </a>
-                        
-                        <a class="list-group-item media" href="">
-                            <div class="pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="list-group-item-heading">Paul Van Dack</div>
-                                <small class="list-group-item-text c-gray">Nam posuere purus sed velit auctor sodales</small>
-                            </div>
-                        </a>
-                        
-                        <a class="list-group-item media" href="">
-                            <div class="lv-avatar pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="list-group-item-heading">James Anderson</div>
-                                <small class="list-group-item-text c-gray">Vivamus imperdiet sagittis quam</small>
-                            </div>
-                        </a>
-                        
-                        <a class="list-group-item media" href="">
-                            <div class="lv-avatar pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="list-group-item-heading">Kane Williams</div>
-                                <small class="list-group-item-text c-gray">Suspendisse justo nulla luctus nec</small>
-                            </div>
-                        </a>
-                    </div>
-            
-                    
-                </div>               
-                <div class="ms-body">
-                    <div class="header-hoolder-sm">
-                        <div class="action-header clearfix">
-                            <div class="visible-xs" id="ms-menu-trigger">
-                                <i class="fa fa-bars"></i>
-                            </div>
-                            
-                            <div class="pull-left hidden-xs">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar m-r-10">
-                                <div class="lv-avatar pull-left">
-                                    
-                                </div>
-                                <span>aladesiun temitope</span>
-                            </div>
-                             
-                            <ul class="ah-actions actions">
-                                <li class="dropdown">
-                                    <a href="" data-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa fa-sort"></i>
+                            <ul class="header-action mt-4">
+                                <li>
+                                    <a href="#" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-h ellipse_header"></i>
                                     </a>
-                        
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <a href="">Latest</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Oldest</a>
-                                        </li>
-                                    </ul>
-                                </li>                             
-                                <li class="dropdown">
-                                    <a href="" data-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa fa-bars"></i>
-                                    </a>
-                        
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <a href="">Refresh</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Message Settings</a>
-                                        </li>
-                                    </ul>
+                                    <div class="dropdown-menu dropdown-menu-right header_drop_icon">
+                                        <a class="dropdown-item" data-toggle="modal" data-target="#new_group">
+											New Group
+										</a>
+                                        <a class="dropdown-item" data-toggle="modal" data-target="#profile_modal">Profile</a>
+                                        <a class="dropdown-item" data-toggle="modal"
+                                            data-target="#settings_modal">Settings</a>
+                                        <a href="login.html" class="dropdown-item">Logout</a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
+                        <ul class="nav nav-tabs chat-tabs mt-4">
+                           <li class="nav-item">
+                        <a class="nav-link  active"><router-link to="/chat">chat</router-link></a>
+                    </li>
+                    <li class="nav-item ml-1">
+                        <a class="nav-link"><router-link to="/group">group</router-link></a>
+                    </li>
+                    <li class="nav-item ml-1">
+                        <a class="nav-link" ><router-link to="/status">status</router-link></a>
+                    </li>
+                    <li class="nav-item ml-1">
+                        <a class="nav-link"><router-link to="/calls">calls</router-link></a>
+                    </li>
+                        </ul>
+                        <button type="button" class="float-right btn btn-circle btn-sm header_button"
+                            data-toggle="modal" data-target="#chat-new">
+                            <i class="fas fa-plus button_plus"></i>
+                        </button>
                     </div>
-                    <div class="all-messages">
-                        <div class="message-feed media">
-                            <div class="pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="mf-content">
-                                    Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.
-                                </div>
-                                <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 09:00</small>
-                            </div>
-                        </div>
-                        
-                        <div class="message-feed right">
-                            <div class="pull-right">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="mf-content">
-                                    Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.
-                                </div>
-                                <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 09:30</small>
-                            </div>
-                        </div>
-                        
-                        <div class="message-feed media">
-                            <div class="pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="mf-content">
-                                    Etiam ex arcumentum
-                                </div>
-                                <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 09:33</small>
-                            </div>
-                        </div>
-                        
-                        <div class="message-feed right">
-                            <div class="pull-right">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="mf-content">
-                                    Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                </div>
-                                <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 10:10</small>
-                            </div>
-                        </div>
-                        
-                        <div class="message-feed media">
-                            <div class="pull-left">
-                                
-                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="mf-content">
-                                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ac tortor ut elit sodales varius. Mauris id ipsum id mauris malesuada tincidunt. Vestibulum elit massa, pulvinar at sapien sed, luctus vestibulum eros. Etiam finibus tristique ante, vitae rhoncus sapien volutpat eget
-                                </div>
-                                <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 10:24</small>
-                            </div>
-                        </div>
-                        <div class="message-feed media">
-                            <div class="pull-left">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                            </div>
-                            <div class="media-body">
-                                <div class="mf-content">
-                                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ac tortor ut elit sodales varius. Mauris id ipsum id mauris malesuada tincidunt. Vestibulum elit massa, pulvinar at sapien sed, luctus vestibulum eros. Etiam finibus tristique ante, vitae rhoncus sapien volutpat eget
-                                </div>
-                                <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 10:24</small>
-                            </div>
-                        </div>
+                    <div class="search_chat has-search">
+                        <span class="fas fa-search form-control-feedback"></span>
+                        <input class="form-control chat_input" id="search-contact" type="text" placeholder="">
                     </div>
-                    <div class="bot container">
-                        <div class="action-heade clearfix bot-cnt">
-                            <i class="far fa-images"></i>
-                            <i class="fas fa-microphone"></i>
-                            <div class="inp-sec">
-                                <input type="text">
-                                <i class="far fa-smile"></i>
-                            </div>
-                            <!-- <i class="fal fa-paper-plane"></i> -->
-                            <i class="far fa-paper-plane"></i>
-                        </div>
+                    <div class="sidebar-body" id="chatsidebar">
+                        <ul class="user-list">
+                            <li class="user-list-item">
+                                <div class="avatar avatar-online">
+                                    <img src="../../../public/assets/img/avatar-8.jpg" class="rounded-circle" alt="image">
+                                </div>
+                                <div class="users-list-body">
+                                    <div>
+                                        <h5>Regina Dickerson</h5>
+                                        <p>It seems logical that the strategy of providing!</p>
+                                    </div>
+                                    <div class="last-chat-time">
+                                        <small class="text-muted">14:45 pm</small>
+                                        <div class="chat-toggle mt-1">
+                                            <div class="dropdown">
+                                                <a data-toggle="dropdown" href="#">
+                                                    <i class="fas fa-ellipsis-h ellipse_header"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item dream_profile_menu">Profile</a>
+                                                    <a href="#" class="dropdown-item">Add to archive</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </li>
+                            <li class="user-list-item">
+                                <div>
+                                    <div class="avatar avatar-away">
+                                        <img src="../../../public/assets/img/avatar-7.jpg" class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <div class="users-list-body">
+                                    <div>
+                                        <h5>Kevin Howard</h5>
+                                        <p>It seems logical that the strategy of providing!</p>
+                                    </div>
+                                    <div class="last-chat-time">
+                                        <small class="text-muted">08:45 pm</small>
+                                        <div class="chat-toggle mt-1">
+                                            <div class="dropdown">
+                                                <a data-toggle="dropdown" href="#">
+                                                    <i class="fas fa-ellipsis-h ellipse_header"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" data-navigation-target="contact-information"
+                                                        class="dropdown-item dream_profile_menu">Profile</a>
+                                                    <a href="#" class="dropdown-item">Add to archive</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="user-list-item">
+                                <div>
+                                    <div class="avatar avatar-offline">
+                                        <img src="../../../public/assets/img/avatar-1.jpg" class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <div class="users-list-body">
+                                    <div>
+                                        <h5 class="list_group_notread">Eric Knight</h5>
+                                        <p>Welcome to the community mate! 👍</p>
+                                    </div>
+                                    <div class="last-chat-time">
+                                        <small class="text-muted">Yesterday</small>
+                                        <div class="new-message-count"></div>
+                                        <div class="chat-toggle mt-1">
+                                            <div class="dropdown">
+                                                <a data-toggle="dropdown" href="#">
+                                                    <i class="fas fa-ellipsis-h ellipse_header"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" data-navigation-target="contact-information"
+                                                        class="dropdown-item dream_profile_menu">Profile</a>
+                                                    <a href="#" class="dropdown-item">Add to archive</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="user-list-item unread">
+                                <div>
+                                    <div class="avatar avatar-online">
+                                        <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <div class="users-list-body">
+                                    <div>
+                                        <h5>Scott Albright</h5>
+                                        <p>I remember everything mate. See you later 🤘</p>
+                                    </div>
+                                    <div class="last-chat-time">
+                                        <small class="text-muted">06:18 am</small>
+                                        <div class="chat-toggle mt-1">
+                                            <div class="dropdown">
+                                                <a data-toggle="dropdown" href="#">
+                                                    <i class="fas fa-ellipsis-h ellipse_header open_drop"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" data-navigation-target="contact-information"
+                                                        class="dropdown-item dr_menu">Profile</a>
+                                                    <a href="#" class="dropdown-item">Add to archive</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="user-list-item">
+                                <div>
+                                    <div class="avatar avatar-away">
+                                        <img src="../../../public/assets/img/avatar-3.jpg" class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <div class="users-list-body">
+                                    <div>
+                                        <h5 class="list_group_notread">Irene Perkins</h5>
+                                        <p><i class="fa fa-camera mr-1"></i> I will miss you, too, my dear!</p>
+                                    </div>
+                                    <div class="last-chat-time">
+                                        <small class="text-muted">Yesterday</small>
+                                        <div class="new-message-count"></div>
+                                        <div class="chat-toggle mt-1">
+                                            <div class="dropdown">
+                                                <a data-toggle="dropdown" href="#">
+                                                    <i class="fas fa-ellipsis-h ellipse_header"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" data-navigation-target="contact-information"
+                                                        class="dropdown-item dream_profile_menu" >Profile</a>
+                                                    <a href="#" class="dropdown-item">Add to archive</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="user-list-item">
+                                <div>
+                                    <div class="avatar avatar-online">
+                                        <img src="../../../public/assets/img/avatar-4.jpg" class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <div class="users-list-body">
+                                    <div>
+                                        <h5 class="list_group_notread">Carol Andre</h5>
+                                        <p><i class="fa fa-camera mr-1"></i> Photo</p>
+                                    </div>
+                                    <div class="last-chat-time">
+                                        <small class="text-muted">Yesterday</small>
+                                        <div class="new-message-count"></div>
+                                        <div class="chat-toggle mt-1">
+                                            <div class="dropdown">
+                                                <a data-toggle="dropdown" href="#">
+                                                    <i class="fas fa-ellipsis-h ellipse_header"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" data-navigation-target="contact-information"
+                                                        class="dropdown-item dream_profile_menu">Profile</a>
+                                                    <a href="#" class="dropdown-item">Add to archive</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </div> 
+                </div>
+                <!-- / Chats sidebar -->
             </div>
-        </div>
-</template>
+            <!-- /Sidebar group -->
 
+            <!-- Chat -->
+            <div class="chat" id="middle">
+                <div class="chat-header">
+                    <div class="user-details">
+                        <div class="d-lg-none ml-2">
+                            <ul class="list-inline mt-2 mr-2">
+                                <li class="list-inline-item">
+                                    <a class="text-muted px-0 left_side" href="#" data-chat="open">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <figure class="avatar ml-1">
+                            <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle" alt="image">
+                        </figure>
+                        <div class="mt-1">
+                            <h5 class="mb-1">Scott Albright</h5>
+                            <small class="text-muted mb-2">
+                                Active 35m ago
+                            </small>
+                        </div>
+                    </div>
+                    <div class="chat-options">
+                        <ul class="list-inline">
+                            <li class="list-inline-item" data-toggle="tooltip" title=""
+                                data-original-title="Voice call">
+                                <a href="javascript:void(0)" class="btn btn-outline-light" data-toggle="modal"
+                                    data-target="#voice_call">
+                                    <i class="fas fa-phone-alt voice_chat_phone"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item" data-toggle="tooltip" title=""
+                                data-original-title="Video call">
+                                <a href="javascript:void(0)" class="btn btn-outline-light" data-toggle="modal"
+                                    data-target="#video_call">
+                                    <i class="fas fa-video"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light" href="#" data-toggle="dropdown">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#" class="dropdown-item dream_profile_menu">Profile</a>
+                                    <a href="#" class="dropdown-item">Delete</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chat-body">
+                    <div class="messages">
+                        <div class="chats">
+                            <div class="chat-avatar">
+                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                            </div>
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    Hi James! What’s Up?
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">Yesterday 14:26 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-action-btns">
+                                <ul>
+                                    <li><a href="#" class="share-msg" title="Share"><i class="fas fa-share"></i></a>
+                                    </li>
+                                    <li><a href="#" class="edit-msg"><i class="fas fa-edit"></i></a></li>
+                                    <li><a href="#" class="del-msg"><i class="fas fa-trash-alt"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chats chats-right">
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    Oh, hello! All perfectly. I work, study and know this wonderful world!
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">Yesterday 14:38 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chats">
+                            <div class="chat-avatar">
+                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                            </div>
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    Ok Cool, Where you from
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">Yesterday 14:40 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chats chats-right">
+
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    I am from California, and you?
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">Yesterday 14:42 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="chat-line">
+							<span class="chat-date">Today</span>
+						</div>
+
+                        <div class="chats">
+                            <div class="chat-avatar">
+                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                            </div>
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    I am from Australia, and where you working?
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">14:26 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chats chats-right">
+
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    Oh Cool, Yeah i am working here famous software company
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">14:29 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chats">
+                            <div class="chat-avatar">
+                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                            </div>
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    That's Good Lol, What is your designation?
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">14:30 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chats chats-right">
+
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    I am senior software engineer.
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">14:32 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="chat-line">
+							<span class="chat-date">1 message unread</span>
+						</div>
+
+                        <div class="chats">
+                            <div class="chat-avatar">
+                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                            </div>
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    Good.!!!
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">14:33 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chats chats-right">
+
+                            <div class="chat-content">
+                                <div class="message-content">
+                                    Yeah, Thank you..
+                                </div>
+                                <div class="chat-time">
+                                    <div>
+                                        <div class="time">14:34 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <form>
+                        <input type="text" class="form-control chat_form" placeholder="Write a message.">
+                        <div class="form-buttons">
+                            <button class="btn" type="button">
+                                <i class="far fa-smile"></i>
+                            </button>
+                            <button class="btn" type="button" data-toggle="modal" data-target="#drag_files">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <button class="btn" type="button">
+                                <i class="fas fa-microphone-alt"></i>
+                            </button>
+                            <button class="btn send-btn" type="submit">
+                                <i class="fab fa-telegram-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /Chat -->
+
+            <!-- Upload Documents -->
+            <div id="drag_files" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-md modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Drag and drop files upload</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="js-upload-form">
+                                <div class="upload-drop-zone" id="drop-zone">
+                                    <i class="fa fa-cloud-upload fa-2x"></i> <span class="upload-text">Just drag and
+                                        drop files here</span>
+                                </div>
+                            </form>
+                            <div class="text-center mt-0">
+                                <button class="btn newgroup_create m-0" data-dismiss="modal">Add to upload</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Upload Documents -->
+
+            <!-- Voice call -->
+            <div class="modal fade voice_pop" id="voice_call" role="document">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content voice_content ml-3">
+                        <div class="modal-body voice_body">
+                            <div class="call-box incoming-box">
+                                <div class="call-wrapper">
+                                    <div class="call-inner">
+                                        <div class="call-user">
+                                            <img alt="User Image" src="../../../public/assets/img/avatar-2.jpg" class="call-avatar">
+                                            <h4>Tobbias Williams</h4>
+                                            <span class="chat_cal">calling...</span>
+                                        </div>
+                                        <div class="call-items">
+                                            <a href="#" class="btn call-item call-end" data-dismiss="modal">
+                                                <i class="fas fa-phone-alt phone_icon"></i>
+											</a>
+                                            <a href="#" class="btn call-item call-start" data-dismiss="modal">
+												<i class="fas fa-phone-alt"></i>
+											</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Voice call -->
+
+            <!-- Video Call -->
+            <div class="modal fade voice_pop" id="video_call" role="document">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content voice_content ml-3">
+                        <div class="modal-body voice_body">
+                            <div class="call-box incoming-box">
+                                <div class="call-wrapper">
+                                    <div class="call-inner">
+                                        <div class="call-user">
+                                            <img alt="User Image" src="../../../public/assets/img/avatar-2.jpg" class="call-avatar">
+                                            <h4>Tobbias Williams</h4>
+                                            <span class="chat_cal">calling...</span>
+                                        </div>
+                                        <div class="call-items">
+                                            <a href="#" class="btn call-item call-end" data-dismiss="modal">
+												<i class="fas fa-phone-alt phone_icon"></i>
+											</a>
+                                            <a href="#" class="btn call-item call-start" data-dismiss="modal">
+                                                <i class="fas fa-video"></i>
+											</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Video Call -->
+
+            <!-- Chat New Modal -->
+            <div class="modal fade" id="chat-new">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                Add Friends
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-times close_icon"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Card -->
+                            <form action="https://dreamschat.dreamguystech.com/template/new-friends">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input class="form-control form-control-lg group_formcontrol" name="new-chat-title" type="text" placeholder="+39 02 87 21 43 19">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control form-control-lg group_formcontrol" name="new-chat-title" type="email" placeholder="tobiaswilliams@gmail.com">
+                                </div>
+                            </form>
+                            <!-- Card -->
+                            <div class="form-row profile_form mt-3 mb-1">
+                                <!-- Button -->
+                                <button type="button" class="btn btn-block newgroup_create mb-0" data-dismiss="modal" aria-label="Close">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+            <!-- /Chat New Modal -->
+
+            <!-- New group modal -->
+            <div class="modal fade" id="new_group">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                New Group
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-times close_icon"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Tabs -->
+                            <ul class="nav nav-tabs nav-justified newgroup_ul mt-0" role="tablist">
+                                <li class="nav-item">
+                                    <a href="#create-group-details" class="nav-link active" data-toggle="tab" role="tab" aria-selected="true">Details</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#create-group-members" class="nav-link" data-toggle="tab" role="tab" aria-selected="false">Members</a>
+                                </li>
+                            </ul>
+                            <!-- Tabs -->	
+                            <!-- Create chat -->
+                            <div class="tab-content" role="tablist">
+                                <!-- Chat details -->
+                                <div id="create-group-details" class="tab-pane fade show active"
+                                    role="tabpanel">
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input class="form-control form-control-lg group_formcontrol" name="new-chat-title" type="text" placeholder="Group Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="new-chat-topic">Topic (optional)</label>
+                                            <input class="form-control form-control-lg group_formcontrol" name="new-chat-topic" id="new-chat-topic" type="text" placeholder="Group Topic">
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <label for="new-chat-description">Description</label>
+                                            <textarea class="form-control form-control-lg group_control_text" name="new-chat-description" id="new-chat-description" rows="6" placeholder="Group Description"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- Chat details -->
+								
+                                <!-- Chat Members -->
+                                <div id="create-group-members" class="tab-pane fade create-group-members" role="tabpanel">
+                                    <nav class="list-group list-group-flush mb-n6">
+                                        <!-- Search -->
+                                        <form class="mb-3 newgroup_content">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-lg newgroup_search" placeholder="Search for messages or users..." aria-label="Search for messages or users...">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-lg btn-ico btn-secondary btn-minimal newgroup_search_btn" type="submit">
+                                                        <i class="fas fa-search newgroup_fa_search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <!-- Search -->
+                                        <div class="mb-6">
+                                            <small class="text-uppercase">A</small>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="card mb-6 group_card_mb">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="avatar avatar-online mr-5">
+                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-7.jpg" alt="Anna Bridges">
+                                                    </div>
+                                                    <div
+                                                        class="media-body align-self-center mr-6 group_card_media">
+                                                        <h6 class="mb-0">Anna Bridges</h6>
+                                                        <small class="text-muted">Online</small>
+                                                    </div>
+                                                    <div class="align-self-center ml-auto">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="id-user-1" type="checkbox">
+                                                            <label class="custom-control-label" for="id-user-1"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Label -->
+                                            <label class="stretched-label" for="id-user-1"></label>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="mb-6">
+                                            <small class="text-uppercase">B</small>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="card mb-6 group_card_mb">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="avatar mr-5">
+                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-1.jpg" alt="Brian Dawson">
+                                                    </div>
+                                                    <div class="media-body align-self-center mr-6 group_card_media">
+                                                        <h6 class="mb-0">Brian Dawson</h6>
+                                                        <small class="text-muted">last seen 2 hours ago</small>
+                                                    </div>
+                                                    <div class="align-self-center ml-auto">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="id-user-2" type="checkbox">
+                                                            <label class="custom-control-label" for="id-user-2"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Label -->
+                                            <label class="stretched-label" for="id-user-2"></label>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="mb-6">
+                                            <small class="text-uppercase">L</small>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="card mb-6 group_card_mb">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="avatar mr-5">
+                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-2.jpg" alt="Leslie Sutton">
+                                                    </div>
+                                                    <div class="media-body align-self-center mr-6 group_card_media">
+                                                        <h6 class="mb-0">Leslie Sutton</h6>
+                                                        <small class="text-muted">last seen 3 days ago</small>
+                                                    </div>
+                                                    <div class="align-self-center ml-auto">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="id-user-3" type="checkbox">
+                                                            <label class="custom-control-label" for="id-user-3"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Label -->
+                                            <label class="stretched-label" for="id-user-3"></label>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="mb-6">
+                                            <small class="text-uppercase">M</small>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="card mb-6 group_card_mb">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="avatar mr-5">
+                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-3.jpg" alt="Matthew Wiggins">
+                                                    </div>
+                                                    <div class="media-body align-self-center mr-6 group_card_media">
+                                                        <h6 class="mb-0">Matthew Wiggins</h6>
+                                                        <small class="text-muted">last seen 3 days ago</small>
+                                                    </div>
+                                                    <div class="align-self-center ml-auto">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="id-user-4" type="checkbox">
+                                                            <label class="custom-control-label" for="id-user-4"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Label -->
+                                            <label class="stretched-label" for="id-user-4"></label>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="mb-6">
+                                            <small class="text-uppercase">S</small>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="card mb-6 group_card_mb">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="avatar mr-5">
+                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-4.jpg" alt="Simon Hensley">
+                                                    </div>
+                                                    <div class="media-body align-self-center mr-6 group_card_media">
+                                                        <h6 class="mb-0">Simon Hensley</h6>
+                                                        <small class="text-muted">last seen 3 days ago</small>
+                                                    </div>
+                                                    <div class="align-self-center ml-auto">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="id-user-5" type="checkbox">
+                                                            <label class="custom-control-label" for="id-user-5"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Label -->
+                                            <label class="stretched-label" for="id-user-5"></label>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="mb-6">
+                                            <small class="text-uppercase">W</small>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="card mb-6 group_card_mb">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="avatar mr-5">
+                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-5.jpg" alt="William Wright">
+                                                    </div>
+                                                    <div class="media-body align-self-center mr-6 group_card_media">
+                                                        <h6 class="mb-0">William Wright</h6>
+                                                        <small class="text-muted">last seen 3 days ago</small>
+                                                    </div>
+                                                    <div class="align-self-center ml-auto">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="id-user-6" type="checkbox">
+                                                            <label class="custom-control-label" for="id-user-6"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Label -->
+                                            <label class="stretched-label" for="id-user-6"></label>
+                                        </div>
+                                        <!-- Friend -->
+                                        <!-- Friend -->
+                                        <div class="card mb-6 group_card_mb">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="avatar mr-5">
+                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-6.png" alt="William Greer">
+                                                    </div>
+                                                    <div class="media-body align-self-center mr-6 group_card_media">
+                                                        <h6 class="mb-0">William Greer</h6>
+                                                        <small class="text-muted">last seen 10 minutes ago</small>
+                                                    </div>
+                                                    <div class="align-self-center ml-auto">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="id-user-7" type="checkbox">
+                                                            <label class="custom-control-label" for="id-user-7"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Label -->
+                                            <label class="stretched-label" for="id-user-7"></label>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="mb-6">
+                                            <small class="text-uppercase">Z</small>
+                                        </div>
+                                        <!-- Friend -->
+                                        <div class="card mb-6 group_card_mb">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="avatar mr-5">
+                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-8.jpg" alt="Zane Mayes">
+                                                    </div>
+                                                    <div
+                                                        class="media-body align-self-center mr-6 group_card_media">
+                                                        <h6 class="mb-0">Zane Mayes</h6>
+                                                        <small class="text-muted">last seen 3 days ago</small>
+                                                    </div>
+                                                    <div class="align-self-center ml-auto">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="id-user-8" type="checkbox">
+                                                            <label class="custom-control-label" for="id-user-8"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Label -->
+                                            <label class="stretched-label" for="id-user-8"></label>
+                                        </div>
+                                        <!-- Friend -->
+                                    </nav>
+                                </div>
+                                <!-- Chat Members -->
+                            </div>
+                            <!-- Create chat -->
+                            <!-- Button -->
+                            <div class="pt-3">
+                                <div class="container text-center">
+                                    <button class="btn btn-block newgroup_create mb-1 mt-0" type="submit" data-dismiss="modal">Create group</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /New group modal -->
+
+            <!-- Profile Modal -->
+            <div class="modal fade" id="profile_modal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                Profile
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-times close_icon"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Card -->
+                            <div class="card mb-6 profile_Card">
+                                <div class="card-body">
+                                    <div class="text-center py-6">
+                                        <!-- Photo -->
+                                        <div class="avatar avatar-xl mb-3">
+                                            <img class="avatar-img rounded-circle mCS_img_loaded" src="../../../public/assets/img/avatar-5.jpg" alt="">
+                                        </div>
+                                        <h5>John Janousek</h5>
+                                        <p class="text-muted m-0">Last seen: Today</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                            <!-- Card -->
+                            <form action="#" class="mt-3">
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <input class="form-control form-control-lg group_formcontrol" name="new-chat-title" type="text" placeholder="Country Name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input class="form-control form-control-lg group_formcontrol" name="new-chat-title" type="text" placeholder="+39 02 87 21 43 19">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control form-control-lg group_formcontrol" name="new-chat-title" type="email" placeholder="johnjanousek@gmail.com">
+                                </div>
+                            </form>
+                            <!-- Card -->
+                            <div class="form-row profile_form mt-3 mb-1">
+                                <!-- Button -->
+                                <button type="button" class="btn btn-block newgroup_create mb-0" data-dismiss="modal">
+                                    Update Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Profile Modal -->
+
+            <!-- Settings Modal -->
+            <div class="modal fade" id="settings_modal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                Settings
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-times close_icon"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card-header position-relative account_details">
+                                <a href="#" class="text-reset d-block stretched-link collapsed">
+                                    <div class="row no-gutters align-items-center">
+                                        <!-- Title -->
+                                        <div class="col">
+                                            <h5>Account</h5>
+                                            <p class="m-0">Update your profile details.</p>
+                                        </div>
+                                        <!-- Icon -->
+                                        <div class="col-auto">
+                                            <i class="text-muted icon-md fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-header position-relative mt-3 security_details">
+                                <a href="#" class="text-reset d-block stretched-link collapsed">
+                                    <div class="row no-gutters align-items-center">
+                                        <!-- Title -->
+                                        <div class="col">
+                                            <h5>Security</h5>
+                                            <p class="m-0">Update your profile details.</p>
+                                        </div>
+                                        <!-- Icon -->
+                                        <div class="col-auto">
+                                            <i class="text-muted icon-md fas fa-crosshairs"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mt-3">
+                                <label for="profile-name">Name</label>
+                                <input class="form-control form-control-lg profile_input group_formcontrol" name="profile-name" id="profile-name" type="text" placeholder="Type your name">
+                            </div>
+                            <div class="mt-4">
+                                <label for="profile-name">Current Password</label>
+                                <input class="form-control form-control-lg group_formcontrol" name="profile-name" id="profile-name_pswd" type="text" placeholder="Current Password">
+                            </div>
+                            <div class="mt-4">
+                                <label for="profile-name">New Password</label>
+                                <input class="form-control form-control-lg group_formcontrol" name="profile-name" id="profile-name_new" type="text" placeholder="New Password">
+                            </div>
+                            <div class="mt-4">
+                                <label for="profile-name">Verify Password</label>
+                                <input class="form-control form-control-lg group_formcontrol" name="profile-name" id="profile-name_prfname" type="text" placeholder="Verify Password">
+                            </div>
+                            <div class="mt-3 text-center">
+                                <button class="btn btn-block newgroup_create mb-0" type="submit" data-dismiss="modal">Save Settings</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Settings Modal -->
+
+            <!-- Right sidebar -->
+            <div class="right-sidebar right_sidebar_profile" id="middle1">
+                <div class="right-sidebar-wrap active">
+                    <div class="contact-close_call mr-4 mt-4 text-right">
+                        <a href="#"
+                            class="btn btn-outline-light close_profile close_profile4">
+                            <i class="fas fa-times close_icon"></i>
+                        </a>
+                    </div>
+                    <div class="sidebar-body">
+                        <div class="pl-4 pr-4 mt-0 right_sidebar_logo">
+                            <div class="text-center mb-3">
+                                <figure class="avatar avatar-xl mb-3">
+                                    <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle" alt="image">
+                                </figure>
+                                <h5 class="profile-name">Scott Albright</h5>
+                            </div>
+                            <div>
+
+                                <div class="accordion-col">
+                                    <div class="accordion-title">
+                                        <h6 class="primary-title">Media (31) <i class="fas fa-chevron-right float-right"></i></h6>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div class="media-lists">
+                                            <div class="media-image">
+                                                <img src="../../../public/assets/img/media1.jpg" alt="">
+                                            </div>
+                                            <div class="media-image">
+                                                <img src="../../../public/assets/img/media2.jpg" alt="">
+                                            </div>
+                                            <div class="media-image">
+                                                <img src="../../../public/assets/img/media3.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-title">
+                                        <h6 class="primary-title">About and phone number <i class="fas fa-chevron-right float-right"></i></h6>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p class="text-muted text-center mt-1">Help people to build websites and apps + grow
+                                            awareness in social media 🔥</p>
+                                        <div class="mt-2 text-center">
+                                            <h6>Phone: <span class="text-muted ml-2">+(33 1) 45 55 01 10</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-title">
+                                        <h6 class="primary-title">Settings <i class="fas fa-chevron-right float-right"></i></h6>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <ul class="contact-action">
+                                            <li class="block-user mt-1">
+                                                <a href="#"><i class="fas fa-ban mr-2 text-muted"></i>Block</a>
+                                            </li>
+                                            <li class="report-contact">
+                                                <a href="#"><i class="fas fa-thumbs-down mr-2"></i> Report Contact</a>
+                                            </li>
+                                            <li class="delete-chat">
+                                                <a href="#"><i class="fas fa-trash-alt mr-2"></i> Delete Chat</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right sidebar -->
+            
+        </div> 
+        <!-- /Content -->
+		
+    </div>
+</template>
 <script>
 export default {
-
-     
+ 
 }
-
 </script>
-<style>
 
-body {
-font-family: Roboto,sans-serif;
-font-size: 13px;
-line-height: 1.42857143;
-color: #767676;
-/* background-image: -webkit-linear-gradient(45deg, #f920ac 0, #68029b 100%); */
-
-}
-
-.header-hoolder-sm{
-position: sticky;
-top: 0;
-z-index: 5;
-}
-#messages-main {
-position: relative;
-margin: 0 auto;
-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-#messages-main:after, #messages-main:before {
-content: " ";
-display: table;
-}
-#messages-main .ms-menu {
-position: absolute;
-left: 0;
-top: 0;
-border-right: 1px solid #eee;
-padding-bottom: 50px;
-height: 100%;
-width: 240px;
-background: #fff;
-}
-@media (min-width:768px) {
-#messages-main .ms-body {
-padding-left: 240px;
-}
-@media (min-width: 500px){
-.container {
-width: 1000px;
-padding: 0!important;
-}
-.bot i{
-    font-size: 22px;
-    margin: 1px 10px;
-    color: #2196f3;
-}
-}
-
-
-}@media (max-width:767px) {
-#messages-main .ms-menu {
-height: calc(100% - 58px);
-display: none;
-z-index: 1;
-top: 58px;
-}
-.header-hoolder-sm{
-    position: fixed;
-right: 14px;
-left: 14px;
-z-index: 9;
-top: 0;
-}
-.bot{
-    position: fixed;
-    right: 14px;
-    left: 14px;
-    z-index: 9;
-    bottom: 0;
-    z-index: 1;
-}
-.bot-cnt{
-    position: sticky;
-background: #f8f8f8;
-padding: 15px 13px 15px 17px;
-top: 139%!important;
-z-index: 5;
-}
-#messages-main .ms-menu.toggled {
-display: block;
-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
-height: auto!important;
-}
-#messages-main .ms-body {
-overflow: hidden;
-margin-top: 35px;
-margin-bottom: 35px;
-
-}
-}
-#messages-main .ms-user {
-padding: 15px;
-background: #f8f8f8;
-padding: 15px;
-position: sticky;
-background: #f8f8f8;
-top: 0;
-z-index: 3;
-}
-#messages-main .ms-user>div {
-overflow: hidden;
-padding: 3px 5px 0 15px;
-font-size: 11px;
-}
-#messages-main #ms-compose {
-position: fixed;
-bottom: 120px;
-z-index: 1;
-right: 30px;
-box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-}
-#ms-menu-trigger {
-user-select: none;
-position: absolute;
-left: 0;
-top: 0;
-width: 50px;
-height: 100%;
-padding-right: 10px;
-padding-top: 19px;
-}
-#ms-menu-trigger i {
-font-size: 21px;
-}
-#ms-menu-trigger.toggled i:before {
-content: '\f2ea'
-}
-.fc-toolbar:before, .login-content:after {
-content: ""
-}
-.message-feed {
-padding: 20px;
-}
-#footer, .fc-toolbar .ui-button, .fileinput .thumbnail, .four-zero, .four-zero footer>a, .ie-warning, .login-content, .login-navigation, .pt-inner, .pt-inner .pti-footer>a {
-text-align: center;
-}
-.message-feed.right>.pull-right {
-margin-left: 15px;
-}
-.message-feed:not(.right) .mf-content {
-background: rgb(3, 102, 250);
-color: #fff;
-border-radius: 10px;
-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-.message-feed.right .mf-content {
-    background: #ffffff;
-    color: rgb(0, 0, 0);
-    border-radius: 10px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-
-}
-.mf-content {
-padding: 12px 17px 13px;
-border-radius: 2px;
-display: inline-block;
-max-width: 80%
-}
-.mf-date {
-display: block;
-color: #B3B3B3;
-margin-top: 7px;
-}
-.mf-date>i {
-font-size: 14px;
-line-height: 100%;
-position: relative;
-top: 1px;
-}
-.msb-reply {
-box-shadow: 0 -20px 20px -5px #fff;
-position: sticky;
-bottom: 0;
-margin-top: 30px;
-border-top: 1px solid #eee;
-background: #f8f8f8;
-}
-.four-zero, .lc-block {
-box-shadow: 0 1px 11px rgba(0, 0, 0, .27);
-}
-.msb-reply textarea {
-width: 100%;
-font-size: 13px;
-border: 0;
-padding: 10px 15px;
-resize: none;
-height: 60px;
-background: 0 0;
-}
-.msb-reply button {
-position: absolute;
-top: 0;
-right: 0;
-border: 0;
-height: 100%;
-width: 60px;
-font-size: 25px;
-color: #2196f3;
-background: 0 0;
-}
-.msb-reply button:hover {
-background: #f2f2f2;
-}
-.img-avatar {
-height: 37px;
-border-radius: 2px;
-width: 37px;
-}
-.list-group.lg-alt .list-group-item {
-border: 0;
-}
-.p-15 {
-padding: 15px!important;
-}
-.btn:not(.btn-alt) {
-border: 0;
-}
-.action-header {
-position: sticky;
-background: #f8f8f8;
-padding: 15px 13px 15px 17px;
-top: 0;
-z-index: 5;
-}
-.ah-actions {
-z-index: 3;
-float: right;
-margin-top: 7px;
-position: relative;
-}
-.actions {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-.actions>li {
-display: inline-block;
-}
-
-.actions:not(.a-alt)>li>a>i {
-color: #939393;
-}
-.actions>li>a>i {
-font-size: 20px;
-}
-.actions>li>a {
-display: block;
-padding: 0 10px;
-}
-.ms-body{
-background:#e6e6e6;    
-}
-#ms-menu-trigger {
-user-select: none;
-position: absolute;
-left: 0;
-top: 0;
-width: 50px;
-height: 100%;
-/* background-color: red; */
-padding-right: 10px;
-padding-top: 19px;
-cursor:pointer;
-}
-#ms-menu-trigger, .message-feed.right {
-text-align: right;
-}
-#ms-menu-trigger, .toggle-switch {
--webkit-user-select: none;
--moz-user-select: none;
-}
-.list-group-item{
-    border-bottom: 1px solid #b1b2b3!important;
-}
-.bot-cnt{
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    width: 100%;
-    margin-top: auto;
-    padding: 10px
-}
-.bot{
-    z-index: 1;
-    margin-top: auto;
-    /* width: 764px; */
-   /* max-width: calc(100% - 543px); */
-    background: #fff!important;
-}
-.bot .inp-sec{
-    position: relative;
-    width: 70%;
-}
-.inp-sec i{
-    font-size: 22px;
-    position: absolute;
-    top: 18%;
-    right: 04%;
-}
-.inp-sec input{
-    width: 100%;
-    border: none;
-    height: 39px;
-    border-radius: 20px;
-    background: #e6e6e6;
-    outline: none!important;
-}
-.bot i{
-    font-size: 22px;
-    margin: 1px 1rem;
-    color: #2196f3;
-}
-.bot .fa-paper-plane{
-    margin-left: auto;
-}
+<style scoped>
 
 </style>

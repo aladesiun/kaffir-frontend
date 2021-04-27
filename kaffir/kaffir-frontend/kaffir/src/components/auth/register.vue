@@ -75,7 +75,7 @@ export default {
             user:{
                 name: 'Oluwapelumi',
                 email: 'aladesiunpelumi@gmail.com',
-                password: 'aladesiun11',
+                password: '123456',
             },
             loading: false,
         }
@@ -99,6 +99,7 @@ export default {
                     var user = data.data.data;
                     this.$store.commit('setUser', user);
                     this.$store.commit('setNotification',{type:1, message:'Registration Successful'});
+                    window.location.href = '/profile';
                 }
                 this.loading = false;
             })

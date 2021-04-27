@@ -28,8 +28,14 @@
         <div class="btns view">
           <a href="message.html">join room&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
-        <div class="c"> 
-            <input type="text" style="width:75%; margin:auto;" v-model="user.anonymous_link" class="form-control" placeholder="Generated link wiil appear here">
+        <div class="c">
+            <span v-if="anonymous">
+                <input type="text" style="width:75%; margin:auto;" v-model="user.anonymous_link" class="form-control" placeholder="Generated link wiil appear here">
+            </span> 
+            <span v-else>
+                <input type="text" style="width:75%; margin:auto;"  class="form-control" placeholder="Generated link wiil appear here">
+            </span> 
+            
             <div class="btns view">
                 <a href="message.html" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
             </div> 
@@ -44,7 +50,8 @@ import { mapState } from 'vuex'
 export default {
     data(){
         return{
-            
+            anonymous_link: '',
+            anonymous: false
         }
     },
     methods:{
@@ -56,6 +63,7 @@ export default {
             .then((data) => {
                 if(data.data.status){
                     this.anonymous_link = data.data.data;
+                    this.anonymous = true;
                     var result = data.data.data;
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;

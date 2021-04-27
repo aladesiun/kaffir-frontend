@@ -99,6 +99,7 @@ export default {
                     var user = data.data.data;
                     this.$store.commit('setUser', user);
                     this.$store.commit('setNotification',{type:1, message:'Registration Successful'});
+                    window.location.href = "/";
                 }
                 this.loading = false;
             })

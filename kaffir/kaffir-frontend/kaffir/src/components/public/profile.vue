@@ -34,7 +34,7 @@
         <div class="c"> 
             <input type="text" style="width:75%; margin:auto;" v-model="user.anonymous_link" class="form-control" placeholder="Generated link wiil appear here">
             <div class="btns view">
-                <a href="message.html" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                <a href="#" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
             </div> 
         </div>
       </div>
@@ -60,7 +60,7 @@ export default {
             })
             .then((data) => {
                 if(data.data.status){
-                    this.anonymous_link = data.data.data;
+                    this.anonymous_link = data.data.anonymous_link;
                     var result = data.data.data;
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;
@@ -79,8 +79,7 @@ export default {
             })
             .then((data) => {
                 
-                    console.log(data.data.data);
-                   
+                console.log(data.data.data);
                 
             })
             .catch((error) => {

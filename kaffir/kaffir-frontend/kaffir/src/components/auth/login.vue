@@ -79,7 +79,7 @@ export default {
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;
                     this.$store.commit('setUser', result);
-                    window.location.href = "/";
+                    window.location.href = "/profile";
                     
                 }else{
                     var e_msg = data.data.message;

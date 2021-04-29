@@ -7,13 +7,13 @@
             <!-- sidebar group -->
             <div class="sidebar-group left-sidebar chat_sidebar">
                 <!-- Chats sidebar -->
-                <div id="chats" class="left-sidebar-wrap sidebar active">
-                    <div class="header">
+                 <div class="header">
                         <div class="header-top">
-                            <div class="logo ml-2 mt-3">
-                                <a href="index.html">
-                                    <img src="../../../public/assets/img/logo.png" class="header_image img-fluid" alt="">
-                                </a>
+                            <div class="l">
+                                <div class="col-md-12 img-sec-sm">
+                    <img src="../../assets/img/logo 2.png" alt="" class="img-fluid">
+            </div>
+                                
                             </div>
                             <ul class="header-action mt-4">
                                 <li>
@@ -51,6 +51,11 @@
                             <i class="fas fa-plus button_plus"></i>
                         </button>
                     </div>
+                <div id="chats" class="left-sidebar-wrap sidebar active">
+                    
+                       
+                    
+                    
                     <div class="search_chat has-search">
                         <span class="fas fa-search form-control-feedback"></span>
                         <input class="form-control chat_input" id="search-contact" type="text" placeholder="">
@@ -59,7 +64,7 @@
                         <ul class="user-list">
                             <li class="user-list-item">
                                 <div class="avatar avatar-online">
-                                    <img src="../../../public/assets/img/avatar-8.jpg" class="rounded-circle" alt="image">
+                                    <img src="../../../public/img2/avatar-8.jpg" class="rounded-circle" alt="image">
                                 </div>
                                 <div class="users-list-body">
                                     <div>
@@ -88,7 +93,7 @@
                             <li class="user-list-item">
                                 <div>
                                     <div class="avatar avatar-away">
-                                        <img src="../../../public/assets/img/avatar-7.jpg" class="rounded-circle" alt="image">
+                                        <img src="../../../public/img2/avatar-7.jpg" class="rounded-circle" alt="image">
                                     </div>
                                 </div>
                                 <div class="users-list-body">
@@ -119,7 +124,7 @@
                             <li class="user-list-item">
                                 <div>
                                     <div class="avatar avatar-offline">
-                                        <img src="../../../public/assets/img/avatar-1.jpg" class="rounded-circle" alt="image">
+                                        <img src="../../../public/img2/avatar-1.jpg" class="rounded-circle" alt="image">
                                     </div>
                                 </div>
                                 <div class="users-list-body">
@@ -151,7 +156,7 @@
                             <li class="user-list-item unread">
                                 <div>
                                     <div class="avatar avatar-online">
-                                        <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle" alt="image">
+                                        <img src="../../../public/img2/avatar-2.jpg" class="rounded-circle" alt="image">
                                     </div>
                                 </div>
                                 <div class="users-list-body">
@@ -182,7 +187,7 @@
                             <li class="user-list-item">
                                 <div>
                                     <div class="avatar avatar-away">
-                                        <img src="../../../public/assets/img/avatar-3.jpg" class="rounded-circle" alt="image">
+                                        <img src="../../../public/img2/avatar-3.jpg" class="rounded-circle" alt="image">
                                     </div>
                                 </div>
                                 <div class="users-list-body">
@@ -214,7 +219,7 @@
                             <li class="user-list-item">
                                 <div>
                                     <div class="avatar avatar-online">
-                                        <img src="../../../public/assets/img/avatar-4.jpg" class="rounded-circle" alt="image">
+                                        <img src="../../../public/img2/avatar-4.jpg" class="rounded-circle" alt="image">
                                     </div>
                                 </div>
                                 <div class="users-list-body">
@@ -264,7 +269,7 @@
                             </ul>
                         </div>
                         <figure class="avatar ml-1">
-                            <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle" alt="image">
+                            <img src="../../../public/img2/avatar-2.jpg" class="rounded-circle" alt="image">
                         </figure>
                         <div class="mt-1">
                             <h5 class="mb-1">Scott Albright</h5>
@@ -305,7 +310,7 @@
                     <div class="messages">
                         <div class="chats">
                             <div class="chat-avatar">
-                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                                <img src="../../../public/img2/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
                             </div>
                             <div class="chat-content">
                                 <div class="message-content">
@@ -333,14 +338,14 @@
                                 </div>
                                 <div class="chat-time">
                                     <div>
-                                        <div class="time">Yesterday 14:38 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                        <div class="time">Yesterday 14:38 PM <i><img src="../../../public/img2/double-tick.png" alt=""></i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="chats">
                             <div class="chat-avatar">
-                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                                <img src="../../../public/img2/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
                             </div>
                             <div class="chat-content">
                                 <div class="message-content">
@@ -361,7 +366,7 @@
                                 </div>
                                 <div class="chat-time">
                                     <div>
-                                        <div class="time">Yesterday 14:42 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                        <div class="time">Yesterday 14:42 PM <i><img src="../../../public/img2/double-tick.png" alt=""></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -372,7 +377,7 @@
 
                         <div class="chats">
                             <div class="chat-avatar">
-                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                                <img src="../../../public/img2/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
                             </div>
                             <div class="chat-content">
                                 <div class="message-content">
@@ -393,14 +398,14 @@
                                 </div>
                                 <div class="chat-time">
                                     <div>
-                                        <div class="time">14:29 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                        <div class="time">14:29 PM <i><img src="../../../public/img2/double-tick.png" alt=""></i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="chats">
                             <div class="chat-avatar">
-                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                                <img src="../../../public/img2/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
                             </div>
                             <div class="chat-content">
                                 <div class="message-content">
@@ -421,7 +426,7 @@
                                 </div>
                                 <div class="chat-time">
                                     <div>
-                                        <div class="time">14:32 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                        <div class="time">14:32 PM <i><img src="../../../public/img2/double-tick.png" alt=""></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -432,7 +437,7 @@
 
                         <div class="chats">
                             <div class="chat-avatar">
-                                <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
+                                <img src="../../../public/img2/avatar-2.jpg" class="rounded-circle dreams_chat" alt="image">
                             </div>
                             <div class="chat-content">
                                 <div class="message-content">
@@ -453,7 +458,7 @@
                                 </div>
                                 <div class="chat-time">
                                     <div>
-                                        <div class="time">14:34 PM <i><img src="../../../public/assets/img/double-tick.png" alt=""></i></div>
+                                        <div class="time">14:34 PM <i><img src="../../../public/img2/double-tick.png" alt=""></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -515,7 +520,7 @@
                                 <div class="call-wrapper">
                                     <div class="call-inner">
                                         <div class="call-user">
-                                            <img alt="User Image" src="../../../public/assets/img/avatar-2.jpg" class="call-avatar">
+                                            <img alt="User Image" src="../../../public/img2/avatar-2.jpg" class="call-avatar">
                                             <h4>Tobbias Williams</h4>
                                             <span class="chat_cal">calling...</span>
                                         </div>
@@ -545,7 +550,7 @@
                                 <div class="call-wrapper">
                                     <div class="call-inner">
                                         <div class="call-user">
-                                            <img alt="User Image" src="../../../public/assets/img/avatar-2.jpg" class="call-avatar">
+                                            <img alt="User Image" src="../../../public/img2/avatar-2.jpg" class="call-avatar">
                                             <h4>Tobbias Williams</h4>
                                             <span class="chat_cal">calling...</span>
                                         </div>
@@ -672,7 +677,7 @@
                                             <div class="card-body">
                                                 <div class="media">
                                                     <div class="avatar avatar-online mr-5">
-                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-7.jpg" alt="Anna Bridges">
+                                                        <img class="avatar-img group_image" src="../../../public/img2/avatar-7.jpg" alt="Anna Bridges">
                                                     </div>
                                                     <div
                                                         class="media-body align-self-center mr-6 group_card_media">
@@ -699,7 +704,7 @@
                                             <div class="card-body">
                                                 <div class="media">
                                                     <div class="avatar mr-5">
-                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-1.jpg" alt="Brian Dawson">
+                                                        <img class="avatar-img group_image" src="../../../public/img2/avatar-1.jpg" alt="Brian Dawson">
                                                     </div>
                                                     <div class="media-body align-self-center mr-6 group_card_media">
                                                         <h6 class="mb-0">Brian Dawson</h6>
@@ -725,7 +730,7 @@
                                             <div class="card-body">
                                                 <div class="media">
                                                     <div class="avatar mr-5">
-                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-2.jpg" alt="Leslie Sutton">
+                                                        <img class="avatar-img group_image" src="../../../public/img2/avatar-2.jpg" alt="Leslie Sutton">
                                                     </div>
                                                     <div class="media-body align-self-center mr-6 group_card_media">
                                                         <h6 class="mb-0">Leslie Sutton</h6>
@@ -751,7 +756,7 @@
                                             <div class="card-body">
                                                 <div class="media">
                                                     <div class="avatar mr-5">
-                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-3.jpg" alt="Matthew Wiggins">
+                                                        <img class="avatar-img group_image" src="../../../public/img2/avatar-3.jpg" alt="Matthew Wiggins">
                                                     </div>
                                                     <div class="media-body align-self-center mr-6 group_card_media">
                                                         <h6 class="mb-0">Matthew Wiggins</h6>
@@ -777,7 +782,7 @@
                                             <div class="card-body">
                                                 <div class="media">
                                                     <div class="avatar mr-5">
-                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-4.jpg" alt="Simon Hensley">
+                                                        <img class="avatar-img group_image" src="../../../public/img2/avatar-4.jpg" alt="Simon Hensley">
                                                     </div>
                                                     <div class="media-body align-self-center mr-6 group_card_media">
                                                         <h6 class="mb-0">Simon Hensley</h6>
@@ -803,7 +808,7 @@
                                             <div class="card-body">
                                                 <div class="media">
                                                     <div class="avatar mr-5">
-                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-5.jpg" alt="William Wright">
+                                                        <img class="avatar-img group_image" src="../../../public/img2/avatar-5.jpg" alt="William Wright">
                                                     </div>
                                                     <div class="media-body align-self-center mr-6 group_card_media">
                                                         <h6 class="mb-0">William Wright</h6>
@@ -826,7 +831,7 @@
                                             <div class="card-body">
                                                 <div class="media">
                                                     <div class="avatar mr-5">
-                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-6.png" alt="William Greer">
+                                                        <img class="avatar-img group_image" src="../../../public/img2/avatar-6.png" alt="William Greer">
                                                     </div>
                                                     <div class="media-body align-self-center mr-6 group_card_media">
                                                         <h6 class="mb-0">William Greer</h6>
@@ -852,7 +857,7 @@
                                             <div class="card-body">
                                                 <div class="media">
                                                     <div class="avatar mr-5">
-                                                        <img class="avatar-img group_image" src="../../../public/assets/img/avatar-8.jpg" alt="Zane Mayes">
+                                                        <img class="avatar-img group_image" src="../../../public/img2/avatar-8.jpg" alt="Zane Mayes">
                                                     </div>
                                                     <div
                                                         class="media-body align-self-center mr-6 group_card_media">
@@ -907,7 +912,7 @@
                                     <div class="text-center py-6">
                                         <!-- Photo -->
                                         <div class="avatar avatar-xl mb-3">
-                                            <img class="avatar-img rounded-circle mCS_img_loaded" src="../../../public/assets/img/avatar-5.jpg" alt="">
+                                            <img class="avatar-img rounded-circle mCS_img_loaded" src="../../../public/img2/avatar-5.jpg" alt="">
                                         </div>
                                         <h5>John Janousek</h5>
                                         <p class="text-muted m-0">Last seen: Today</p>
@@ -1024,7 +1029,7 @@
                         <div class="pl-4 pr-4 mt-0 right_sidebar_logo">
                             <div class="text-center mb-3">
                                 <figure class="avatar avatar-xl mb-3">
-                                    <img src="../../../public/assets/img/avatar-2.jpg" class="rounded-circle" alt="image">
+                                    <img src="../../../public/img2/avatar-2.jpg" class="rounded-circle" alt="image">
                                 </figure>
                                 <h5 class="profile-name">Scott Albright</h5>
                             </div>
@@ -1037,13 +1042,13 @@
                                     <div class="accordion-content">
                                         <div class="media-lists">
                                             <div class="media-image">
-                                                <img src="../../../public/assets/img/media1.jpg" alt="">
+                                                <img src="../../../public/img2/media1.jpg" alt="">
                                             </div>
                                             <div class="media-image">
-                                                <img src="../../../public/assets/img/media2.jpg" alt="">
+                                                <img src="../../../public/img2/media2.jpg" alt="">
                                             </div>
                                             <div class="media-image">
-                                                <img src="../../../public/assets/img/media3.jpg" alt="">
+                                                <img src="../../../public/img2/media3.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -1081,7 +1086,7 @@
                 </div>
             </div>
             <!-- Right sidebar -->
-            
+
         </div> 
         <!-- /Content -->
 		
@@ -1094,5 +1099,8 @@ export default {
 </script>
 
 <style scoped>
-
+.modal {
+     position: fixed!important; 
+    
+}
 </style>

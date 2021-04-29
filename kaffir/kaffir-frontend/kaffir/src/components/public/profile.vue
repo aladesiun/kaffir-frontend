@@ -1,8 +1,7 @@
 <template>
-
     <div class=" text-center mt-5 contents">
       <div class="head">
-        <h2>user's profile</h2>
+        <h2>{{user.name}}</h2>
         <p>share your  below  profile link for your friends to send you anonymous messages
           also go to view messages to see your response </p>
       </div>

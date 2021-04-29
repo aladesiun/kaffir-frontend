@@ -29,7 +29,7 @@
                 <div class="head-y text-center">
                     <h2>why you must join the society</h2>
                 </div>
-            <div class=" card-row  grid-slider-wrap carousel p-0" data-flickity='{ "wrapAround": true }'>
+            <div id="about" class=" card-row  grid-slider-wrap carousel p-0" data-flickity='{ "wrapAround": true }'>
                 <div class=" grid-slide">
                 <div class="cards bb">
                     <div class="icon-cont icon-bb">

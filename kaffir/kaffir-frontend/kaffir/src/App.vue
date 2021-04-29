@@ -32,8 +32,6 @@ export default {
 
 <style>
 #app{
-  width:100% ;
-  height: 500%;
-  overflow-x: hidden;
+ 
 }
 </style>

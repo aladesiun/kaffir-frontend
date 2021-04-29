@@ -9,17 +9,15 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">About us</a>
-                    <a class="nav-link" href="#">Anonymous</a>
+                    <a class="nav-link" href="#about">About us</a>
+                    <a class="nav-link" href="/profile">Anonymous</a>
                     <a class="sign-btn" href="/login" tabindex="-1" aria-disabled="true">sign up</a>
 
                 </div>
             </div>
             </div>
         </nav>
-
         <router-view></router-view>
-
         <!-- footer -->
         <footer class="kff_cont">
    <div class="kff_content">
@@ -70,9 +68,8 @@
       <p><i>Kaffir always there for you....</i></p>
      </div>
    </div> 
- </footer>
+        </footer>
     </div>
-    
 </template>
 
 <script>
@@ -80,7 +77,6 @@ export default {
 
 }
 </script>
-
 <style>
     
 </style>

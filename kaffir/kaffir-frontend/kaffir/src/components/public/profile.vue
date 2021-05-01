@@ -7,7 +7,7 @@
       </div>
       <div class="btn-container">
         <div class="btns view">
-          <a href="message.html">view messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+          <a href="/messages">view messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div class="btns share">
           <a href="#"><i class="fas fa-share-alt"></i>  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Share My Profile</a>
@@ -25,7 +25,7 @@
           <a href="#"><i class="fab fa-twitter-square"></i>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Share on twitter</a>
         </div> 
         <div class="btns view">
-          <a href="message.html">join room&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+          <a href="/chat">join room&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div class="c">
             <span v-if="anonymous">
@@ -36,7 +36,7 @@
             </span> 
             
             <div class="btns view">
-                <a href="message.html" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                <a href="" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
             </div> 
         </div>
       </div>

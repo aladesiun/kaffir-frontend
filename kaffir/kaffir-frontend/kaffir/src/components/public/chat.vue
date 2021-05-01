@@ -1010,7 +1010,7 @@
                             <div class="mt-3 text-center">
                                 <button class="btn btn-block newgroup_create mb-0" type="submit" data-dismiss="modal">Save Settings</button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -1094,7 +1094,68 @@
 </template>
 <script>
 export default {
- 
+    data() {
+        return {
+            chat:{
+                message: '',
+                token: '',
+            },
+            chats:{}
+        }
+    },
+    methods:{
+        verifyToken(){
+            this.$store.dispatch('get', 'verify-group-chat-token?token='+this.$route.params.token)
+            .then((data)=>{
+                if(data.data.status){
+                    console.log(data.data)
+                    this.chat_message.token=this.$route.params.token;
+                }else{
+                    this.$store.commit('setNotification',{type:2, message:'Expired or Invalid link.'});  
+                }
+            })
+            .catch((error) =>{
+                if(error.request.status == 422){
+                    var error_date = JSON.parse(error.request.response);
+                    error_date = error_date.message;
+                    this.error_message = error_date;    
+                    this.$store.commit('setNotification',{type:2, message: this.error_message})
+                    this.loading = false;
+                }
+            });
+        },
+        sendMessage(){
+            this.chat.token = this.$route.params.token;
+            this.$store.dispatch('post', {
+                endpoint: 'send-group-message',
+                details: this.chat
+            }).then((data) => {
+                console.log(data.data.data);
+                this.chat.message = '';
+            }).catch((error) => {
+                console.log(error);
+            });
+        },
+
+        getMessages(){
+            this.$store.dispatch('get', 'get-messages')
+            .then((data) => {
+                console.log(data.data.data);
+                this.chats = data.data.data;
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        }
+    },
+    created(){
+        this.verifyToken();
+        this.getMessages();
+        this.$echo.join('channel_new')
+        .listen('chat',(event) => {
+            this.chats.push(event.chat);
+        })
+    }
 }
 </script>
 

@@ -5,45 +5,11 @@
             <div class="all-cont">
         <div class="mesg-content">
             <h1 class="tithead">your messages are here</h1>
-            <div class="msg-box">
+            <div class="msg-box" v-for="(message, index) in messages" :key="index">
                 <span class="pb-5">
-                you recieved:
+                    you recieved: {{message.created_at}}
                 </span><br>
-                <span id="ic-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iusto ad quas ipsa! In, fugiat 
-                dicta qui suscipit cum doloribus. Cum ut delectus deleniti ipsum 
-                accusantium temporibus fuga cupiditate reprehenderit.</span>
-                <div class="lk-cont">
-                    <a href="#"><i class="fas fa-share"></i>share</a>
-                    <a href="#"><i class="far fa-flag"></i>Report</a>
-                    <!-- <a href="#">share</a> -->
-
-                </div>
-            </div>
-            
-
-             <div class="msg-box">
-                <span class="pb-5">
-                you recieved:
-                </span><br>
-                <span id="ic-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iusto ad quas ipsa! In, fugiat 
-                dicta qui suscipit cum doloribus. Cum ut delectus deleniti ipsum 
-                accusantium temporibus fuga cupiditate reprehenderit.</span>
-                <div class="lk-cont">
-                    <a href="#"><i class="fas fa-share"></i>share</a>
-                    <a href="#"><i class="far fa-flag"></i>Report</a>
-                    <!-- <a href="#">share</a> -->
-
-                </div>
-            </div>
-
-
-             <div class="msg-box">
-                <span class="pb-5">
-                you recieved:
-                </span><br>
-                <span id="ic-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iusto ad quas ipsa! In, fugiat 
-                dicta qui suscipit cum doloribus. Cum ut delectus deleniti ipsum 
-                accusantium temporibus fuga cupiditate reprehenderit.</span>
+                <span id="ic-message">{{message.anonymous_msg}}</span>
                 <div class="lk-cont">
                     <a href="#"><i class="fas fa-share"></i>share</a>
                     <a href="#"><i class="far fa-flag"></i>Report</a>
@@ -58,6 +24,31 @@
 
 </div>
 </template>
+<script>
+    export default {
+        data(){
+            return {
+                messages: []
+            }
+        },
+        methods:{
+            getMessages(){
+                this.$store.dispatch('get', 'messages')
+                .then((data) => {
+                    if(data.data.status){
+                        this.messages = data.data.data;
+                    }
+                }).catch((error) =>{
+                    console.log(error);
+                });
+            }
+        },
+        mounted() {
+            this.getMessages();
+            console.log(this.messages);
+        }
+    }
+</script>
 <style scoped>
 .bdy{
     padding:0;
@@ -161,8 +152,3 @@
 }
 
 </style>
-<script>
-export default {
-    
-}
-</script>

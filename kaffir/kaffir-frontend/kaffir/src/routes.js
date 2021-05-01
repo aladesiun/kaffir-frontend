@@ -1,4 +1,4 @@
- import Vue from 'vue'
+import Vue from 'vue'
 import VueRouter from 'vue-router'
 import layout from './components/layouts/layout'
 import home from './components/public/home'
@@ -26,42 +26,46 @@ var routes = [
             {
                 path: '/contact',
                 component: contact,
-            }
+            },
+            {
+                path:'/profile',
+                component: profile,
+                meta:{
+                    AuthRequired:true
+                }
+            },
+            {
+                path:'/groups',
+                component: groups
+            },
+            {
+                path:'/write-anonymous/:token',
+                component: sendmsg
+            },
+            {
+                path:'/message',
+                component: message,
+                meta:{
+                    AuthRequired:true
+                }
+            },
         ]
-    },    
-
+    },
     {
-        path:'/login',
+        path: '/login',
         component: login
     },
-
     {
-        path:'/register',
+        path: '/register',
         component: register
     },
-
     {
-        path:'/profile',
-        component: profile
-    },
-
-    {
-        path:'/chat',
-        component: chat
-    },
-
-    {
-        path:'/write-anonymous/:token',
-        component: sendmsg
-    },
-    {
-        path:'/message',
-        component: message
-    },
-    {
-        path:'/groups',
-        component: groups
-    }
+        path:'/group-chat/:token',
+        component: chat,
+        meta:{
+            AuthRequired:true
+        }
+    },    
 ];
 
 const router = new VueRouter({

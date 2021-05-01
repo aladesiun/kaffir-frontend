@@ -7,7 +7,7 @@
       </div>
       <div class="btn-container">
         <div class="btns view">
-          <a href="/messages">view messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+            <router-link  to="/message"> view messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
         </div>
         <div class="btns share">
           <a href="#"><i class="fas fa-share-alt"></i>  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Share My Profile</a>
@@ -61,13 +61,27 @@ export default {
             })
             .then((data) => {
                 if(data.data.status){
-                    this.anonymous_link = data.data.data;
-                    this.anonymous = true;
+                    this.anonymous_link = data.data.anonymous_link;
                     var result = data.data.data;
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;
                     this.$store.commit('setUser', result);
                 }
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        },
+
+        createGroup(){
+            this.$store.dispatch('post', {
+                endpoint: 'create-group', 
+                details: this.group
+            })
+            .then((data) => {
+                
+                console.log(data.data.data);
+                
             })
             .catch((error) => {
                 console.log(error);
@@ -89,6 +103,22 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
+.grp-form{
+    width: 100%;
+}
+
+.grp-btn{
+    padding: 10px 50px;
+    background: #ffffff;
+    white-space: nowrap;
+    text-decoration: none;
+    border-radius: 1rem;
+    color: #4F52FF;
+    font-family: 'Secular One', sans-serif;
+    width: 100%;
+    border: none;
+}
+
 body{
     padding: 0;
     margin: 0;
@@ -96,7 +126,7 @@ body{
     width: 100%;
     overflow-X: hidden;
     /* background: rgb(2,0,36);
-background: linear-gradient(280deg, rgba(2,0,36,1) 0%, rgba(170,12,172,0.9947002282303371) 0%, rgba(238,2,126,1) 18%, rgba(5,40,74,1) 37%, rgba(9,90,121,1) 52%, rgba(252,0,255,1) 75%);
+    background: linear-gradient(280deg, rgba(2,0,36,1) 0%, rgba(170,12,172,0.9947002282303371) 0%, rgba(238,2,126,1) 18%, rgba(5,40,74,1) 37%, rgba(9,90,121,1) 52%, rgba(252,0,255,1) 75%);
     background: linear-gradient(to right,#00515b,#00d4c1,#00515b); */
 }
  .hero{

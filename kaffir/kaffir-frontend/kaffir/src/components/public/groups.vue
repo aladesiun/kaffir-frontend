@@ -42,12 +42,19 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    
+}
+</script>
 <style scoped>
 .g-cont{
     width: 500px;
     background: white;
     height: max-content;
-    margin:1rem  auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
     border: 2px solid lightgray;
     border-radius: 10px;
 }

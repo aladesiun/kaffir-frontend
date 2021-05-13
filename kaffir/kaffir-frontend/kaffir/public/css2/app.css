@@ -694,15 +694,17 @@ border-width: 6px !important;
 }
 .sidebar .user-list li {
   padding: 17px 20px;
+  width: 95%;
   display: flex;
+  height: max-content;
   display: -webkit-flex;
   cursor: pointer;
   border-radius: 6px;
   background-color: #fff;
   margin-bottom: 10px;
   border: 0;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
-	position: relative;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  position: relative;
 }
 .sidebar .user-list li.unread {
   background-color: #4F52FF;
@@ -1059,9 +1061,7 @@ i.fas.fa-reply {
 .header {
   z-index: 9;
   position: sticky;
-  background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(21,60,224,0.9947002282303371) 0%,
- rgba(238,2,126,1) 0%, rgba(1,55,175,1) 0%, rgba(0,9,69,1) 0%, rgba(251,251,251,1) 0%, rgba(0,2,255,1) 100%);
+  background:#0a80ff;
   /* background-color: #4f52ff; */
   top: 0;
   width: 100%;
@@ -2513,6 +2513,7 @@ i.fas.fa-ellipsis-h.ellipse_header {
   }
   .main-wrapper .content {
     flex-flow: column wrap;
+    height: auto;
   }
   .main-wrapper .content .sidebar-group {
     width: 100%;
@@ -2638,6 +2639,7 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(21,60,224,0.9947002282
     margin-right: 15px !important;
   }
 }
+
 @media screen and (max-width: 767.98px) {
   .main-wrapper {
     overflow: auto;
@@ -2649,7 +2651,7 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(21,60,224,0.9947002282
     margin-left: 15px;
   }
   .chat .chat-header {
-    display: block;
+    display: flex;
   }
   .chat .mob-auto{
     max-width: 25%;

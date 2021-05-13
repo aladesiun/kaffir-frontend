@@ -1,5 +1,6 @@
 <template>
-    <div class="cont" id="cntt">
+    <div class="cont-holder-snd">
+        <div class="cont" id="cntt">
         <div class="ead text-center">
             <h2 class="abt">
                 send message
@@ -15,6 +16,7 @@
                 </div>
             </form>
         </div>
+    </div>
     </div>
 </template>
 
@@ -71,7 +73,19 @@
         }
     }
 </script>
-<style>
+<style scoped>
+    *::-webkit-scrollbar{
+        display: none;
+    }
+    .cont-holder-snd{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+        background-color: #4542ff;
+        padding-top: 50px;
+    }
     .holder{
         width: 100vw;
         height: 100vh;
@@ -98,17 +112,15 @@
     }
     .cont{
     width: 500px;
-        height: 90vh;
-        border: 1px solid #ffffff;
-        display: flex;
-        border-radius: 20px;
-        margin: 20px auto;
-
-        background-color: #060106;
-        align-items: center;
-        justify-content: flex-start;
-        padding:5px 10px;
-        flex-direction: column;
+    /* height: 90vh; */
+    border: 1px solid #ffffff;
+    display: flex;
+    border-radius: 20px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    flex-direction: column;
     }
     .sendinp{
         border: 1px solid #4542ff;
@@ -132,19 +144,22 @@
         border: none;
         border-bottom: 2px solid  #4542ff;
         background: transparent;
-        padding: 10px;
+    }
+    .sendinp .text-inp:focus{
+        border: 1px solid #4542ff;
     }
     .sendinp .text-inp::placeholder{
         color: #4542ff;
+        font-size: 20px;
     }
     .sendinp .sndbtn-msg{
         background-color: #4542ff;
         width: 80%;
-        border-radius: 20px;
+        border-radius: 53px;
         border: none;
         margin: auto;
+        color: white;
         font-size: 1.5rem;
-
         padding: 10px;
     }
     @media only screen and (max-width:540px){

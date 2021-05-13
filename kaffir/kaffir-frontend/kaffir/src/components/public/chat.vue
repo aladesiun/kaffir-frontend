@@ -10,11 +10,11 @@
                  <div class="header">
                         <div class="header-top">
                             <div class="l">
-                                <div class="col-md-12 img-sec-sm">
-                    <img src="../../assets/img/logo 2.png" alt="" class="img-fluid">
-            </div>
+                                
                                 
                             </div>
+                            <div class="col-md-12 img-sec-sm">
+                    <img src="../../assets/img/logo 2.png" alt="" class="img-fluid"></div>
                             <ul class="header-action mt-4">
                                 <li>
                                     <a href="#" data-toggle="dropdown">
@@ -280,7 +280,7 @@
                     </div>
                     <div class="chat-options">
                         <ul class="list-inline">
-                            <li class="list-inline-item" data-toggle="tooltip" title=""
+                            <!--<li class="list-inline-item" data-toggle="tooltip" title=""
                                 data-original-title="Voice call">
                                 <a href="javascript:void(0)" class="btn btn-outline-light" data-toggle="modal"
                                     data-target="#voice_call">
@@ -293,7 +293,7 @@
                                     data-target="#video_call">
                                     <i class="fas fa-video"></i>
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="list-inline-item">
                                 <a class="btn btn-outline-light" href="#" data-toggle="dropdown">
                                     <i class="fas fa-ellipsis-h"></i>
@@ -304,7 +304,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> 
                 </div>
                 <div class="chat-body">
                     <div class="messages">
@@ -512,7 +512,7 @@
             <!-- /Upload Documents -->
 
             <!-- Voice call -->
-            <div class="modal fade voice_pop" id="voice_call" role="document">
+            <!-- <div class="modal fade voice_pop" id="voice_call" role="document">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content voice_content ml-3">
                         <div class="modal-body voice_body">
@@ -538,11 +538,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- /Voice call -->
 
             <!-- Video Call -->
-            <div class="modal fade voice_pop" id="video_call" role="document">
+            <!-- <div class="modal fade voice_pop" id="video_call" role="document">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content voice_content ml-3">
                         <div class="modal-body voice_body">
@@ -568,7 +568,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- /Video Call -->
 
             <!-- Chat New Modal -->
@@ -1017,7 +1017,7 @@
             <!-- /Settings Modal -->
 
             <!-- Right sidebar -->
-            <div class="right-sidebar right_sidebar_profile" id="middle1">
+            <!-- <div class="right-sidebar right_sidebar_profile" id="middle1">
                 <div class="right-sidebar-wrap active">
                     <div class="contact-close_call mr-4 mt-4 text-right">
                         <a href="#"
@@ -1084,7 +1084,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Right sidebar -->
 
         </div> 
@@ -1160,8 +1160,18 @@ export default {
 </script>
 
 <style scoped>
+.img-sec-sm{
+    display: block;
+    width: 50%;
+}
+.img-sec-sm img{
+    width: 100px;
+}
 .modal {
      position: fixed!important; 
     
+}
+.header{
+    background-color: #4f52ff!important;
 }
 </style>

@@ -60,10 +60,10 @@ var routes = [
         component: register
     },
     {
-        path:'/group-chat/:token',
+        path:'/group-chat',
         component: chat,
         meta:{
-            AuthRequired:true
+            // AuthRequired:true  /:token
         }
     },    
 ];

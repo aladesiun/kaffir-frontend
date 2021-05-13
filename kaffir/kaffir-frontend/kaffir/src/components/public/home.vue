@@ -9,12 +9,12 @@
             </div>
             <div class="row hero mt-5">
                 <div class="col-lg-7 col-md-12">
-                    <h1>Send anonymous messages and bulk sms.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandi
+                    <h1>Send anonymous messages and create or join anonymous group chat .</h1>
+                    <p>dolsse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandi
                     </p>
                     <div class="lkns">
-                        <a href="#" class="sign-btn">sign up</a>
-                        <a href="#" class="sign-btn2">login</a>
+                        <a href="" class="sign-btn"><router-link to="/register">sign up</router-link></a>
+                        <a href="#" class="sign-btn2"><router-link to="/login"  class="bbl">login</router-link></a>
                     </div>
                 </div>
                 <div class="col-md-5 img-sec"> 
@@ -224,11 +224,60 @@
             </div>
             </div>
         </div>
+          <footer class="kff_cont">
+   <div class="kff_content">
+     <div class="row kff_row_1">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="kff_col_box">
+              <h3 class="text">Get Started Now!</h3> 
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="kff_col_box ">
+              <div class="d-flex">
+                <input type="email" class="form-control kff_input" placeholder="Your feedback">
+                <button class="kff_btn">Submit</button>
+              </div>
+            </div>
+        </div>
+     </div>
+     <div class="container-fluid content-wrap">
+       <div class="content-box">
+         <h5>
+           <a href="#">Vist us</a>
+         </h5>
+       </div>
+       <div class="content-box">
+        <h5>
+          <a href="#">Contact Us</a>
+        </h5>
+        <div class="d-flex">
+          <div class="kff_icon_cont">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div class="kff_icon_cont sp">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="kff_icon_cont">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+       </div>
+       <div class="content-box">
+        <h5>
+          <a href="#">Info on Kaffir</a>
+        </h5>
+      </div>
+     </div>
+     <div class="container-fluid end-text">
+      <p><i>Kaffir always there for you....</i></p>
+     </div>
+   </div> 
+        </footer>
         </div>
 </template>
-
-
 <script>
+
 window.addEventListener("scroll", function(){ 
  const scrollnav= document.querySelector('nav');
     scrollnav.style.transition= 'all .8s';
@@ -259,6 +308,11 @@ icons.forEach((icon) => {
 
 </script>
 
-<style>
-
+<style scoped>
+      .hero a{
+          color: white;
+      }
+      .bbl{
+          color:#4f52ff!important;
+      }
 </style>

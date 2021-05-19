@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import layout from './components/layouts/layout'
 import home from './components/public/home'
 import login from './components/auth/login'
+import forget from './components/auth/forget'
 import register from './components/auth/register'
 import contact from './components/public/contact'
 import profile from './components/public/profile'
@@ -58,6 +59,10 @@ var routes = [
     {
         path: '/register',
         component: register
+    },
+    {
+        path: '/reset',
+        component: forget
     },
     {
         path:'/group-chat',

@@ -1,7 +1,7 @@
 <template>
     <div>
          <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
+        <div class="container-xl">
           <a class="navbar-brand" href="#"><img src="../../assets/img\logo 2.png" class="img-fluid" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fas fa-bars"></span><i class=""></i>

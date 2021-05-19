@@ -9,12 +9,8 @@
                 <!-- Chats sidebar -->
                  <div class="header">
                         <div class="header-top">
-                            <div class="l">
-                                
-                                
-                            </div>
-                            <div class="col-md-12 img-sec-sm">
-                    <img src="../../assets/img/logo 2.png" alt="" class="img-fluid"></div>
+                            <div class="img-sec-sm">
+                                 <img src="../../assets/img/logo 2.png" alt="" class="img-fluid"></div>
                             <ul class="header-action mt-4">
                                 <li>
                                     <a href="#" data-toggle="dropdown">
@@ -32,7 +28,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="nav nav-tabs chat-tabs mt-4">
+                        <ul class="nav nav-tabs chat-tabs">
                            <li class="nav-item">
                         <a class="nav-link  active"><router-link to="/chat">chat</router-link></a>
                     </li>

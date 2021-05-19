@@ -6,12 +6,15 @@
 <img src="images/img-01.png" alt="IMG">
 </div>
 <form method="POST" novalidate="" @submit.prevent="signup()" class="login100-form validate-form">
+    <div class="bck">
+        <router-link to="/"><i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i> </router-link>
+    </div>
 <span class="login100-form-title">
 Create Account
 </span>
 <notification/>
 <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-<input class="input100" type="text" name="name" placeholder="name" v-model="user.name" autofocus required>
+<input class="input100" type="text" name="name" placeholder="username" v-model="user.name" autofocus required>
 <span class="focus-input100"></span>
 <span class="symbol-input100">
 <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -44,7 +47,7 @@ Forgot
 Username / Password?
 </a>
 </div>
-<div class="text-center p-t-136">
+<div class="text-center p-t-60">
 <a class="txt2" href="#">
 Already Have Account?<router-link to="/login">Login</router-link>
 
@@ -62,9 +65,9 @@ export default {
    
         return {
             user:{
-                name: 'Oluwapelumi',
-                email: 'aladesiunpelumi@gmail.com',
-                password: '123456',
+                name: '',
+                email: '',
+                password: '',
             },
             loading: false,
         }
@@ -102,5 +105,15 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style >
+.bck{
+    position: absolute;
+    top: 4%;
+    left: 2%;
+}
+.bck i{
+    font-size: 20px;
+    padding: 20px;
+
+}
 </style>

@@ -9,6 +9,7 @@
                     <div class="rap-msg">
                         <span class="pb-5">you recieved: {{message.created_at}}</span><br>
                         <span id="ic-message">{{message.anonymous_msg}}</span>
+                        <!-- <p>{{message.anonymous_msg.length()}}</p> -->
                         <div class="lk-cont">
                             <a href="#"><i class="fas fa-share"></i>share</a>
                             <a href="#"><i class="far fa-flag"></i>Report</a>
@@ -45,6 +46,7 @@
         mounted() {
             this.getMessages();
             console.log(this.messages);
+
         }
     }
 </script>

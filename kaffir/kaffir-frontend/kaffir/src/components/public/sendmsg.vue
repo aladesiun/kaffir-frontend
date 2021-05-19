@@ -56,6 +56,7 @@
                 .then((data) => {
                     if(data.data.status){
                         this.$store.commit('setNotification', {type:1, message:'Message sent successfully'});
+                        this.anonymous.anonymous_msg= '';
                     }
                     else{
                         var e_msg = data.data.message;

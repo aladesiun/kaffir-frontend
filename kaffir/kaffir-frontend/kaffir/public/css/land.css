@@ -450,8 +450,8 @@ nav .sign-btn:hover{
 
 }
 .faq .i-cont{
-    padding: 5px 30px;
-    background:url(img/Path\ 624.png);
+    padding: 11px 30px;
+    /* background:url(img/Path\ 624.png); */
     background-color:#4F52FF ;
 
     color: #fff;
@@ -462,12 +462,13 @@ nav .sign-btn:hover{
     padding-left: 5px;
 }
 .ask-tab{
-    box-shadow: 0px 0px 3px rgb(180, 179, 179);
-    width: 90%;
+    box-shadow: 0px 0px 3px rgb(180 179 179);
+    width: 100%;
     height: max-content;
     background: #fff;
     transition: .3s;
-    margin: 10px;
+    margin-right: 0;
+    margin: 9px 0px;
 
 }
 /* .ask-tab:{
@@ -481,10 +482,14 @@ nav .sign-btn:hover{
     
 } */
 .faq p{
+
+
     border: #fff;
     background: #fff;
     margin-bottom: 0;
     /* white-space: nowrap; */
+    padding: 9px 10px;
+    color: black;
     font-size: 16px;
 
 }
@@ -538,8 +543,9 @@ nav .sign-btn:hover{
     @media only screen and (max-width:1100px){
         .cards{
             min-width: 250px;
-            padding:initial 5px;
-            height: 300px;
+            padding: initial 5px;
+            min-height: 300px;
+            max-height: 353px;
         }
         nav .sign-btn {
             margin-left: 0px!important;
@@ -747,6 +753,7 @@ nav .sign-btn:hover{
 .end-text p{
     color: #fff;
     text-align: end;
+    margin: 0;
 }
 @media only screen  and (max-width:1230px){
     .kff_cont .kff_content{

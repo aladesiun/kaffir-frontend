@@ -10,8 +10,7 @@
             <div class="row hero mt-5">
                 <div class="col-lg-7 col-md-12">
                     <h1>Send anonymous messages and create or join anonymous group chat .</h1>
-                    <p>dolsse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandi
-                    </p>
+                    <p class="pt-4">know what people think about, start the journey by clicking any of the botton below</p>
                     <div class="lkns">
                         <a href="" class="sign-btn"><router-link to="/register">sign up</router-link></a>
                         <a href="#" class="sign-btn2"><router-link to="/login"  class="bbl">login</router-link></a>
@@ -25,7 +24,7 @@
      </div>
         <!-- carousel -->
         <section class="cards-section">
-            <div class="container mb-5">
+            <div class="container-xl mb-5">
                 <div class="head-y text-center">
                     <h2>why you must join the society</h2>
                 </div>
@@ -133,7 +132,7 @@
         </section>
         <!-- follow us -->
         <div class="f-us">
-            <div class="container">
+            <div class="container-lg">
                 <h1 class="text-center">connect with us</h1>
                 <div class="row">
                     <div class="col-md-5 col-sm-1 f-us-img">
@@ -157,7 +156,7 @@
             </div>
         </div>
         <!-- FAQ -->
-        <div class="container faq mt-4">
+        <div class="container-xl faq mt-4">
             <div class="row">
             <div class="col-md-6">
                 <h1 class="mb-3">Frequently asked questions</h1>
@@ -225,7 +224,7 @@
             </div>
         </div>
           <footer class="kff_cont">
-   <div class="kff_content">
+   <div class="kff_content pt0-4">
      <div class="row kff_row_1">
         <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="kff_col_box">
@@ -242,33 +241,19 @@
         </div>
      </div>
      <div class="container-fluid content-wrap">
-       <div class="content-box">
-         <h5>
-           <a href="#">Vist us</a>
-         </h5>
-       </div>
-       <div class="content-box">
-        <h5>
-          <a href="#">Contact Us</a>
-        </h5>
+      
         <div class="d-flex">
           <div class="kff_icon_cont">
-            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-facebook-f"><a href="#"></a></i>
           </div>
           <div class="kff_icon_cont sp">
-            <i class="fab fa-twitter"></i>
+            <i class="fab fa-twitter"><a href="https://twitter.com/Temitopeluke"></a></i>
           </div>
           <div class="kff_icon_cont">
             <i class="fab fa-instagram"></i>
           </div>
         </div>
        </div>
-       <div class="content-box">
-        <h5>
-          <a href="#">Info on Kaffir</a>
-        </h5>
-      </div>
-     </div>
      <div class="container-fluid end-text">
       <p><i>Kaffir always there for you....</i></p>
      </div>

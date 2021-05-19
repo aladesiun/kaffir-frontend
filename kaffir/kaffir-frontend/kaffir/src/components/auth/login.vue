@@ -6,6 +6,9 @@
 <img src="images/img-01.png" alt="IMG">
 </div>
 <form method="POST" novalidate="" @submit.prevent="login()" class="login100-form validate-form">
+    <div class="bck">
+        <router-link to="/"><i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i> </router-link>
+    </div>
 <span class="login100-form-title">
 Member Login
 </span>
@@ -33,10 +36,10 @@ Login
 Forgot
 </span>
 <a class="txt2" href="#">
-Username / Password?
+<router-link to="/reset">username/password</router-link>
 </a>
 </div>
-<div class="text-center p-t-136">
+<div class="text-center p-t-60">
 <a class="txt2" href="#">
 Create your Account?<router-link to="/register">Create One</router-link>
 
@@ -54,8 +57,8 @@ export default {
     data(){
         return {
             user:{
-                email: 'aladesiunpelumi@gmail.com',
-                password: 'aladesiun11'
+                email: ' ',
+                password: ' '
             },
             loading: false,
         }

@@ -20,7 +20,10 @@
                             <a href="/message " @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                         <div class="btns view">
-                            <router-link to="/message"> view messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
+                            <router-link to="/group-chat">Room&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
+                        </div>
+                        <div class="btns view">
+                            <router-link to="/message">messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
                         </div>
                         </div>
                         <div class="bg-c-blue counter-block m-t-10 p-20">
@@ -42,44 +45,44 @@
                                 <input type="text" v-model="this.anonymous_link" id="cpy-box"> <input type="button" id="cpy-real" value="copy" @click="copy">
                             </div>
                         </div>
-                        <p class="m-t-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p class="m-t-15 text-muted detm">this is your profile where you can view messages, share your links to friends and family</p>
                         <hr />
                         <div class="row justify-content-center user-social-link">
                             <div>
                                 <ul>
                                     <li>
                                         <a href="#">
+                                            <!-- <span></span>
                                             <span></span>
                                             <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span></span> -->
                                             <span class="fa fa-facebook"></span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
+                                            <!-- <span></span>
                                             <span></span>
                                             <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span></span> -->
                                             <span class="fa fa-twitter"></span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
+                                            <!-- <span></span>
                                             <span></span>
                                             <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span></span> -->
                                             <span class="fa fa-instagram"></span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
+                                            <!-- <span></span>
                                             <span></span>
                                             <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span></span> -->
                                             <span class="fa fa-linkedin"></span>
                                         </a>
                                     </li>
@@ -274,6 +277,9 @@ ul li:nth-child(4):hover span{
         display: flex;
     justify-content: space-around;
 }
+.detm{
+    text-transform: capitalize;
+}
 /* button ends */
 .btn-active  a{
     background: white;
@@ -295,7 +301,11 @@ ul li:nth-child(4):hover span{
 .boss{
     /* margin-top:60px  ; */
     height: 100vh;
+    overflow: scroll;
     background: #4f52ff;
+}
+.boss::-webkit-scrollbar{
+    display: none;
 }
 body{
     background:#f3f3f3;
@@ -385,12 +395,13 @@ body{
     margin: 0 auto;
     display: inline-block;
     padding: 5px;
+    z-index: 1;
     width: 110px;
     height: 110px;
 }
 
 .user-card .card-block .user-image img {
-    z-index: 20;
+    /* z-index: 20; */
     position: absolute;
     top: 5px;
     left: 5px;
@@ -528,7 +539,11 @@ body{
     }
     .boss{
         margin:0 ;
+        overflow:scroll;
     }
+    .card .card-block {
+    padding: 6px;
+}
 
 }
 </style>

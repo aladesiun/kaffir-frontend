@@ -5,11 +5,11 @@
          <div class="container">
             <!-- <h1 class="tithead center">your messages are here</h1> -->
             <div class="row msg-row">
-                <div class="msg-box col-md-4" v-for="(message, index) in messages" :key="index">
+                <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
                     <div class="rap-msg">
                         <span class="pb-5">you recieved: {{message.created_at}}</span><br>
-                        <span id="ic-message">{{message.anonymous_msg}}</span>
-                        <!-- <p>{{message.anonymous_msg.length()}}</p> -->
+                        <span id="ic-message" class="pt-4 pb-5">{{message.anonymous_msg}}</span>
+                        <!-- <p>{{message.anonymous_msg.count()}}</p> -->
                         <div class="lk-cont">
                             <a href="#"><i class="fas fa-share"></i>share</a>
                             <a href="#"><i class="far fa-flag"></i>Report</a>
@@ -32,6 +32,9 @@
             }
         },
         methods:{
+            amount (){
+               
+            },
             getMessages(){
                 this.$store.dispatch('get', 'messages')
                 .then((data) => {
@@ -93,8 +96,10 @@
 .msg-row{
  background-color: white;
  border-radius: 5px;
+ margin: 0px auto;
  margin-top: 50px;
  padding: 10px;
+ width: 500px;
 }
 #ic-message{
     color: black;

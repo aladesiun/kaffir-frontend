@@ -10,7 +10,7 @@
             <div class="row hero mt-5">
                 <div class="col-lg-7 col-md-12">
                     <h1>Send anonymous messages and create or join anonymous group chat .</h1>
-                    <p class="pt-4">know what people think about, start the journey by clicking any of the botton below</p>
+                    <!-- <p class="ptt">know what people think about, start the journey by clicking any of the botton below</p> -->
                     <div class="lkns">
                         <a href="" class="sign-btn"><router-link to="/register">sign up</router-link></a>
                         <a href="#" class="sign-btn2"><router-link to="/login"  class="bbl">login</router-link></a>
@@ -55,7 +55,6 @@
                     <p>If There Is Anything That You Need Help With Related To Our Anonymous Messaging And Feedback Platform, We Are Always Here For You. 24 Hours A Day And 7 Days A Week.
 
                     </p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Read More <i class="fas fa-plus"></i></a>
                 </div>
                 </div>
                 <div class=" grid-slide">
@@ -84,7 +83,6 @@
                     <p>If There Is Anything That You Need Help With Related To Our Anonymous Messaging And Feedback Platform, We Are Always Here For You. 24 Hours A Day And 7 Days A Week.
 
                     </p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Read More <i class="fas fa-plus"></i></a>
                 </div>
                 </div>
                 <div class="grid-slide">
@@ -99,13 +97,12 @@
                     <p>Our Platform Ensures Your Privacy So That You Stay Anonymous Everytime You Send Someone A Secret Message. You Are Anonymous Until You Ever Choose To Reveal Your Identity.
 
                     </p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Read More <i class="fas fa-plus"></i></a>
                         <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Anonimity</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <butto" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <form>
@@ -163,7 +160,7 @@
                 <div class="ask-tab mb-2">
                 <div class="dropdown d-flex">
                     <div class="i-cont"  data-mdb-toggle="collapse" data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" > 
-                    <i class="fas fa-plus" type="button"></i>
+                    <i class="fas fa-plus"></i>
                     </div>
                     <p>How do I know I will be anonymous</p>
                 </div>
@@ -176,7 +173,7 @@
                 <div class="ask-tab">
                 <div class="dropdown d-flex">
                     <div class="i-cont"  data-mdb-toggle="collapse" data-mdb-target="#collapsetwo" aria-expanded="true" aria-controls="collapseOne" > 
-                    <i class="fas fa-plus" type="button"></i>
+                    <i class="fas fa-plus"></i>
                     </div>
                     <p>if i send a voice won't i be detected</p>
                 </div>
@@ -190,7 +187,7 @@
                 <div class="ask-tab">
                 <div class="dropdown d-flex">
                     <div class="i-cont"  data-mdb-toggle="collapse" data-mdb-target="#collapsethree" aria-expanded="true" aria-controls="collapseOne" > 
-                    <i class="fas fa-plus" type="button"></i>
+                    <i class="fas fa-plus"></i>
                     </div>
                     <p>can i create a room</p>
                 </div>
@@ -204,7 +201,7 @@
                 <div class="ask-tab">
                 <div class="dropdown d-flex">
                     <div class="i-cont"  data-mdb-toggle="collapse" data-mdb-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne" > 
-                    <i class="fas fa-plus" type="button"></i>
+                    <i class="fas fa-plus"></i>
                     </div>
                     <p>what if i am offended</p>
                 </div>
@@ -299,5 +296,8 @@ icons.forEach((icon) => {
       }
       .bbl{
           color:#4f52ff!important;
+      }
+      .ptt{
+          padding-top: 10px;
       }
 </style>

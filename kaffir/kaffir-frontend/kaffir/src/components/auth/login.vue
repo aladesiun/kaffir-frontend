@@ -58,7 +58,7 @@ export default {
         return {
             user:{
                 email: ' ',
-                password: ' '
+                password: ''
             },
             loading: false,
         }

@@ -162,8 +162,8 @@ export default {
         })
     },
     created(){
-        console.log(this.user);
-        alert(this.user['username']);
+        // console.log(this.user);
+        // alert(this.user['username']);
     }
 }
 </script>

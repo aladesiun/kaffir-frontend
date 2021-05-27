@@ -12,7 +12,7 @@
             <!-- <i type="text" class="text-inp" placeholder="type your message"> -->
                 <textarea name="" class="text-inp" v-model="anonymous.anonymous_msg" placeholder="type..."></textarea>
                 <div class="btn-to-send">
-                    <button type="submit"  class="sndbtn-msg">send</button>
+                    <button type="submit" :disabled="!anonymous.anonymous_msg"  class="sndbtn-msg">send</button>
                 </div>
             </form>
         </div>
@@ -75,6 +75,9 @@
     }
 </script>
 <style scoped>
+    .sndbtn-msg:disabled{
+        background: #4542ff9e !important;
+    }
     *::-webkit-scrollbar{
         display: none;
     }

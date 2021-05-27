@@ -16,8 +16,11 @@
                         <p class="text-muted">Welcome to your profile</p>
                         <hr />
                         <div class="btn-act">
-                        <div class="btns view">
+                        <div class="btns view" v-if="user.anonymous_link ==  ''">
                             <a href="/message " @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                        <div class="btns view" v-else>
+                            <a href="/message " @click.prevent="disableAnonymousLink()">Delete Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                         <div class="btns view">
                             <router-link to="/group-chat">Room&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
@@ -42,7 +45,7 @@
                                 </div>
                             </div>
                             <div class="cpy-holder">
-                                <input type="text" v-model="this.anonymous_link" id="cpy-box"> <input type="button" id="cpy-real" value="copy" @click="copy">
+                                <input type="text" v-model="user.anonymous_link" id="cpy-box"> <input type="button" id="cpy-real" value="copy" @click="copy">
                             </div>
                         </div>
                         <p class="m-t-15 text-muted detm">this is your profile where you can view messages, share your links to friends and family</p>
@@ -102,6 +105,11 @@
 <script>
 import { mapState } from 'vuex'
 export default {
+    computed:{
+        ...mapState({
+            user: (state)=> state.user
+        })
+    },
     data(){
         return{
             anonymous_link: '',
@@ -110,21 +118,37 @@ export default {
     },
     methods:{
         copy(){
-              var copyText = document.getElementById("cpy-box");
+            var copyText = document.getElementById("cpy-box");
 
-  /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
-  /* Copy the text inside the text field */
-  document.execCommand("copy") ? alert("Copied the text: " + copyText.value) : alert("try again")
-
-  /* Alert the copied text */
+            /* Copy the text inside the text field */
+            document.execCommand("copy") ? alert("Copied the text: " + copyText.value) : alert("try again")
   
         },
         generateAnonymousLink(){
             this.$store.dispatch('post', {
                 endpoint: 'generate-anonymous-link', 
+                details: {}
+            })
+            .then((data) => {
+                if(data.data.status){
+                    this.anonymous_link = data.data.anonymous_link;
+                    var result = data.data.data;
+                    localStorage.setItem('token', data.data.token);
+                    result.token=data.data.token;
+                    this.$store.commit('setUser', result);
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        },
+        disableAnonymousLink(){
+            this.$store.dispatch('post', {
+                endpoint: 'disable-anonymous-link', 
                 details: {}
             })
             .then((data) => {
@@ -156,14 +180,8 @@ export default {
             })
         }
     },
-    computed:{
-        ...mapState({
-            user: (state)=> state.user
-        })
-    },
     created(){
         console.log(this.user);
-        alert(this.user['username']);
     }
 }
 </script>

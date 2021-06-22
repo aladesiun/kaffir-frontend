@@ -26,7 +26,7 @@
             return {
                 anonymous: {
                     anonymous_msg: '',
-                    token: ''
+                    token: '',
                 }
             }
         },
@@ -55,8 +55,11 @@
                 })
                 .then((data) => {
                     if(data.data.status){
+                        window.location.href = "/signup";
                         this.$store.commit('setNotification', {type:1, message:'Message sent successfully'});
                         this.anonymous.anonymous_msg= '';
+                        // swal("My title", "My description", "success");
+                        
                     }
                     else{
                         var e_msg = data.data.message;

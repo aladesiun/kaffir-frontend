@@ -12,8 +12,8 @@
                     <h1>Send anonymous messages and create or join anonymous group chat .</h1>
                     <!-- <p class="ptt">know what people think about, start the journey by clicking any of the botton below</p> -->
                     <div class="lkns">
-                        <a href="" class="sign-btn"><router-link to="/register">sign up</router-link></a>
-                        <a href="#" class="sign-btn2"><router-link to="/login"  class="bbl">login</router-link></a>
+                        <router-link class="sign-btn" to="/register" tabindex="-1" aria-disabled="true">sign up</router-link>
+                        <router-link class="sign-btn tolog" to="/login" tabindex="-1" aria-disabled="true" style="">log in</router-link>
                     </div>
                 </div>
                 <div class="col-md-5 img-sec"> 
@@ -24,7 +24,7 @@
      </div>
         <!-- carousel -->
         <section class="cards-section">
-            <div class="container-xl mb-5">
+            <div class="container-xl">
                 <div class="head-y text-center">
                     <h2>why you must join the society</h2>
                 </div>
@@ -129,7 +129,7 @@
         </section>
         <!-- follow us -->
         <div class="f-us">
-            <div class="container-lg">
+            <div class="container-lg concont">
                 <h1 class="text-center">connect with us</h1>
                 <div class="row">
                     <div class="col-md-5 col-sm-1 f-us-img">
@@ -299,5 +299,16 @@ icons.forEach((icon) => {
       }
       .ptt{
           padding-top: 10px;
+      }
+      .tolog{
+        margin-left: 5px;
+        background-color: white;
+        color: #4f52ff!important;
+      
+      }
+      .tolog:hover{
+          background-color: #4f52ff;
+          color: white 
+          !important;;
       }
 </style>

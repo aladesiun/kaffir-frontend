@@ -2,17 +2,23 @@
 <template>
 <div>
     <div class="bdy">
-         <div class="container">
+         <div class="container thb">
             <!-- <h1 class="tithead center">your messages are here</h1> -->
             <div class="row msg-row">
+                <div class="col-md-12 text-center head-mm">
+                    <h1>Messages</h1>
+                    <p>messages you recieve will appear here</p>
+                </div>
                 <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
                     <div class="rap-msg">
-                        <span class="pb-5">you recieved: {{message.created_at}}</span><br>
-                        <span id="ic-message" class="pt-4 pb-5">{{message.anonymous_msg}}</span>
+                        <p>Message:</p>
+                        <p id="ic-message" class="pb-2">{{message.anonymous_msg}}</p>
+                        <p class="pb-0">you recieved: {{message.created_at}}</p>
+
                         <!-- <p>{{message.anonymous_msg.count()}}</p> -->
                         <div class="lk-cont">
-                            <a href="#"><i class="fas fa-share"></i>share</a>
-                            <a href="#"><i class="far fa-flag"></i>Report</a>
+                            <a href="#"><i class="fas fa-share-square"></i>share</a>
+                            <router-link to="/report"><i class="fas fa-flag"></i>Report</router-link>
                             <!-- <a href="#">share</a> -->
                         </div>
                 </div>
@@ -48,7 +54,7 @@
         },
         mounted() {
             this.getMessages();
-            console.log(this.messages);
+            // console.log(this.messages);
 
         }
     }
@@ -61,7 +67,7 @@
 }
 .bdy{
        background-color: #4f52ff;
-    margin: 50px auto;
+    margin: 1px auto;
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
@@ -75,16 +81,30 @@
 .fas{
     margin-right: 5px;
 }
+.head-mm{
+    position: sticky;
+    top: -6px;
+    background: white;
+    z-index: 6;
+}
 .rap-msg{
     border: 1px solid blue;
     padding: 10px;
-    margin: 5px 1px;
+    width: 391px;
+    font-size: 14px;
+    margin: 5px auto;
+    border-radius: 13px;
+}
+.rap-msg p{
+    color: black;
+    font-size: 15xpx;
+    margin-bottom: 0!important;
 }
 .lk-cont a{
-    padding: 2px 5px;
+    padding: 4px 5px;
     display: block;
     text-align: center;
-    margin: 5px;
+    margin:7px 5px;
     border-radius: 5px;
     border: 1px solid #4f52ff;
     box-shadow: 0px 0px 4px #9c9dff;
@@ -97,12 +117,21 @@
  background-color: white;
  border-radius: 5px;
  margin: 0px auto;
- margin-top: 50px;
+ margin-top: 20px;
  padding: 10px;
  width: 500px;
 }
 #ic-message{
     color: black;
     font-weight: 600;
+}
+@media screen and (max-width:700px)  {
+    .msg-row{
+        width: 100%;
+    }
+    .thb{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 </style>

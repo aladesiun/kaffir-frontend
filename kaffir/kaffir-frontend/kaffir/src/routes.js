@@ -11,6 +11,8 @@ import chat from './components/public/chat'
 import sendmsg from './components/public/sendmsg'
 import message from './components/public/message'
 import groups from './components/public/groups'
+import report from './components/public/report'
+// import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter);
 
@@ -25,16 +27,14 @@ var routes = [
         
             },
             {
+                path: '/report',
+                component: report
+            },
+            {
                 path: '/contact',
                 component: contact,
             },
-            {
-                path:'/profile',
-                component: profile,
-                meta:{
-                    AuthRequired:true
-                }
-            },
+         
             {
                 path:'/groups',
                 component: groups
@@ -43,14 +43,22 @@ var routes = [
                 path:'/write-anonymous/:token',
                 component: sendmsg
             },
-            {
-                path:'/message',
-                component: message,
-                meta:{
-                    AuthRequired:true
-                }
-            },
+           
         ]
+    },
+    {
+        path:'/profile',
+        component: profile,
+        meta:{
+            AuthRequired:true
+        }
+    },
+    {
+        path:'/message',
+        component: message,
+        meta:{
+            AuthRequired:true
+        }
     },
     {
         path: '/login',

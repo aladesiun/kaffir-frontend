@@ -1,66 +1,39 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6V47XVYWZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q6V47XVYWZ');
-</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>../../../src/assets/img/newlogo.png">
-    <!-- <link rel="stylesheet" href="<%= BASE_URL %>css/home.css"> -->
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" href="<%= BASE_URL %>css/land.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="<%= BASE_URL %>./assets/img/favicon.ico">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="<%= BASE_URL %>./assets/css/bootstrap.min.css">
-      
+        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="<%= BASE_URL %>./assets/plugins/fontawesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="<%= BASE_URL %>./assets/plugins/fontawesome/css/all.min.css">
+        <!-- Custom scroll CSS -->
         <link rel="stylesheet" href="<%= BASE_URL %>./assets/plugins/mcustomscroll/jquery.mCustomScrollbar.css">
-      
         <!-- App styles -->
         <link rel="stylesheet" href="<%= BASE_URL %>./assets/css/app.css">
-
-
         <!-- for login -->
         <!--===============================================================================================-->
-	<!-- <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>vendor/bootstrap/css/bootstrap.min.css"> -->
-  <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-  <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>vendor/animate/animate.css">
-  <!--===============================================================================================-->	
-    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>vendor/css-hamburgers/hamburgers.min.css">
-  <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>vendor/select2/select2.min.css">
-  <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>css/util.css">
-    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>css/main.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<%= BASE_URL %>./css2/bootstrap.min.css">
-      
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="<%= BASE_URL %>./plugins2/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="<%= BASE_URL %>./plugins2/fontawesome/css/all.min.css">
-  
     <!-- Custom scroll CSS -->
     <link rel="stylesheet" href="<%= BASE_URL %>./plugins2/mcustomscroll/jquery.mCustomScrollbar.css">
-  
     <!-- App styles -->
     <link rel="stylesheet" href="<%= BASE_URL %>./css2/app.css">
-  
-
     <title><%= htmlWebpackPlugin.options.title %></title>
     <style>
       body{
@@ -80,49 +53,17 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
     <!--===============================================================================================-->
-      <script src="<%= BASE_URL %>vendor/tilt/tilt.jquery.min.js"></script>
-      <script >
-       
-      </script>
-    <!--===============================================================================================-->
-      <script src="<%= BASE_URL %>js/main.js"></script>
-    <script src="<%= BASE_URL %>./assets/js/jquery-3.4.1.min.js"></script> 
-	
-    <!-- Bootstrap Core JS -->
-      <script src="<%= BASE_URL %>./assets/js/popper.min.js"></script> 
-      <script src="<%= BASE_URL %>./assets/js/bootstrap.min.js"></script> 
-  
-      <script src="<%= BASE_URL %>./assets/js/bootstrap-rtl.min.js"></script> 
-    <!-- <!- Custom Scroll JS -- -->
-      <script src="<%= BASE_URL %>./assets/js/jquery.nicescroll.min.js"></script> 
-       <script src="<%= BASE_URL %>./assets/js/plugins/mcustomscroll/jquery.mCustomScrollbar.js"></script>
-    <!-- Custom JS -->
-       <script src="<%= BASE_URL %>./assets/js/script.js"></script>
-
-
-
-
-       <script src="<%= BASE_URL %>./js2/jquery-3.4.1.min.js"></script> 
-	
-       <!-- Bootstrap Core JS -->
-         <script src="<%= BASE_URL %>./js2/popper.min.js"></script> 
-         <script src="<%= BASE_URL %>./js2/bootstrap.min.js"></script> 
      
-         <script src="<%= BASE_URL %>./js2/bootstrap-rtl.min.js"></script> 
-       <!-- <!- Custom Scroll JS -- -->
-         <script src="<%= BASE_URL %>./js2/jquery.nicescroll.min.js"></script> 
-          <script src="<%= BASE_URL %>./js2/plugins/mcustomscroll/jquery.mCustomScrollbar.js"></script>
-       <!-- Custom JS -->
-          <script src="<%= BASE_URL %>./js2/script.js"></script>
-
-
           
-
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"></script>
-    <script src="<%= BASE_URL %>js/home.js"></script>
+    <!-- <script src="<%= BASE_URL %>js/home.js"></script> -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>

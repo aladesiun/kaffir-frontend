@@ -42,9 +42,36 @@
         </div>
     </div>
 </template>
+
+ <script src="<%= BASE_URL %>vendor/tilt/tilt.jquery.min.js"></script>
+
+    <!--===============================================================================================-->
+      <script src="<%= BASE_URL %>js/main.js"></script>
+    <script src="<%= BASE_URL %>./assets/js/jquery-3.4.1.min.js"></script> 
+	
+  
+
+
+
+
+       <script src="<%= BASE_URL %>./js2/jquery-3.4.1.min.js"></script> 
+	
+       <!-- Bootstrap Core JS -->
+         <script src="<%= BASE_URL %>./js2/popper.min.js"></script> 
+         <script src="<%= BASE_URL %>./js2/bootstrap.min.js"></script> 
+     
+         <script src="<%= BASE_URL %>./js2/bootstrap-rtl.min.js"></script> 
+       <!-- <!- Custom Scroll JS -- -->
+         <script src="<%= BASE_URL %>./js2/jquery.nicescroll.min.js"></script> 
+          <script src="<%= BASE_URL %>./js2/plugins/mcustomscroll/jquery.mCustomScrollbar.js"></script>
+       <!-- Custom JS -->
+          <script src="<%= BASE_URL %>./js2/script.js"></script>
+
 <script>
 export default {
-    
+    setup() {
+        
+    },
 }
 </script>
 <style scoped>

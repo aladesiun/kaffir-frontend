@@ -5,28 +5,36 @@
         <div class="row mt-4">
             <div class="col-md-12 sx">
                 <div class="card user-card">
-                    <div class="card-header text-center">
-                        <h5>Profile</h5>
+                    <div class="card-header text-center p-0">
+                        <h1>Profile</h1>
                     </div>
                     <div class="card-block">
-                        <div class="user-image">
+                        <!-- <div class="user-image">
                             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image" />
-                        </div>
-                        <h6 class="f-w-600 m-t-25 m-b-10">{{this.user['username']}}</h6>
+                        </div> -->
+                        <h6 class="f-w-600  m-b-10">{{this.user['username']}}</h6>
                         <p class="text-muted">Welcome to your profile</p>
                         <hr />
-                        <div class="btn-act">
-                        <div class="btns view" v-if="user.anonymous_link ==  ''">
-                            <a href="/message " @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        <div class="btn-act row">
+                        <div class=" col-md-6 mt-1" v-if="user.anonymous_link ==  ''">
+                            <div class="tt btns view" style="width:90%; margin:auto;">
+                            <a href=" " @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                            </div>
                         </div>
-                        <div class="btns view" v-else>
-                            <a href="/message " @click.prevent="disableAnonymousLink()">Delete Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        <div class="col-md-6 mt-1" v-else>
+                            <div class="tt btns view" style="width:90%; margin:auto;">
+                            <a href="" @click.prevent="disableAnonymousLink()">Delete Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+
+                            </div>
+                            <a href="https://api.whatsapp.com/send?text=Write%20a%20*secret%20anonymous%20message*%20for%20me..%20%F0%9F%98%89%20I%20*won%27t%20know*%20who%20wrote%20it..%20%F0%9F%98%82%E2%9D%A4%20%F0%9F%91%89%20https://anonymous.kaffir.ng/profile" target="_blank" class="btn-wa m-b-20 contact100-form-btn">
+					<i class="fa fa-whatsapp"></i>
+					Share on WhatsApp
+				</a>
                         </div>
-                        <div class="btns view">
-                            <router-link to="/group-chat">Room&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
-                        </div>
-                        <div class="btns view">
+                        <div class="col-md-6 mt-1">
+                            <div class="tt btns view " style="width:90%;margin:auto;">
                             <router-link to="/message">messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
+                            </div>
                         </div>
                         </div>
                         <div class="bg-c-blue counter-block m-t-10 p-20">
@@ -50,48 +58,8 @@
                         </div>
                         <p class="m-t-15 text-muted detm">this is your profile where you can view messages, share your links to friends and family</p>
                         <hr />
-                        <div class="row justify-content-center user-social-link">
-                            <div>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <!-- <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span> -->
-                                            <span class="fa fa-facebook"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <!-- <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span> -->
-                                            <span class="fa fa-twitter"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <!-- <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span> -->
-                                            <span class="fa fa-instagram"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <!-- <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span> -->
-                                            <span class="fa fa-linkedin"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -149,7 +117,7 @@ export default {
         disableAnonymousLink(){
             this.$store.dispatch('post', {
                 endpoint: 'disable-anonymous-link', 
-                details: {}
+                details: {},
             })
             .then((data) => {
                 if(data.data.status){
@@ -158,6 +126,7 @@ export default {
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;
                     this.$store.commit('setUser', result);
+                    this.anonymous_link= ""
                 }
             })
             .catch((error) => {
@@ -183,7 +152,7 @@ export default {
     created(){
         // console.log(this.user);
         // alert(this.user['username']);
-        console.log(this.user);
+        
     }
 }
 </script>
@@ -286,6 +255,7 @@ ul li:nth-child(4):hover span{
     box-shadow: 0px 0px 5px;
     /* color: #e22223; */
     border-radius: 6px;
+    margin-bottom: 5px;
     border: 1px solid #4f52ff
 }
 .btn-act .btns a{
@@ -332,7 +302,7 @@ body{
 }
 .sx{
     display: flex;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     justify-content: center;
 }
 .card.user-card {
@@ -552,6 +522,9 @@ body{
     left: 0;
     z-index: 10;
 }
+.tt{
+    margin-bottom: 10px;
+}
 @media only screen and (max-width: 522px) {
     .card.user-card{
         width: 100%;
@@ -559,6 +532,7 @@ body{
     }
     .boss{
         margin:0 ;
+        
         overflow:scroll;
     }
     .card .card-block {

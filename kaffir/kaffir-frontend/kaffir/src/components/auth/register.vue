@@ -79,7 +79,10 @@ export default {
         
         signup(){
             if(this.user.name.length == 0 || this.user.email.length == 0 || this.user.password.length == 0 ){
-                this.$store.commit('setNotification', {type:2, message:"All fields are required"});
+                setTimeout(function () {
+                    this.$store.commit('setNotification',{type:2, message:'Email and Password fields are required'});
+                }, 3000
+                );
                 return false;
             }
 

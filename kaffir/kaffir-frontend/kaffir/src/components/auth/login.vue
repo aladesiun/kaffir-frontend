@@ -10,6 +10,7 @@
                         <router-link to="/"><i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i> </router-link>
                     </div>
                     <span class="login100-form-title">Member Login</span>
+                        <notification/>
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                         <input class="input100" type="email" name="email" placeholder="Email" v-model="user.email" autofocus>
                         <span class="focus-input100"></span>
@@ -27,7 +28,7 @@
                     <div class="container-login100-form-btn">
                         <button class="sub-btn login100-form-btn">
                             <span v-if="!loading">Login</span>
-                            <span v-else>Loading</span>
+                            <span v-else>Loading..</span>
                         </button>
                     </div>
                     <div class="text-center p-t-12">
@@ -53,7 +54,9 @@ export default {
         return {
             user:{
                 email: ' ',
-                password: ''
+                password: '',
+                messages:'',
+                numGroups:''
             },
             loading: false,
         }
@@ -62,7 +65,7 @@ export default {
          
         login(){
             if(this.user.email.length == 0 || this.user.password.length == 0){
-               this.$store.commit('setNotification',{type:2, message:'Email and Password fields are required'});
+                
                return false;
             }
 

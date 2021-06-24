@@ -55,7 +55,7 @@
                 })
                 .then((data) => {
                     if(data.data.status){
-                        window.location.href = "/signup";
+                        window.location.href = "/yourturn";
                         this.$store.commit('setNotification', {type:1, message:'Message sent successfully'});
                         this.anonymous.anonymous_msg= '';
                         // swal("My title", "My description", "success");
@@ -109,7 +109,7 @@
     .cont .abt{
         font-size: 2rem;
         text-transform: capitalize;
-        color: #ffffff;
+        color: #2773d6;
     }
     input,button,textarea{
         outline: none!important;

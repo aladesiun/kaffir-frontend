@@ -1,14 +1,21 @@
 <template>
-    <div class="rep-cont">
-        <div class="rep-box">
-            <div class="inp-rb">
-                <textarea name="report" id="rep" cols="30" rows="10"></textarea>
+<section>
+  <div class="rrp">
+                <div class="col-md-12 text-center y-hr">
+                    <h2>As any one offended you?</h2>
+                </div>
+            <div class="row repq">
+            <div class="col-md-12 text-center">
+                <!-- <h3>would you like to us a feedback or report</h3> -->
+                <div class="area">
+                    <input type="text" placeholder="type...">
+                    <input type="submit" value="submit">
+                </div>
             </div>
-            <div class="btn-rep">
-                <input type="submit" value="report">
             </div>
         </div>
-    </div>
+</section>
+  
 </template>
 <script>
 export default {
@@ -18,25 +25,46 @@ export default {
 }
 </script>
 <style scoped>
-.rep-cont{
-    background-color: blue;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.y-hr{
+    color: blue;
 }
-.rep-cont .rep-box{
+.rrp{
+    margin-top:6rem;
+    margin: 6rem auto;
+    background-color: white;
     width: 500px;
-    height: 500px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0px 0px 5px lightgrey;
     padding: 10px;
+    border-radius: 10px;
 }
-.rep-box input{
-    padding: 5px 10px;
-    background-color: white;
-    box-shadow: 0px 0px 10px red inset;
+.repq{
+    max-width: 500px;
+    margin: 5px auto;
+}
+
+section{
+    width: 100vw;
+    overflow: hidden;
+    background-color: #4f52ff;
+    height: 100vh;
+    /* filter: opacity(0.5); */
+} 
+input{
+        background: white;
+    border: 2px solid #4f52ff;
+    border-radius: 0px;
+    padding: 6px 5px;
+    margin: 10px auto;
+    width: 100%;
+    box-shadow: 0px 0px 5px #4f52ff;
+}
+input[type="submit"]{
+    background-color: #4f52ff;
+    margin: 5px auto;
+    color: white;
+}
+@media screen and (max-width:700px)  {
+    .rrp{
+        width: 90%;
+    }
 }
 </style>

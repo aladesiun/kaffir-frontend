@@ -16,29 +16,50 @@
                         <p class="text-muted">Welcome to your profile</p>
                         <hr />
                         <div class="btn-act row">
-                        <div class=" col-md-6 mt-1" v-if="user.anonymous_link ==  ''">
+                        <div class=" col-md-12 mt-2 mb-1" v-if="user.anonymous_link ==  ''">
                             <div class="tt btns view" style="width:90%; margin:auto;">
-                            <a href=" " @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                            <a href="" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-md-6 mt-1" v-else>
+                        <div class="col-md-12 mt-2 mb-1" v-else>
                             <div class="tt btns view" style="width:90%; margin:auto;">
                             <a href="" @click.prevent="disableAnonymousLink()">Delete Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
 
                             </div>
-                            <a href="https://api.whatsapp.com/send?text=Write%20a%20*secret%20anonymous%20message*%20for%20me..%20%F0%9F%98%89%20I%20*won%27t%20know*%20who%20wrote%20it..%20%F0%9F%98%82%E2%9D%A4%20%F0%9F%91%89%20https://anonymous.kaffir.ng/profile" target="_blank" class="btn-wa m-b-20 contact100-form-btn">
-					<i class="fa fa-whatsapp"></i>
-					Share on WhatsApp
-				</a>
+                            <!-- <a href="https://api.whatsapp.com/send?text=Write%20a%20*secret%20anonymous%20message*%20for%20me..%20%F0%9F%98%89%20I%20*won%27t%20know*%20who%20wrote%20it..%20%F0%9F%98%82%E2%9D%A4%20%F0%9F%91%89%20https://anonymous.kaffir.ng/write-anonymous/70162035IxkNTPXtfMaX583789cuxVqYPzB3X3" target="_blank" class="btn-wa m-b-20 contact100-form-btn"><i class="fa fa-whatsapp"></i>Share on WhatsA</a> -->
                         </div>
-                        <div class="col-md-6 mt-1">
+                        <div class="col-md-12 mt-2 mb-1">
                             <div class="tt btns view " style="width:90%;margin:auto;">
                             <router-link to="/message">messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
                             </div>
                         </div>
+
+                        <div class="col-md-12 mt-2 mb-1">
+                            <div class="tt btns view " style="width:90%;margin:auto;">
+                            <a :href="facebook_url + user.anonymous_link">share on facebook&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fa fa-facebook-official"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mt-2 mb-1">
+                            <div class="tt btns view " style="width:90%;margin:auto;">
+                            <a :href="whatsapp_url+user.anonymous_link">share on whatsapp&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fa fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-2 mb-1">
+                            <div class="tt btns view " style="width:90%;margin:auto;">
+                            <a :href="twitter_url">share on twitter &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-2 mb-1">
+                            <div class="tt btns view " style="width:90%;margin:auto;">
+
+
+                            <router-link to="">share on instagram &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fab fa-instagram"></i></router-link>
+                            </div>
+                        </div>
                         </div>
                         <div class="bg-c-blue counter-block m-t-10 p-20">
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-4">
                                     <i class="fa fa-comment"></i>
                                     <p>1256</p>
@@ -51,7 +72,7 @@
                                     <i class="fa fa-suitcase"></i>
                                     <p>189</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="cpy-holder">
                                 <input type="text" v-model="user.anonymous_link" id="cpy-box"> <input type="button" id="cpy-real" value="copy" @click="copy">
                             </div>
@@ -81,7 +102,10 @@ export default {
     data(){
         return{
             anonymous_link: '',
-            anonymous: false
+            anonymous: false,
+            twitter_url:'https://twitter.com/home',
+            facebook_url: 'https://www.facebook.com/sharer/?u=',
+            whatsapp_url:"https://api.whatsapp.com/send?text=Write%20a%20*secret%20anonymous%20message*%20for%20me..%20%F0%9F%98%89%20I%20*won%27t%20know*%20who%20wrote%20it..%20%F0%9F%98%82%E2%9D%A4%20%F0%9F%91%89%20"
         }
     },
     methods:{
@@ -118,6 +142,8 @@ export default {
             this.$store.dispatch('post', {
                 endpoint: 'disable-anonymous-link', 
                 details: {},
+                anonymous_link:""
+
             })
             .then((data) => {
                 if(data.data.status){
@@ -126,7 +152,6 @@ export default {
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;
                     this.$store.commit('setUser', result);
-                    this.anonymous_link= ""
                 }
             })
             .catch((error) => {
@@ -162,105 +187,36 @@ export default {
 * {
   padding: 0px;
   margin: 0px;
+  text-transform: capitalize;
 }
- ul {
-   position: relative;
-   display: flex;
-   justify-content: center;
-   transform-style: preserve-3d;
-}
-ul li {
-  position: relative;
-  list-style: none;
-  width: 60px;
-  height: 60px;
-  margin: 0px 20px;
-}
-ul li:before{
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: -5px;
-  width: 100%;
-  height: 10px;
-  /* background:#4f52ff; */
-  transform-origin: top;
-  transform: skewX(-41deg);
-}
-ul li:after{
-  content: '';
-  position: absolute;
-  top:5px;
-  left: -9px;
-  width: 9px;
-  height: 100%;
-  /* background: #7c7ef7; */
-  transform-origin: right;
-  transform: skewY(-49deg);
-}
-ul li span{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex !important;
-  /* background: #4f52ff; */
-  justify-content: center;
-  align-items: center;
-  color: #4f52ff;
-  font-size: 30px !important;
-  transition: 1.5s ease-out;
-}
-ul li:hover span {
-  z-index: 1000;
-  transition: .3s;
-  color: #fff;
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, .5);
-}
-ul li:hover span:nth-child(5){
-  transform: translate(40px, -40px);
-  opacity: 1;
-}
-ul li:hover span:nth-child(4){
-  transform: translate(30px, -30px);
-  opacity: .8;
-}
-ul li:hover span:nth-child(3){
-  transform: translate(20px, -20px);
-  opacity: .6;
-}
-ul li:hover span:nth-child(2){
-  transform: translate(10px, -10px);
-  opacity: .4;
-}ul li:hover span:nth-child(1){
-  transform: translate(0px, 0px);
-  opacity: .2;
-}
-ul li:nth-child(1):hover span{
-  background: #52E19F !important;
-}
-ul li:nth-child(2):hover span{
-  background: #2C3456 !important;
-}
-ul li:nth-child(3):hover span{
-  background: #EA6E96 !important;
-}
-ul li:nth-child(4):hover span{
-  background: #FCEB00 !important;
-}
+
 .btn-act .btns{
         background: white;
-    padding: 4px 9px;
     box-shadow: 0px 0px 5px;
     /* color: #e22223; */
-    border-radius: 6px;
+    border-radius: 20px;
+    transition: .5s;
     margin-bottom: 5px;
-    border: 1px solid #4f52ff
+    /* border: 1px solid #4f52ff; */
+}
+.btns a:hover{
+    background-color: #4f52ff;
+    color: white!important;
+}.btns:hover{
+    background-color: #4f52ff;
+    color: white!important;
 }
 .btn-act .btns a{
     color: #4f52ff;
-    font-family: 'Roboto', sans-serif;
+    display: block;
+    width: 100%;
+  font-family: 'Poppins', sans-serif!important;
+  font-weight: lighter;
+
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 9px 9px;
+
 
 }
 .btn-act{
@@ -540,4 +496,5 @@ body{
 }
 
 }
+
 </style>

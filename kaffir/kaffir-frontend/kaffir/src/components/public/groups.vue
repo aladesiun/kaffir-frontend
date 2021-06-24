@@ -75,7 +75,7 @@ export default {
 }
 </script>
 <style scoped>
-.g-cont{
+.g-cont {
     width: 500px;
     background: white;
     height: max-content;
@@ -85,34 +85,34 @@ export default {
     border: 2px solid lightgray;
     border-radius: 10px;
 }
-.g-nav{
-    width:100%;
+.g-nav {
+    width: 100%;
     padding: 1rem 2rem;
 }
-.g-nav ul{
+.g-nav ul {
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    background:lightgray;
-    height:50px;
+    align-items: center;
+    background: lightgray;
+    height: 50px;
     /* width: 100%; */
 }
-.g-nav ul li{
+.g-nav ul li {
     color: black;
     list-style: none;
 }
-.g-nav ul li a i{
+.g-nav ul li a i {
     font-size: 2rem;
 }
-.g-nav ul li span{
-    padding: 10px ;
-    width:100%;
-    display:block;
+.g-nav ul li span {
+    padding: 10px;
+    width: 100%;
+    display: block;
     border-radius: 4px;
     background: #3168df;
 }
 
-.grd-box-groups{
+.grd-box-groups {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,7 +121,7 @@ export default {
     margin: 10px auto;
     grid-template-columns: 40%, 40%;
 }
-.grd-box-groups .a-g-card{
+.grd-box-groups .a-g-card {
     text-align: center;
     width: 150px;
     height: 150px;
@@ -130,35 +130,34 @@ export default {
     border-radius: 10px;
     margin: 10px;
 }
-.a-g-card .round{
+.a-g-card .round {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     margin: auto;
-    background:#4F52FF;
+    background: #4f52ff;
 }
-.fa-ellipsis-h{
+.fa-ellipsis-h {
     display: block;
     text-align: right;
     font-size: 20px;
     padding: 5px 10px;
 }
-.a-g-card .gr-title{
-    font-size:20px;
-    text-transform:capitalize;
-    color:black;
-
+.a-g-card .gr-title {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
 }
-.search-bx{
-    width:100%;
-    height:max-content;
-    padding:5px;
-    text-align:center;
+.search-bx {
+    width: 100%;
+    height: max-content;
+    padding: 5px;
+    text-align: center;
 }
-.search-bx input{
-        margin: 10px auto;
+.search-bx input {
+    margin: 10px auto;
     width: 80%;
-    height:33px;
+    height: 33px;
     background: blue;
     border: none;
     font-size: 15px;
@@ -166,24 +165,23 @@ export default {
     color: white;
     padding: 10px 15px;
 }
-input::placeholder{
-
-    color:white;
-    font-size:10px;
+input::placeholder {
+    color: white;
+    font-size: 10px;
 }
 
-  @media only screen and (max-width:560px){
-      .g-cont{
-          width:90%;
-      }
-      .grd-box-groups {
-    width: 99%;
-    margin: 10px auto;
-    
+@media only screen and (max-width: 560px) {
+    .g-cont {
+        width: 90%;
+    }
+    .grd-box-groups {
+        width: 99%;
+        margin: 10px auto;
     }
     .grd-box-groups .a-g-card[data-v-37fb475a] {
- width: 43%;
-    margin: 5px;
+        width: 43%;
+        margin: 5px;
+    }
 }
-        }
+
 </style>

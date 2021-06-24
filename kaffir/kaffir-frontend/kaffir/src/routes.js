@@ -12,6 +12,7 @@ import sendmsg from './components/public/sendmsg'
 import message from './components/public/message'
 import groups from './components/public/groups'
 import report from './components/public/report'
+import yourturn from './components/public/yourturn'
 // import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter);
@@ -63,6 +64,10 @@ var routes = [
     {
         path: '/login',
         component: login
+    },
+    {
+        path: '/yourturn',
+        component: yourturn
     },
     {
         path: '/register',

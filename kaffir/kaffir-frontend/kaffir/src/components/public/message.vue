@@ -1,4 +1,3 @@
-
 <template>
 <div>
     <div class="bdy">
@@ -8,6 +7,14 @@
                 <div class="col-md-12 text-center head-mm">
                     <h1>Messages</h1>
                     <p>messages you recieve will appear here</p>
+
+                </div>
+                <div class="row " v-if="ismessage">
+                    <div class="col-md-12 text-center">
+                        <h4>you have no messages yet</h4>
+                    <router-link to="/profile">Go back</router-link>
+
+                    </div>
                 </div>
                 <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
                     <div class="rap-msg">
@@ -17,8 +24,13 @@
 
                         <!-- <p>{{message.anonymous_msg.count()}}</p> -->
                         <div class="lk-cont">
-                            <a href="#"><i class="fas fa-share-square"></i>share</a>
-                            <router-link to="/report"><i class="fas fa-flag"></i>Report</router-link>
+                            <a @click="showss" @mouseleave="hidssh" ><i class="fas fa-share-square"></i>share
+                            <div class="ssh">
+                            <span v-if="showshare" @mouseleave="hidssh">You can make a screenshot of your messages to share with friends</span>
+                            </div>
+                            </a>
+                            
+                             <router-link to="/report" ><i  class="fas fa-flag"></i>Report</router-link>
                             <!-- <a href="#">share</a> -->
                         </div>
                 </div>
@@ -31,21 +43,32 @@
 </div>
 </template>
 <script>
+// import report from './report.vue'
     export default {
+
         data(){
             return {
-                messages: []
+                ismessage:true,
+                messages: [],
+                showshare:false
             }
         },
         methods:{
             amount (){
                
             },
+            hidssh (){
+                this.showshare= false
+            },
+            showss (){
+                this.showshare = true
+            },
             getMessages(){
                 this.$store.dispatch('get', 'messages')
                 .then((data) => {
                     if(data.data.status){
                         this.messages = data.data.data;
+                        this.ismessage = false
                     }
                 }).catch((error) =>{
                     console.log(error);
@@ -80,6 +103,9 @@
 }
 .fas{
     margin-right: 5px;
+}
+.ssh{
+    transition: ease-in-out .5s;
 }
 .head-mm{
     position: sticky;
@@ -132,6 +158,9 @@
     .thb{
         padding-left: 0;
         padding-right: 0;
+    }
+    .rap-msg{
+        width: 100%;
     }
 }
 </style>

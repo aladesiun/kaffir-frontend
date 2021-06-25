@@ -10,6 +10,7 @@
                         <router-link to="/"><i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i> </router-link>
                     </div>
                     <span class="login100-form-title">Member Login</span>
+                    <notification/>
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                         <input class="input100" type="email" name="email" placeholder="Email" v-model="user.email" autofocus>
                         <span class="focus-input100"></span>
@@ -27,7 +28,7 @@
                     <div class="container-login100-form-btn">
                         <button class="sub-btn login100-form-btn">
                             <span v-if="!loading">Login</span>
-                            <span v-else>Loading</span>
+                            <span v-else>Authorizing...</span>
                         </button>
                     </div>
                     <div class="text-center p-t-12">
@@ -48,7 +49,9 @@
 </template>
 
 <script>
+import notification from '../layouts/notification.vue';
 export default {
+  components: { notification },
     data(){
         return {
             user:{

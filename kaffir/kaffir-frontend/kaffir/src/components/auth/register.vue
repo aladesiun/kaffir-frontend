@@ -62,7 +62,7 @@ Already Have Account?<router-link to="/login">Login</router-link>
 <script>
 export default {
     data(){
-   
+
         return {
             user:{
                 name: '',
@@ -74,9 +74,9 @@ export default {
     },
     created:{
     },
-
+// |}1@"|\\Z\\|\?><M,.//';:"|\\}}+_)(*&^%$)"'"
     methods:{
-        
+
         signup(){
             if(this.user.name.length == 0 || this.user.email.length == 0 || this.user.password.length == 0 ){
                 setTimeout(function () {

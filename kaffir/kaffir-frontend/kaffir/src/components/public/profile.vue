@@ -481,6 +481,13 @@ body{
 .tt{
     margin-bottom: 10px;
 }
+.tt i {
+    font-size: 20px;    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
 @media only screen and (max-width: 522px) {
     .card.user-card{
         width: 100%;

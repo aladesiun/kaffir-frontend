@@ -21,7 +21,6 @@
                         <p>Message:</p>
                         <p id="ic-message" class="pb-2">{{message.anonymous_msg}}</p>
                         <p class="pb-0">you recieved: {{message.created_at}}</p>
-
                         <!-- <p>{{message.anonymous_msg.count()}}</p> -->
                         <div class="lk-cont">
                             <a @click="showss" @mouseleave="hidssh" ><i class="fas fa-share-square"></i>share

@@ -28,19 +28,17 @@
                     <div class="container-login100-form-btn">
                         <button class="sub-btn login100-form-btn">
                             <span v-if="!loading">Login</span>
-                            <span v-else>Loading..</span>
+                            <span v-else>Authorizing..</span>
                         </button>
                     </div>
                     <div class="text-center p-t-12">
-                        <span class="txt1">Forgot</span>
-                        <router-link class="txt2" to="/reset">username/password</router-link>
+                        <span class="txt1">Forgot </span>
+                        <router-link class="txt2" to="/reset"> Password?</router-link>
                     </div>
                     <div class="text-center p-t-60">
-                        <a class="txt2" href="#">
-                            Create your Account?<router-link to="/register">Create One</router-link>
-
+                        <router-link to="/register" class="txt2">Create Account?
                             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                        </a>
+                        </router-link>
                     </div>
                 </form>
             </div>
@@ -55,8 +53,8 @@ export default {
             user:{
                 email: ' ',
                 password: '',
-                messages:'',
-                numGroups:''
+                // messages:'',
+                // numGroups:''
             },
             loading: false,
         }
@@ -65,6 +63,7 @@ export default {
          
         login(){
             if(this.user.email.length == 0 || this.user.password.length == 0){
+                this.$store.commit('setNotification',{type:2, message: 'Email and Password fields are required'});
                 
                return false;
             }

@@ -17,25 +17,31 @@
                     </div>
                 </div>
                 <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
-                    <div class="rap-msg">
+                    <div class="rap-msg mb-2">
                         <p>Message:</p>
                         <p id="ic-message" class="pb-2">{{message.anonymous_msg}}</p>
-                        <p class="pb-0">you recieved: {{message.created_at}}</p>
+                        <p class="pb-0">Recieved At: {{message.created_at}}</p>
 
                         <!-- <p>{{message.anonymous_msg.count()}}</p> -->
-                        <div class="lk-cont">
-                            <a @click="showss" @mouseleave="hidssh" ><i class="fas fa-share-square"></i>share
-                            <div class="ssh">
-                            <span v-if="showshare" @mouseleave="hidssh">You can make a screenshot of your messages to share with friends</span>
-                            </div>
+                        <div :class="'lk-cont lk-cont-'+index">
+                            <!-- @mouseleave="hidssh"  -->
+                            <a  @click.prevent="printThis(index)" ><i class="fas fa-share-square"></i>share
+                                <div class="ssh">
+                                    <span v-if="showshare" @mouseleave="hidssh">You can make a screenshot of your messages to share with friends</span>
+                                </div>
                             </a>
                             
                              <router-link to="/report" ><i  class="fas fa-flag"></i>Report</router-link>
                             <!-- <a href="#">share</a> -->
                         </div>
-                </div>
+                    </div>
+                    <div class="rap-msg mb-2 mt-2 rap-png" :id="'msgImg'+index" :ref="'printcontent'+index">
+                        <p>Message:</p>
+                        <p id="ic-message" class="pb-2">{{message.anonymous_msg}}</p>
+                        <p class="pb-0">Recieved At: {{message.created_at}}</p>
+                    </div>
                 
-            </div>
+                </div>
             </div>
         </div>
     </div>
@@ -44,6 +50,7 @@
 </template>
 <script>
 // import report from './report.vue'
+import html2canvas from 'html2canvas';
     export default {
 
         data(){
@@ -68,12 +75,33 @@
                 .then((data) => {
                     if(data.data.status){
                         this.messages = data.data.data;
+                        console.log(this.messages);
                         this.ismessage = false
                     }
                 }).catch((error) =>{
                     console.log(error);
                 });
-            }
+            },
+            async printThis(id) {
+                console.log("printing..", id);
+                const el = document.getElementById('msgImg'+id)
+                // convert div to canvas 
+                const options = {
+                    type: "dataURL",
+                };
+                const printCanvas = await html2canvas(el, options);
+                // convert canvas to png
+                const link = document.createElement("a");
+                link.setAttribute("download", "download.png");
+                link.setAttribute(
+                    "href",
+                    printCanvas
+                    .toDataURL("image/png")
+                    .replace("image/png", "image/octet-stream")
+                );
+                // click programmatically
+                link.click();
+            },
         },
         mounted() {
             this.getMessages();
@@ -150,6 +178,14 @@
 #ic-message{
     color: black;
     font-weight: 600;
+}
+.msg-box{
+    position: relative;
+}
+.rap-png{
+    z-index: -11;
+    position: absolute;
+    /* bottom: 40px; */
 }
 @media screen and (max-width:700px)  {
     .msg-row{

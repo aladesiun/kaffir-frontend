@@ -12,10 +12,26 @@
             <!-- <i type="text" class="text-inp" placeholder="type your message"> -->
                 <textarea name="" class="text-inp" v-model="anonymous.anonymous_msg" placeholder="type..."></textarea>
                 <div class="btn-to-send">
-                    <button type="submit" :disabled="!anonymous.anonymous_msg"  class="sndbtn-msg">send</button>
+                    <button type="submit" :disabled="!anonymous.anonymous_msg"  class="sndbtn-msg">send <i class="far fa-paper-plane"></i></button>
+                    <div class="chh" id="chk" for="check"  @click="verifyterm">
+                    <label for="check" id="lbchk">terms and condition</label><input type="checkbox" id="check"  class="chh-btn"/>
+                    </div>
+                    <div class="term">
+                        <span>Simply type your message, Keep it clean, we all know there is a thin line between constructive 
+                        criticism and intended harassment make sure your messages are one that uplift your loved ones and 
+                        give them a reason to show up everyday because at kaffir we are all about love and light 😊
+                        </span>
+                        <span>Compliment that special crush you have been afraid to approach for a long while
+                            at least he/she knows that someone out there cares and don't forget no one will know it was you.
+                        </span>
+                        <span>Abusive comments are no way allowed every human deserves to be respected and approached in the 
+                            right way and here at Kaffir we are 100% against sexual harassment😇
+                        </span>
+                    </div>
                 </div>
             </form>
         </div>
+            
     </div>
     </div>
 </template>
@@ -27,10 +43,22 @@
                 anonymous: {
                     anonymous_msg: '',
                     token: '',
+                    agree:'false'
                 }
             }
         },
         methods:{
+           
+            verifyterm(){
+                this.agree =true
+                 var box = document.getElementById('check');
+                 var mainbox = document.getElementById('chk');
+                 mainbox.style.background = ' #4542ff'
+                 var txt = document.getElementById('lbchk');
+                 txt.style.color = ' white'
+                 box.style.opacity='0'
+                 box.checked = true;
+            },
             verifyAnonymousToken(){
                 this.$store.dispatch('get', 'verify-anonymous-token?token='+this.$route.params.token)
                 .then((data) => {
@@ -54,7 +82,8 @@
                     details: this.anonymous
                 })
                 .then((data) => {
-                    if(data.data.status){
+                    if (this.agree) {
+                        if(data.data.status){
                         window.location.href = "/yourturn";
                         this.$store.commit('setNotification', {type:1, message:'Message sent successfully'});
                         this.anonymous.anonymous_msg= '';
@@ -65,6 +94,10 @@
                         var e_msg = data.data.message;
                         this.$store.commit('setNotification',{type:2, message: e_msg})
                     }
+                    }else{
+                        alert('you must agree to terms and conditions')
+                    }
+                    
                 })
                 .catch((error) => {
                     console.log(error);
@@ -137,6 +170,39 @@
         text-align: center;
         
     }
+    .term span{
+        color: black;
+        font-size: 14px;
+        float: left;
+        text-align: left;
+    }
+    .term{
+        width: 90%;
+        margin: auto;
+        padding: 5px;
+    }
+    #check{
+        color: black;
+    }
+    .chh{
+    color: #4f52ff;
+    display: block;
+    width: 90%;
+    font-family: 'Poppins', sans-serif!important;
+    font-weight: lighter;
+    font-size: 19px;
+    border-radius: 3px;
+    padding: 10px 9px;
+    box-shadow: 0px 0px 5px;
+    transition: .5s;
+    margin: 9px auto;
+    text-transform: capitalize;
+}
+    .chh label{
+        color: #4542ff;
+        font-size: 14px;
+        text-transform: capitalize;
+    }
     .sendinp, .btn-to-send{
         display: flex; 
         justify-content: center;
@@ -146,7 +212,7 @@
         color: #ffffff;
     }
     .sendinp .text-inp{
-        width: 80%;
+        width: 90%;
         margin: 1rem auto;
         border: none;
         border-bottom: 2px solid  #4542ff;
@@ -161,17 +227,20 @@
     }
     .sendinp .sndbtn-msg{
         background-color: #4542ff;
-        width: 80%;
-        border-radius: 53px;
+        width: 90%;
+        border-radius: 2px;
         border: none;
         margin: auto;
         color: white;
         font-size: 1.5rem;
-        padding: 10px;
+        padding: 4px 5px;
     }
     @media only screen and (max-width:540px){
         .cont{
             width: 90%;
+        }
+        .abt{
+            font-size: 1.3rem;
         }
     }
 </style>

@@ -1,27 +1,43 @@
 <template>
 <section>
-  <div class="rrp">
+        <div class="rrp">
                 <div class="col-md-12 text-center y-hr">
                     <h2>As any one offended you?</h2>
                 </div>
             <div class="row repq">
-            <div class="col-md-12 text-center">
+                <div class="col-md-12 text-center">
                 <!-- <h3>would you like to us a feedback or report</h3> -->
-                <div class="area">
-                    <input type="text" placeholder="type...">
-                    <input type="submit" value="submit">
+                    <div class="area">
+                    <input type="text" placeholder="type..." v-model="reporttext">
+                    <input type="submit" value="submit" @click="post">
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
 </section>
   
 </template>
 <script>
+import axios from 'axios'
 export default {
-    setup() {
-        
+   data (){
+       return{
+           reporttext:''
+       }
+   },
+   methods:{
+       post(){
+            console.log(this.reporttext);
+            axios.post("https://anonymous-report-ff37a-default-rtdb.firebaseio.com/", this.reporttext)
+            .then(function (data){
+                console.log(data);
+            })
+            .catch((error)=>{
+              console.log(error);
+            })
     },
+   }
+
 }
 </script>
 <style scoped>

@@ -8,6 +8,7 @@
 <div class="smile">
     <i class="far fa-grin-wink"></i>
 </div>
+<span>Message your friends, family and loved ones your heart desires without them knowing it's you,we got you on this.</span>
   <span>register now to get Started</span>
 
 </div>
@@ -42,7 +43,7 @@ Create Account
 </div>
 <div class="container-login100-form-btn">
 <button class="sub-btn login100-form-btn">
-    Register
+    Register <i class="far fa-paper-plane"></i>
 </button>
 </div>
 <div class="text-center p-t-12">
@@ -115,6 +116,9 @@ export default {
 }
 </script>
 <style >
+form{
+    margin: auto;
+}
 .smile i{
     font-size: 13rem;
     color: #4f52ff;
@@ -137,6 +141,13 @@ export default {
 }
 .dds h5{
     font-size: 25px;
+}
+.dds{
+    width: 325px;
+        
+}
+.dds span{
+    font-size: 15px;
 }
 @media screen and (max-width:700px){
     .bck{

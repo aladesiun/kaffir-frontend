@@ -21,13 +21,13 @@
                             <a href="" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-md-12 mt-2 mb-1" v-else>
+                         <!--<div class="col-md-12 mt-2 mb-1" v-else>
                             <div class="tt btns view" style="width:90%; margin:auto;">
                             <a href="" @click.prevent="disableAnonymousLink()">Delete Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
 
                             </div>
-                            <!-- <a href="https://api.whatsapp.com/send?text=Write%20a%20*secret%20anonymous%20message*%20for%20me..%20%F0%9F%98%89%20I%20*won%27t%20know*%20who%20wrote%20it..%20%F0%9F%98%82%E2%9D%A4%20%F0%9F%91%89%20https://anonymous.kaffir.ng/write-anonymous/70162035IxkNTPXtfMaX583789cuxVqYPzB3X3" target="_blank" class="btn-wa m-b-20 contact100-form-btn"><i class="fa fa-whatsapp"></i>Share on WhatsA</a> -->
-                        </div>
+                            <! <a href="https://api.whatsapp.com/send?text=Write%20a%20*secret%20anonymous%20message*%20for%20me..%20%F0%9F%98%89%20I%20*won%27t%20know*%20who%20wrote%20it..%20%F0%9F%98%82%E2%9D%A4%20%F0%9F%91%89%20https://anonymous.kaffir.ng/write-anonymous/70162035IxkNTPXtfMaX583789cuxVqYPzB3X3" target="_blank" class="btn-wa m-b-20 contact100-form-btn"><i class="fa fa-whatsapp"></i>Share on WhatsA</a> --
+                        </div> -->
                         <div class="col-md-12 mt-2 mb-1">
                             <div class="tt btns view " style="width:90%;margin:auto;">
                             <router-link to="/message">messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
@@ -152,6 +152,7 @@ export default {
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;
                     this.$store.commit('setUser', result);
+                    this.user.anonymous_link = "";
                 }
             })
             .catch((error) => {
@@ -181,22 +182,19 @@ export default {
     }
 }
 </script>
-<style>
+<style  >
 /* social button */
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-* {
-  padding: 0px;
-  margin: 0px;
-  text-transform: capitalize;
-}
 
 .btn-act .btns{
-        background: white;
+    background: white;
     box-shadow: 0px 0px 5px;
     /* color: #e22223; */
     border-radius: 20px;
     transition: .5s;
     margin-bottom: 5px;
+  text-transform: capitalize;
+
     /* border: 1px solid #4f52ff; */
 }
 .btns a:hover{
@@ -482,10 +480,7 @@ body{
     margin-bottom: 10px;
 }
 .tt i {
-    font-size: 20px;    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    font-size: 20px;
 
 }
 @media only screen and (max-width: 522px) {

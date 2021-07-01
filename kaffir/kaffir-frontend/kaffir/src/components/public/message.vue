@@ -35,10 +35,16 @@
                             <!-- <a href="#">share</a> -->
                         </div>
                     </div>
-                    <div class="rap-msg mb-2 mt-2 rap-png" :id="'msgImg'+index" :ref="'printcontent'+index">
-                        <p>Message:</p>
-                        <p id="ic-message" class="pb-2">{{message.anonymous_msg}}</p>
-                        <p class="pb-0">Recieved At: {{message.created_at}}</p>
+                    <div class="rap-msg mb-2 mt-2 rap-png prr" :id="'msgImg'+index" :ref="'printcontent'+index">
+                        <div class="top-nav">
+                            <p>kaffir Anonymous</p>
+                        </div>
+                        <div class="bbrr">
+                            <p>Message:</p>
+                            <p id="ic-message pr-ic" class="pb-2">{{message.anonymous_msg}}</p>
+                        </div>
+                        
+                        <!-- <p class="pb-0">Recieved At: {{message.created_at}}</p> -->
                     </div>
                 
                 </div>
@@ -186,6 +192,18 @@ import html2canvas from 'html2canvas';
     z-index: -11;
     position: absolute;
     /* bottom: 40px; */
+}
+.top-nav p{
+    color:  #4f52ff;
+    font-family: 'Pacifico', cursive;
+}
+.bbrr{
+    border-bottom: 1px solid #4f52ff!important;
+    width: 200px;
+    max-width: 500px;
+}
+.prr{
+    padding:25px 20px;
 }
 @media screen and (max-width:700px)  {
     .msg-row{

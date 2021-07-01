@@ -9,7 +9,7 @@
             </div>
             <div class="row hero mt-5">
                 <div class="col-lg-7 col-md-12">
-                    <h1>Send anonymous messages and create or join anonymous group chat .</h1>
+                    <h1>Send anonymous messages to your friends online.</h1>
                     <!-- <p class="ptt">know what people think about, start the journey by clicking any of the botton below</p> -->
                     <div class="lkns">
                         <router-link class="sign-btn" to="/register" tabindex="-1" aria-disabled="true">sign up</router-link>
@@ -35,7 +35,7 @@
                             <div class="icon-main icon-bb-main"></div>
                         </div>
                         <h1>safe and secure</h1>
-                        <p>Safety Of Our Users Using This Anonymous Messaging Platform Is Very Important For Us. We Have Got Reporting Systems So That You Can Report Anything That You Do Not Like To See.</p>
+                        <p>Safety Of Our Users Using This Anonymous Messaging Platform Is Very Important to Us. We Have Got Reporting Systems So That You Can Report Anything That You Do Not Like To See.</p>
                     </div>
                 </div>
                 <div class="grid-slide">
@@ -53,7 +53,7 @@
                             <div class="icon-main icon-bb-main"></div>
                         </div>
                         <h1>Advance Features</h1>
-                        <p>Safety Of Our Users Using This Anonymous Messaging Platform Is Very Important For Us. We Have Got Reporting Systems So That You Can Report Anything That You Do Not Like To See.</p>
+                        <p>later in the future you will be able to create a group chat and even send a voice record and share files </p>
                     </div>
                 </div>
                 <div class="grid-slide">
@@ -71,7 +71,7 @@
                             <div class="icon-main"></div>
                         </div>
                         <h1>Anonimity</h1>
-                        <p>Our Platform Ensures Your Privacy So That You Stay Anonymous Everytime You Send Someone A Secret Message. You Are Anonymous Until You Ever Choose To Reveal Your Identity.</p>
+                        <p>Our Platform Ensures Your Privacy So That You Stay Anonymous Everytime You Send Someone A Secret Message.</p>
                         <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -118,7 +118,7 @@
                     </div>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity</p>
+                            <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity </p>
                         </div>
                     </div>
                 </div>
@@ -219,6 +219,9 @@ icons.forEach((icon) => {
 </script>
 
 <style scoped>
+      .bb p{
+          text-transform: capitalize;
+      }  
       .hero a{
           color: white;
       }

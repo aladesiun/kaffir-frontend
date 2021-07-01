@@ -36,7 +36,7 @@
                         <router-link class="txt2" to="/reset"> Password?</router-link>
                     </div>
                     <div class="text-center p-t-60">
-                        <router-link to="/register" class="txt2">Create Account?
+                        <router-link to="/register" class="txt2">Dont have an account, Create One?
                             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                         </router-link>
                     </div>

@@ -13,6 +13,7 @@ import message from './components/public/message'
 import groups from './components/public/groups'
 import report from './components/public/report'
 import yourturn from './components/public/yourturn'
+import Share from './components/public/imgshare'
 // import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter);
@@ -40,12 +41,13 @@ var routes = [
                 path:'/groups',
                 component: groups
             },
-            {
-                path:'/write-anonymous/:token',
-                component: sendmsg
-            },
+            
            
         ]
+    },
+    {
+        path:'/write-anonymous/:token',
+        component: sendmsg
     },
     {
         path:'/profile',
@@ -76,6 +78,10 @@ var routes = [
     {
         path: '/reset',
         component: forget
+    },
+    {
+        path: '/share',
+        component: Share
     },
     {
         path:'/group-chat',

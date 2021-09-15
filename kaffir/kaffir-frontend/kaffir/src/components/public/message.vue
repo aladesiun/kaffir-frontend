@@ -9,14 +9,16 @@
                     <p>messages you recieve will appear here</p>
 
                 </div>
-                <div class="row " v-if="ismessage">
+                <div class="row " v-if="messages.length == 0">
                     <div class="col-md-12 text-center">
                         <h4>you have no messages yet</h4>   
                     <router-link to="/profile">Go back</router-link>
 
                     </div>
                 </div>
-                <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
+                <div class="msg-holder" style="display: flex;
+    flex-direction: column-reverse;">
+ <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
                     <div class="rap-msg mb-2">
                         <p>Message:</p>
                         <p id="ic-message" class="pb-2">{{message.anonymous_msg}}</p>
@@ -48,6 +50,8 @@
                     </div>
                 
                 </div>
+                </div>
+               
             </div>
         </div>
     </div>
@@ -111,7 +115,7 @@ import html2canvas from 'html2canvas';
         },
         mounted() {
             this.getMessages();
-            // console.log(this.messages);
+            console.log(this.messages);
 
         }
     }

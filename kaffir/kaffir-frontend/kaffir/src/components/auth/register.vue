@@ -87,8 +87,11 @@ export default {
             })
             .then((data) => {
                 if(data.data.status){
-                    var user = data.data.data;
-                    this.$store.commit('setUser', user);
+                    var result = data.data.data;
+                    console.log(data);
+                    localStorage.setItem('token', data.data.token);
+                    result.token=data.data.token;
+                    this.$store.commit('setUser', result);
                     this.$store.commit('setNotification',{type:1, message:'Registration Successful'});
                     window.location.href = '/profile';
                 }

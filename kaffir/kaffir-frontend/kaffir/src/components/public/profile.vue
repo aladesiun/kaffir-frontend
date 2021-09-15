@@ -8,71 +8,54 @@
                     <div class="card-header text-center p-0">
                         <h1>Profile</h1>
                     </div>
-                    <div class="card-block">
-                        <!-- <div class="user-image">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image" />
-                        </div> -->
-                        <h6 class="f-w-600  m-b-10">{{this.user['username']}}</h6>
+                    <div class="card-block"> 
+                        <h6 class="f-w-600  m-b-10">{{user.username}}</h6>
                         <p class="text-muted">Welcome to your profile</p>
                         <hr />
                         <div class="btn-act row">
-                        <div class=" col-md-12 mt-2 mb-1" v-if="user.anonymous_link ==  ''">
-                            <div class="tt btns view" style="width:90%; margin:auto;">
-                            <a href="" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                            <div class=" col-md-12 mt-2 mb-1" v-if="user.anonymous_link ==  ''">
+                                <div class="tt btns view" style="width:90%; margin:auto;">
+                                    <a href="" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
                             </div>
-                        </div>
-                         <!--<div class="col-md-12 mt-2 mb-1" v-else>
-                            <div class="tt btns view" style="width:90%; margin:auto;">
-                            <a href="" @click.prevent="disableAnonymousLink()">Delete Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                            <div class="col-md-12 mt-2 mb-1" v-else>
+                                <div class="tt btns view" style="width:90%; margin:auto;">
+                                <a href="" @click.prevent="disableAnonymousLink()">Delete Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
 
+                                </div>
+                            </div> 
+                            <div class="col-md-12 mt-2 mb-1">
+                                <div class="tt btns view " style="width:90%;margin:auto;">
+                                    <router-link to="/message">messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
+                                </div>
                             </div>
-                            <! <a href="https://api.whatsapp.com/send?text=Write%20a%20*secret%20anonymous%20message*%20for%20me..%20%F0%9F%98%89%20I%20*won%27t%20know*%20who%20wrote%20it..%20%F0%9F%98%82%E2%9D%A4%20%F0%9F%91%89%20https://anonymous.kaffir.ng/write-anonymous/70162035IxkNTPXtfMaX583789cuxVqYPzB3X3" target="_blank" class="btn-wa m-b-20 contact100-form-btn"><i class="fa fa-whatsapp"></i>Share on WhatsA</a> --
-                        </div> -->
-                        <div class="col-md-12 mt-2 mb-1">
-                            <div class="tt btns view " style="width:90%;margin:auto;">
-                            <router-link to="/message">messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
-                            </div>
-                        </div>
 
-                        <div class="col-md-12 mt-2 mb-1">
-                            <div class="tt btns view " style="width:90%;margin:auto;">
-                            <a :href="facebook_url + user.anonymous_link">share on facebook&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fa fa-facebook-official"></i></a>
+                            <div class="col-md-12 mt-2 mb-1">
+                                <div class="tt btns view " style="width:90%;margin:auto;">
+                                    <a :href="facebook_url + user.anonymous_link">share on facebook&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fa fa-facebook-official"></i></a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-md-12 mt-2 mb-1">
-                            <div class="tt btns view " style="width:90%;margin:auto;">
-                            <a :href="whatsapp_url+user.anonymous_link">share on whatsapp&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fa fa-whatsapp"></i></a>
+                            <div class="col-md-12 mt-2 mb-1">
+                                <div class="tt btns view " style="width:90%;margin:auto;">
+                                <a :href="whatsapp_url+user.anonymous_link">share on whatsapp&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fa fa-whatsapp"></i></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-12 mt-2 mb-1">
-                            <div class="tt btns view " style="width:90%;margin:auto;">
-                            <a :href="twitter_url">share on twitter &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fab fa-twitter"></i></a>
+                            <div class="col-md-12 mt-2 mb-1">
+                                <div class="tt btns view " style="width:90%;margin:auto;">
+                                <a :href="twitter_url">share on twitter &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fab fa-twitter"></i></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-12 mt-2 mb-1">
-                            <div class="tt btns view " style="width:90%;margin:auto;">
+                            <div class="col-md-12 mt-2 mb-1">
+                                <div class="tt btns view " style="width:90%;margin:auto;">
 
 
-                            <router-link to="">share on instagram &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fab fa-instagram"></i></router-link>
+                                <router-link to="">share on instagram &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fab fa-instagram"></i></router-link>
+                                </div>
                             </div>
-                        </div>
                         </div>
                         <div class="bg-c-blue counter-block m-t-10 p-20">
-                            <!-- <div class="row">
-                                <div class="col-4">
-                                    <i class="fa fa-comment"></i>
-                                    <p>1256</p>
-                                </div>
-                                <div class="col-4">
-                                    <i class="fa fa-user"></i>
-                                    <p>8562</p>  
-                                </div>
-                                <div class="col-4">
-                                    <i class="fa fa-suitcase"></i>
-                                    <p>189</p>
-                                </div>
-                            </div> -->
+                           
                             <div class="cpy-holder">
                                 <input type="text" v-model="user.anonymous_link" id="cpy-box"> <input type="button" id="cpy-real" value="copy" @click="copy">
                             </div>
@@ -127,7 +110,7 @@ export default {
             })
             .then((data) => {
                 if(data.data.status){
-                    this.anonymous_link = data.data.anonymous_link;
+                    this.user.anonymous_link = data.data.anonymous_link;
                     var result = data.data.data;
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;
@@ -147,7 +130,7 @@ export default {
             })
             .then((data) => {
                 if(data.data.status){
-                    this.anonymous_link = data.data.anonymous_link;
+                    this.user.anonymous_link = data.data.anonymous_link;
                     var result = data.data.data;
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;
@@ -176,7 +159,7 @@ export default {
         }
     },
     created(){
-        // console.log(this.user);
+        console.log(this.user);
         // alert(this.user['username']);
         
     }

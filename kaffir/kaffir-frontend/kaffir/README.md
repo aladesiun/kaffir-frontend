@@ -1,4 +1,5 @@
 # kaffir
+<!-- VUE_APP_ENDPOINT="https://api.kaffir.ng/api/" -->
 
 ## Project setup
 ```

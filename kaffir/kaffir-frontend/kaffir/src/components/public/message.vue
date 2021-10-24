@@ -5,8 +5,8 @@
             <!-- <h1 class="tithead center">your messages are here</h1> -->
             <div class="row msg-row">
                 <div class="col-md-12 text-center head-mm">
-                    <h1>Messages</h1>
-                    <p>messages you recieve will appear here</p>
+                    <h1>Responses</h1>
+                    <p class="color-dark">messages you recieve will appear here</p>
 
                 </div>
                 <div class="row " v-if="messages.length == 0">
@@ -17,21 +17,21 @@
                     </div>
                 </div>
                 <div class="msg-holder" style="display: flex;
-    flex-direction: column-reverse;">
- <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
+                        flex-direction: column-reverse;">
+                    <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
                     <div class="rap-msg mb-2">
                         <p>Message:</p>
                         <p id="ic-message" class="pb-2">{{message.anonymous_msg}}</p>
-                        <p class="pb-0">Recieved At: {{message.created_at}}</p>
+                        <p class="pb-0">-Anonymous[{{message.created_at}}]</p>
 
                         <!-- <p>{{message.anonymous_msg.count()}}</p> -->
                         <div :class="'lk-cont lk-cont-'+index">
                             <!-- @mouseleave="hidssh"  -->
-                            <a  @click.prevent="printThis(index)" ><i class="fas fa-share-square"></i>share
+                            <!-- <a  @click.prevent="printThis(index)" ><i class="fas fa-share-square"></i>share
                                 <div class="ssh">
                                     <span v-if="showshare" @mouseleave="hidssh">You can make a screenshot of your messages to share with friends</span>
                                 </div>
-                            </a>
+                            </a> -->
                             
                              <router-link to="/report" ><i  class="fas fa-flag"></i>Report</router-link>
                             <!-- <a href="#">share</a> -->
@@ -123,16 +123,17 @@ import html2canvas from 'html2canvas';
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 *{
-    font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
+.color-dark{
+    color: #000;
+}
 .bdy{
-       background-color: #4f52ff;
+    background-color: #4f52ff;
     margin: 1px auto;
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
-    font-family: 'Roboto', sans-serif;
     padding: 5px;
     }
     i.fas.fa-share {
@@ -186,7 +187,7 @@ import html2canvas from 'html2canvas';
  width: 500px;
 }
 #ic-message{
-    color: black;
+        color: #7e7e7e;
     font-weight: 600;
 }
 .msg-box{

@@ -13,9 +13,9 @@
                 <textarea name="" class="text-inp" v-model="anonymous.anonymous_msg" placeholder="type..."></textarea>
                 <div class="btn-to-send">
                     <button type="submit" :disabled="!anonymous.anonymous_msg"  class="sndbtn-msg">send <i class="far fa-paper-plane"></i></button>
-                    <div class="chh" id="chk" for="check"  @click="verifyterm">
+                    <!-- <div class="chh" id="chk" for="check"  @click="verifyterm">
                     <label for="check" id="lbchk">terms and condition</label><input type="checkbox" id="check"  class="chh-btn"/>
-                    </div>
+                    </div> -->
                     <div class="term">
                         <span>Simply type your message, Keep it clean, we all know there is a thin line between constructive 
                         criticism and intended harassment make sure your messages are one that uplift your loved ones and 
@@ -49,16 +49,16 @@
         },
         methods:{
            
-            verifyterm(){
-                this.agree =true
-                 var box = document.getElementById('check');
-                 var mainbox = document.getElementById('chk');
-                 mainbox.style.background = ' #4542ff'
-                 var txt = document.getElementById('lbchk');
-                 txt.style.color = ' white'
-                 box.style.opacity='0'
-                 box.checked = true;
-            },
+            // verifyterm(){
+            //     this.agree =true
+            //      var box = document.getElementById('check');
+            //      var mainbox = document.getElementById('chk');
+            //      mainbox.style.background = ' #4542ff'
+            //      var txt = document.getElementById('lbchk');
+            //      txt.style.color = ' white'
+            //      box.style.opacity='0'
+            //      box.checked = true;
+            // },
             verifyAnonymousToken(){
                 this.$store.dispatch('get', 'verify-anonymous-token?token='+this.$route.params.token)
                 .then((data) => {
@@ -78,25 +78,23 @@
                 }
 
                 this.$store.dispatch('post', {
-                    endpoint: 'write-anonymous',
+                    endpoint: 'message',
                     details: this.anonymous
                 })
                 .then((data) => {
-                    if (this.agree) {
+                    
                         if(data.data.status){
                         window.location.href = "/yourturn";
                         this.$store.commit('setNotification', {type:1, message:'Message sent successfully'});
                         this.anonymous.anonymous_msg= '';
                         // swal("My title", "My description", "success");
-                        
+                                    
                     }
                     else{
                         var e_msg = data.data.message;
                         this.$store.commit('setNotification',{type:2, message: e_msg})
                     }
-                    }else{
-                        alert('you must agree to terms and conditions')
-                    }
+                    
                     
                 })
                 .catch((error) => {

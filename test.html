@@ -1,0 +1,784 @@
+<div class="" tabindex="">
+    <div>
+        <style type="text/css" id="static">
+            @import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,500,700");
+            html,
+            body,
+            div,
+            span,
+            applet,
+            object,
+            iframe,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            pre,
+            a,
+            abbr,
+            acronym,
+            address,
+            big,
+            cite,
+            code,
+            del,
+            dfn,
+            em,
+            font,
+            img,
+            ins,
+            kbd,
+            q,
+            s,
+            samp,
+            small,
+            strike,
+            strong,
+            sub,
+            sup,
+            tt,
+            var,
+            b,
+            u,
+            i,
+            center,
+            dl,
+            dt,
+            dd,
+            ol,
+            ul,
+            li,
+            fieldset,
+            form,
+            label,
+            legend,
+            table,
+            caption,
+            tbody,
+            tfoot,
+            thead,
+            tr,
+            th,
+            td {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                vertical-align: baseline;
+                background: transparent;
+            }
+            body {
+                line-height: 1;
+                text-align: left;
+                font-feature-settings: "liga" 0;
+                -moz-font-feature-settings: "liga" off;
+            }
+            #document.skn-mli2 table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                font-size: inherit;
+                color: inherit;
+                width: 100%;
+            }
+
+            /*START content disc style for LI*/
+            #document.skn-mli2 ul,
+            #document.skn-mli2 li {
+                list-style: none;
+                margin: 0 0 0 8px;
+                padding: 0;
+            }
+            #document.skn-mli2 ul li {
+                position: relative;
+                margin: 0;
+            }
+            #document.skn-mli2 ul li:before {
+                content: "\2022";
+                position: absolute;
+                left: -8px;
+                top: 0;
+            }
+            /*END content disc style for LI*/
+
+            #document.skn-mli2 .paddedline {
+                display: block;
+            }
+            #document.skn-mli2 .txt-bold {
+                font-weight: bold;
+            }
+            #document.skn-mli2 .flt-right {
+                float: right;
+            }
+            #document.skn-mli2 .brk-all {
+                word-break: break-all;
+            }
+
+            /*Document*/
+            #document.skn-mli2 {
+                font-family: "Fira Sans";
+                color: #000;
+                line-height: 16px;
+                font-weight: 300;
+                font-variant-ligatures: none;
+                min-height: 792px;
+                word-wrap: break-word;
+            }
+            #document.skn-mli2 .parentContainer {
+                table-layout: fixed;
+                display: table;
+                width: 100%;
+                border-collapse: collapse;
+            }
+            #document.skn-mli2 .topsection {
+                position: relative;
+                padding-top: 45px;
+                border-bottom: 1px solid #8da6b6;
+            }
+            #document.skn-mli2 .topsection:before {
+                content: "";
+                background: #dfe6eb;
+                position: absolute;
+                height: 35px;
+                width: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0.15;
+            }
+            #document.skn-mli2 .topsection .section {
+                margin-bottom: 0;
+            }
+            #document.skn-mli2 .section {
+                padding-bottom: 5px;
+            }
+            #document.skn-mli2 .bottom-box {
+                padding-bottom: 20px;
+            }
+
+            /*Name and CNTC*/
+            #document.skn-mli2 .name {
+                color: #2a5978;
+                font-size: 36px;
+                line-height: 34px;
+                font-weight: 700;
+                text-align: left;
+                padding-bottom: 5px;
+                text-transform: uppercase;
+            }
+            #document.skn-mli2 .companyname {
+                font-weight: 700;
+            }
+            #document.skn-mli2 .jobcity,
+            #document.skn-mli2 .jobstate,
+            #document.skn-mli2 .degree,
+            #document.skn-mli2 .programline,
+            #document.skn-mli2 .jobdates {
+                font-weight: 500;
+            }
+            #document.skn-mli2 .education .jobcity,
+            #document.skn-mli2 .education .jobstate,
+            #document.skn-mli2 .education .jobcountry {
+                font-weight: 300;
+            }
+            #document.skn-mli2 .resumeTitle {
+                text-align: left;
+                padding-bottom: 5px;
+            }
+            #document.skn-mli2 .address .adrsDetails {
+                word-break: normal;
+            }
+            #document.skn-mli2 .adnlLnks {
+                margin-left: 0 !important;
+            }
+            #document.skn-mli2 .cntc-sec {
+                border-top: none;
+                margin-bottom: 0;
+                padding-top: 0;
+            }
+
+            /* Common style for left and right box */
+            #document.skn-mli2 .left-box {
+                padding: 25px 17px 25px 0;
+                display: table-cell;
+            }
+            #document.skn-mli2 .right-box {
+                padding: 25px 0 25px 17px;
+                display: table-cell;
+                vertical-align: top;
+            }
+            #document.skn-mli2 .left-box .section,
+            #document.skn-mli2 .right-box .section {
+                border-bottom: 1px solid #8da6b6;
+            }
+
+            /*heading*/
+            #document.skn-mli2 .heading {
+                margin-bottom: 4px;
+                font-weight: bold;
+                font-size: 18px;
+                overflow: hidden;
+            }
+            #document.skn-mli2 .sectiontitle {
+                color: #2a5978;
+                text-transform: uppercase;
+                padding-right: 5px;
+                display: inline;
+                letter-spacing: 0.5px;
+            }
+            #document.skn-mli2 .sectiontitle:after {
+                content: "";
+                display: inline-block;
+                width: 100%;
+                height: 12px;
+                margin-right: -100%;
+                margin-left: 5px;
+                background: #dfe6eb;
+                opacity: 0.15;
+            }
+            #document.skn-mli2 .jobline ul {
+                margin-top: 3px;
+            }
+
+            /*New logic for infographic*/
+            #document.skn-mli2 .lang-sec .singlecolumn,
+            #document.skn-mli2 .skli-sec .singlecolumn {
+                display: none;
+            }
+            #document.skn-mli2 .lang-sec.infobarsec .infobarpara,
+            #document.skn-mli2 .lang-sec.infotilesec .infotilepara,
+            #document.skn-mli2 .skli-sec.infobarsec .infobarpara,
+            #document.skn-mli2 .skli-sec.infotilesec .infotilepara {
+                display: block;
+            }
+
+            /*Infographic*/
+            #document.skn-mli2 .lang-sec.infobarsec .field *,
+            #document.skn-mli2 .lang-sec.infobarsec .nativeLangPara .field {
+                display: inline;
+            }
+            #document.skn-mli2 .lang-sec.infobarsec .paragraph {
+                clear: both;
+                margin-top: 0;
+                page-break-inside: avoid;
+            }
+            #document.skn-mli2 .firstparagraph {
+                margin-top: 0 !important;
+            }
+            #document.skn-mli2 .rating-bar {
+                background: #d5d6d6;
+                width: 100%;
+                clear: both;
+            }
+            #document.skn-mli2 .inner-rating {
+                background-color: #2a5978;
+                height: 4px;
+                width: 60%;
+            }
+
+            /*Infographic Skills*/
+            #document.skn-mli2 .lang-sec.infotilesec .paragraph,
+            #document.skn-mli2 .skli-sec .paragraph {
+                width: 100%;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 0;
+            }
+            #document.skn-mli2 .lang-sec.infotilesec > .paragraph:nth-last-child(1),
+            #document.skn-mli2 .skli-sec > .paragraph:nth-last-child(1) {
+                padding-bottom: 0 !important;
+            }
+            #document.skn-mli2 .lang-sec.infotilesec .field *,
+            #document.skn-mli2 .lang-sec.infotilesec .field,
+            #document.skn-mli2 .skli-sec .field * {
+                display: inline;
+            }
+            #document.skn-mli2 .lang-sec.infotilesec .sliced-rect,
+            #document.skn-mli2 .skli-sec .sliced-rect {
+                height: 6px;
+                width: 100%;
+                line-height: 0px;
+                margin-top: 3px;
+                clear: both;
+            }
+            #document.skn-mli2 .lang-sec.infotilesec .sliced-rect .sliced-rect-tile,
+            #document.skn-mli2 .skli-sec .sliced-rect .sliced-rect-tile {
+                height: 100%;
+                background-color: #d5d6d6;
+                float: left;
+                margin-right: 3px;
+            }
+            #document.skn-mli2 .lang-sec.infotilesec .sliced-rect .sliced-rect-tile:last-child,
+            #document.skn-mli2 .skli-sec .sliced-rect .sliced-rect-tile:last-child {
+                margin-right: 0;
+            }
+
+            /*Rectangular Rating Blocks*/
+            #document.skn-mli2 .sliced-rect .sliced-rect-tile.ratvfill {
+                background-color: #576d7b;
+            }
+            #document.skn-mli2 .hide-bar .rating-bar,
+            #document.skn-mli2 .hide-bar .sliced-rect,
+            #document.skn-mli2 .hide-only-bar .rating-bar,
+            #document.skn-mli2 .hide-colon .colon,
+            #document.skn-mli2 .hide-bar .field-ratt {
+                display: none !important;
+            }
+
+            /* Additional Link */
+            #document.skn-mli2 .adnlLnks li:last-child {
+                padding: 0;
+            }
+
+            /* Style for Signature */
+            #document.skn-mli2 .disclaim .singlecolumn,
+            #document.skn-mli2 .disclaim .singlecolumn li,
+            #document.skn-mli2 .disclaim .singlecolumn p,
+            #document.skn-mli2 .disclaim .singlecolumn span {
+                font-size: 9px !important;
+                color: #8a8a8a !important;
+            }
+            #document.skn-mli2 .field_sign {
+                font-size: 7px !important;
+                color: #8a8a8a !important;
+            }
+            #document.skn-mli2 .txtleft + .field_sign {
+                text-align: left;
+            }
+            #document.skn-mli2 .txtcenter + .field_sign {
+                text-align: center;
+            }
+            #document.skn-mli2 .txtright + .field_sign {
+                text-align: right;
+            }
+            #document.skn-mli2 .signPic span:first-child {
+                padding-right: 6px;
+            }
+            #document.skn-mli2 .signPic img {
+                max-width: 100%;
+            }
+            #document.skn-mli2 div[id*="SECTION_SGTR"] {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            /*MFR address*/
+            #document.skn-mli2 .zipsuffix,
+            #document.skn-mli2.MFR .zipprefix,
+            #document.skn-mli2.MES .zipprefix {
+                display: inline;
+            }
+            #document.skn-mli2 .zipprefix,
+            #document.skn-mli2.MFR .zipsuffix,
+            #document.skn-mli2.MES .zipsuffix {
+                display: none;
+            }
+
+            /*MUK colon*/
+            #document.skn-mli2 .mukcolon {
+                display: none;
+            }
+            #document.skn-mli2.MUK .mukcolon {
+                display: inline !important;
+            }
+
+            /* GRYR */
+            #document.skn-mli2 .displayNoneThisField {
+                display: none;
+            } /* Keep this class always at bottom */
+
+            /*For Extra Space Before Colon*/
+            #document.skn-mli2 .beforecolonspace {
+                display: none !important;
+            }
+            #document.skn-mli2.MFR .beforecolonspace {
+                display: inline !important;
+            }
+        </style>
+        <style type="text/css" id="dynamic" data-time="Thu Oct 21 2021 14:29:02 GMT+1300 (GMT+13:00)">
+            #document.skn-mli2,
+            #document.skn-mli2 table {
+                line-height: 17px;
+            }
+            #document.skn-mli2.pagesize {
+                width: 90%;
+                margin: auto;
+            }
+            #document.skn-mli2.fontsize {
+                font-size: 20px;
+            }
+            #document.skn-mli2.fontface {
+                font-family: Fira Sans;
+            }
+            #document.skn-mli2.hmargins {
+                padding-left: 35px;
+                padding-right: 35px;
+            }
+            #document.skn-mli2 .section {
+                margin-bottom: 25px;
+            }
+            #document.skn-mli2 .disclaim {
+                padding: 0;
+                padding-top: 50px;
+            }
+            #document.skn-mli2 .sectiontitle {
+                color: #cf142b;
+                font-size: 16px;
+                line-height: 20px;
+            }
+            #document.skn-mli2 .paragraph {
+                margin-top: 15px;
+            }
+            #document.skn-mli2 .left-box .singlecolumn,
+            #document.skn-mli2 .left-box .maincolumn {
+                margin-left: 0px;
+            }
+            #document.skn-mli2 table.skills td {
+                padding-top: 5px;
+            }
+            #document.skn-mli2 .name {
+                color: #cf142b;
+                font-size: 36px;
+                line-height: 36px;
+            }
+            #document.skn-mli2 .resumeTitle {
+                color: #cf142b;
+                font-size: 18px;
+            }
+            #document.skn-mli2 .left-box {
+                width: 75%;
+            }
+            #document.skn-mli2 ul li {
+                padding-left: 0px;
+            }
+            #document.skn-mli2 .sectiontitle:after {
+                height: 13px;
+            }
+            #document.skn-mli2 .topsection:before,
+            #document.skn-mli2 .sectiontitle:after {
+                background-color: #cf142b;
+            }
+            #document.skn-mli2 .left-box .section,
+            #document.skn-mli2 .right-box .section,
+            #document.skn-mli2 .topsection {
+                border-color: #cf142b;
+            }
+
+            /*Infographic*/
+            #document.skn-mli2 .lang-sec.infobarsec .paragraph {
+                padding-top: 5px;
+            }
+            #document.skn-mli2 .lang-sec.infobarsec .firstparagraph {
+                padding-top: 0;
+            }
+            #document.skn-mli2 .inner-rating {
+                background-color: #cf142b;
+            }
+            .text-rename{
+                display: none;
+            }
+            /*Infographic Skills*/
+            #document.skn-mli2 .lang-sec.infotilesec .paragraph,
+            #document.skn-mli2 .skli-sec .paragraph {
+                padding-bottom: 5px;
+            }
+            #document.skn-mli2 .lang-sec.infotilesec .firstparagraph,
+            #document.skn-mli2 .skli-sec .firstparagraph {
+                padding-top: 0;
+            }
+
+            /*Rectangular Rating Blocks*/
+            #document.skn-mli2 .paragraph .sliced-rect .sliced-rect-tile.ratvfill {
+                background-color: #cf142b;
+            }
+        </style>
+    </div>
+    <div id="document" class="document fontsize fontface vmargins hmargins pagesize skn-mli2 MLI2 MUK" docskinwidth="525">
+        <div id="CONTAINER_PARENT_0" class="topsection">
+            <div id="CONTAINER_0">
+                <div data-react-beautiful-dnd-draggable="0" class="sortable-item section-container SortableItem-sibling data-NAME">
+                    
+                    <div id="SECTION_NAMEbd16ba77-39a4-4f74-9059-751ba8eb739c" class="section notdraggable SECTION_NAME firstsection" data-section-cd="NAME">
+                        <div class="doc-item">
+                            <div class="">
+                                <div class="">
+                                    <div id="PARAGRAPH_NAME_b3a63b35-6cbc-4dd7-a45d-a7a259bf4bde" class="paragraph PARAGRAPH_NAME firstparagraph">
+                                        <div>
+                                            <div class="name">
+                                                <span class="field" id="FIELD_FNAM">temitope</span>
+                                                <span class="field" id="FIELD_LNAM">aladesiun</span>
+                                            </div>
+                                        </div>
+                                        <div class="doc-overlay para-overlay" style="left: -37px; right: -37px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-overlay section-overlay" style="left: -37px; right: -37px;"><span>&nbsp;</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="CONTAINER_PARENT_1" class="parentContainer">
+            <div id="CONTAINER_1" class="left-box last-box">
+                <div data-react-beautiful-dnd-draggable="1" class="sortable-item section-container SortableItem-sibling data-SUMM">
+               
+                    <div id="SECTION_SUMM71fb9a74-5f87-41fd-9a5b-dfbaf1769e69" class="section SECTION_SUMM" data-section-cd="SUMM">
+                        <div class="doc-item">
+                            <div class="heading">
+                                <div class="sectiontitle" id="SECTIONNAME_SUMM">Professional summary<span class="rename-section text-rename"> Rename</span></div>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <div id="PARAGRAPH_SUMM_e41e59a4-5ca8-bd2b-2df9-6108d4d7436c" class="paragraph PARAGRAPH_SUMM firstparagraph">
+                                        <div class="clearfix doc-item">
+                                            <div class="field singlecolumn" id="FIELD_FRFM">
+                                                <p>
+                                                    Motivated Fullstack Web Developer with over 3years hands-on experience. Recognized for integrating and implement both simple and complex web functionality such as chat, payment, crude
+                                                    operations, sms etc. Resourceful and well-organized with excellent leadership and team-building record.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="doc-overlay para-overlay" style="left: -37px; right: -37px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-overlay section-overlay" style="left: -37px; right: -37px;"><span>&nbsp;</span></div>
+                    </div>
+                </div>
+                <div data-react-beautiful-dnd-draggable="1" class="sortable-item section-container SortableItem-sibling data-EXPR">
+                   
+                    <div id="SECTION_EXPRf69ce02b-0412-47d6-a189-1f8f3b0d5ba2" class="section experience SECTION_EXPR multi-para" data-section-cd="EXPR">
+                        <div class="doc-item">
+                            <div class="heading">
+                                <div class="sectiontitle" id="SECTIONNAME_EXPR">Work history<span class="rename-section text-rename"> Rename</span></div>
+                            </div>
+                            <div class="">
+                                <div class="sortableInner">
+                                    <div class="sortable-item paragraph-container">
+                                       
+                                        <div id="PARAGRAPH_EXPR_cd4e84b1-e42b-5e56-6e71-db101743b588" class="paragraph PARAGRAPH_EXPR firstparagraph">
+                                            <div class="clearfix doc-item">
+                                                <div class="singlecolumn">
+                                                    <span class="paddedline txt-bold" dependency="JTIT|JSTD|EDDT">
+                                                        <span class="jobtitle" id="FIELD_JTIT">Front end developer </span><span dependency="JTIT+JSTD|EDDT">, </span>
+                                                        <span class="jobdates" dependency="JSTD|EDDT">
+                                                            <span id="FIELD_JSTD" format="%m/%Y">01/2021</span><span dependency="JSTD+EDDT"> to </span>
+                                                            <span id="FIELD_EDDT" format="%m/%Y">Current</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="paddedline locationGap txt-bold" dependency="COMP|JSTA|JCIT|JCNT">
+                                                        <span class="companyname" id="FIELD_COMP">rideeat.org</span><span dependency="COMP"><span dependency="JCIT|JSTA|JCNT"> - </span></span>
+                                                        <span class="jobcity" id="FIELD_JCIT">Ogbomoso, oyo state</span><span dependency="JCIT+JSTA|JCNT">, </span> <span class="jobstate" id="FIELD_JSTA">nigeria</span>
+                                                        <span class="joblocation jobcountry" id="FIELD_JCNT"></span>
+                                                    </span>
+
+                                                    <span class="jobline" id="FIELD_JDES">
+                                                        <ul>
+                                                            <li>Created animations and transitions to enhance design and UX, boosting user experience score from 40% to 90%.</li>
+                                                            <li>Developed efficient, reusable code and libraries that saved over 4 hours of development time per day.</li>
+                                                            <li>Improved JavaScript and CSS quality by conducting code analysis and recommending changes in policies and procedures.</li>
+                                                            <li>Used vue.js as frontend framework to increase the website speed and easy connection to the backend and Api framework which is php laravel.</li>
+                                                            <li>Fetched data directly from laravel Api and consumed them.</li>
+                                                            <li>Monitored project progress, ensuring functionality and feasibility of solutions to best meet client specifications.</li>
+                                                        </ul>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="doc-overlay para-overlay" style="left: -37px; right: -37px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="sortable-item paragraph-container">
+                                       
+                                        <div id="PARAGRAPH_EXPR_58c52f29-0edd-69ef-85ad-ccd40bebe503" class="paragraph PARAGRAPH_EXPR">
+                                            <div class="clearfix doc-item">
+                                                <div class="singlecolumn">
+                                                    <span class="paddedline txt-bold" dependency="JTIT|JSTD|EDDT">
+                                                        <span class="jobtitle" id="FIELD_JTIT">fullsatck developer</span><span dependency="JTIT+JSTD|EDDT">, </span>
+                                                        <span class="jobdates" dependency="JSTD|EDDT">
+                                                            <span id="FIELD_JSTD" format="%m/%Y">10/2020</span><span dependency="JSTD+EDDT"> to </span>
+                                                            <span id="FIELD_EDDT" format="%m/%Y">Current</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="paddedline locationGap txt-bold" dependency="COMP|JSTA|JCIT|JCNT">
+                                                        <span class="companyname" id="FIELD_COMP">kaffir.ng</span><span dependency="COMP"><span dependency="JCIT|JSTA|JCNT"> - </span></span> <span class="jobcity" id="FIELD_JCIT">oyo</span>
+                                                        <span dependency="JCIT+JSTA|JCNT">, </span> <span class="jobstate" id="FIELD_JSTA">nigeria</span><span class="joblocation jobcountry" id="FIELD_JCNT"></span>
+                                                    </span>
+
+                                                    <span class="jobline" id="FIELD_JDES">
+                                                        <ul>
+                                                            <li>Created anonymous messaging webapp where users can send messages to their loved ones without their identity been reviewed</li>
+                                                            <li>Maintained advanced security measures to protect user assets, safeguarding integrity of confidential data and minimising identity breaches by 99%.</li>
+                                                            <li>Worked closely with other developers, UX designers and data analysts to create cohesive finished products.</li>
+                                                            <li>Used my two favorites frameworks(vue.js and laravel) to ensure speed and efficiency</li>
+                                                        </ul>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="doc-overlay para-overlay" style="left: -37px; right: -37px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="sortable-item paragraph-container">
+                                      
+                                        <div id="PARAGRAPH_EXPR_2af418ea-d3b2-db03-4d99-32bf4ff17e0a" class="paragraph PARAGRAPH_EXPR">
+                                            <div class="clearfix doc-item">
+                                                <div class="singlecolumn">
+                                                    <span class="paddedline txt-bold" dependency="JTIT|JSTD|EDDT">
+                                                        <span class="jobtitle" id="FIELD_JTIT">Full Stack Developer</span><span dependency="JTIT+JSTD|EDDT">, </span>
+                                                        <span class="jobdates" dependency="JSTD|EDDT">
+                                                            <span id="FIELD_JSTD" format="%m/%Y">10/2021</span><span dependency="JSTD+EDDT"> to </span>
+                                                            <span id="FIELD_EDDT" format="%m/%Y">11/2021</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="paddedline locationGap txt-bold" dependency="COMP|JSTA|JCIT|JCNT">
+                                                        <span class="companyname" id="FIELD_COMP">extremumteeauto </span><span dependency="COMP"><span dependency="JCIT|JSTA|JCNT"> - </span></span>
+                                                        <span class="jobcity" id="FIELD_JCIT">oyo</span><span dependency="JCIT+JSTA|JCNT">, </span> <span class="jobstate" id="FIELD_JSTA">nigeria</span>
+                                                        <span class="joblocation jobcountry" id="FIELD_JCNT"></span>
+                                                    </span>
+
+                                                    <span class="jobline" id="FIELD_JDES">
+                                                        <ul>
+                                                            <li>Used vue.js as my frontend framework and php laravel as backend</li>
+                                                            <li>Created admin page that allows client to post cars, blogs and inquiries on the website</li>
+                                                            <li>Fetched cars from the database to the frontend allowing users to pick a car of their choice</li>
+                                                            <li>Applied latest standards and approaches to solve software errors.</li>
+                                                            <li>Executed unit and load testing methods, decreasing system failures by 99%.</li>
+                                                            <li>Designed and maintained architecture of the web application using vue.js and laravel.</li>
+                                                            <li>Worked with an Agile team of 4 in executing the entire product lifecycle from suggestion to deployment.</li>
+                                                        </ul>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="doc-overlay para-overlay" style="left: -37px; right: -37px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-overlay section-overlay" style="left: -37px; right: -37px;"><span>&nbsp;</span></div>
+                    </div>
+                </div>
+                <div data-react-beautiful-dnd-draggable="1" class="sortable-item section-container SortableItem-sibling data-EDUC">
+                   
+                    <div id="SECTION_EDUCd1897f1c-c660-4b1b-a1cd-7714496de3a3" class="section education SECTION_EDUC multi-para" data-section-cd="EDUC">
+                        <div class="doc-item">
+                            <div class="heading">
+                                <div class="sectiontitle" id="SECTIONNAME_EDUC">Education<span class="rename-section text-rename"> Rename</span></div>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <div id="PARAGRAPH_EDUC_3ccd2e40-f25a-e16a-760f-29417042ef13" class="paragraph PARAGRAPH_EDUC firstparagraph">
+                                        <div class="clearfix doc-item">
+                                            <div class="singlecolumn">
+                                                <div class="paddedline" dependency="DGRE|GRYR|STUY">
+                                                    <span class="degree" id="FIELD_DGRE">Bachelor of Science</span><span dependency="DGRE+GRYR|STUY">, </span> <span class="programline" id="FIELD_STUY">computer science</span>
+                                                    <span dependency="STUY+GRYR">, </span>
+                                                    <span class="jobdates" dependency="GRYR"><span class="xslt_static_change">Expected in </span><span id="FIELD_GRYR" format="%m/%Y">12/2024</span></span>
+                                                </div>
+                                                <div class="paddedline" dependency="SCIT|SSTA|SCHO|SCNT">
+                                                    <span class="companyname" id="FIELD_SCHO">ladoke akintola University of technology </span>
+                                                    <span dependency="SCHO"><span dependency="SCIT|SSTA|SCNT"> - </span></span>
+                                                    <span class="joblocation jobcity" id="FIELD_SCIT">Ogbomoso</span>
+                                                    <span class="joblocation jobstate" id="FIELD_SSTA"></span>
+                                                    <span class="joblocation jobcountry" id="FIELD_SCNT"></span>
+                                                </div>
+
+                                                <span class="field" id="FIELD_FRFM"></span>
+                                            </div>
+                                        </div>
+                                        <div class="doc-overlay para-overlay" style="left: -37px; right: -37px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-overlay section-overlay" style="left: -37px; right: -37px;"><span>&nbsp;</span></div>
+                    </div>
+                </div>
+            </div>
+            <div id="CONTAINER_2" class="right-box last-box">
+                <div data-react-beautiful-dnd-draggable="1" class="sortable-item section-container SortableItem-sibling data-CNTC">
+                    
+                    <div id="SECTION_CNTC285309fc-c9f6-402d-b7f9-a342f4f17d03" class="section SECTION_CNTC notdraggable cntc-sec" data-section-cd="CNTC">
+                        <div class="doc-item">
+                            <div class="heading">
+                                <div class="sectiontitle" id="SECTIONNAME_CNTC">Contact<span class="rename-section text-rename"> Rename</span></div>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <div id="PARAGRAPH_CNTC_5f12b0a1-3824-43fc-9bfc-0abb676fd90b" class="paragraph PARAGRAPH_CNTC firstparagraph">
+                                        <div class="clearfix doc-item">
+                                            <div class="address">
+                                                <span class="paddedline adrsDetails zipsuffix" dependency="ADDR|STRT|CITY|STAT|ZIPC">
+                                                    <span class="txt-bold"><span class="xslt_static_change">Address</span><span class="beforecolonspace"> </span><span>: </span></span>
+                                                    <span class="field" id="FIELD_STRT">Under G, Lautech</span><span dependency="STRT+CITY|STAT">, </span> <span class="field" id="FIELD_CITY">oyo</span><span dependency="CITY+STAT">, </span>
+                                                    <span class="field" id="FIELD_STAT">Oyo State</span>
+                                                    <span class="field" id="FIELD_ZIPC">210213</span>
+                                                    <span class="field" id="FIELD_ADDR"></span>
+                                                </span>
+                                                <span class="paddedline" dependency="HPHN|CPHN">
+                                                    <span class="txt-bold"><span class="xslt_static_change">Phone</span><span class="beforecolonspace"> </span><span>: </span></span><span class="field" id="FIELD_HPHN">09037019967</span>
+                                                    <span class="field" id="FIELD_CPHN"></span>
+                                                </span>
+
+                                                <span class="paddedline" dependency="EMAI">
+                                                    <span class="txt-bold"><span class="xslt_static_change">Email</span><span class="beforecolonspace"> </span><span>: </span></span>
+                                                    <span class="field" id="FIELD_EMAI">aladesiuntope@gmail.com</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="doc-overlay para-overlay" style="left: -37px; right: -37px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-overlay section-overlay" style="left: -37px; right: -37px;"><span>&nbsp;</span></div>
+                    </div>
+                </div>
+                <div data-react-beautiful-dnd-draggable="1" class="sortable-item section-container SortableItem-sibling data-HILT">
+                    
+                    <div id="SECTION_HILT8892011c-b22a-4fa8-bd6e-0c990a804fc9" class="section SECTION_HILT" data-section-cd="HILT">
+                        <div class="doc-item">
+                            <div class="heading">
+                                <div class="sectiontitle" id="SECTIONNAME_HILT">Skills<span class="rename-section text-rename"> Rename</span></div>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <div id="PARAGRAPH_HILT_56a316d8-fd19-7eb1-ccba-dd87fc7d5c10" class="paragraph PARAGRAPH_HILT firstparagraph">
+                                        <div class="clearfix doc-item">
+                                            <div class="singlecolumn maincolumn">
+                                                <span class="paddedline" id="FIELD_SKC1">
+                                                    <ul>
+                                                        <li>JavaScript</li>
+                                                        <li>HTML/ CSS</li>
+                                                        <li>Git</li>
+                                                        <li>Vue.js</li>
+                                                        <li>php</li>
+                                                    </ul>
+                                                </span>
+                                                <span class="paddedline" id="FIELD_SKC2">
+                                                    <ul>
+                                                        <li>laravel</li>
+                                                        <li>bootstrap/tailwind css/saas</li>
+                                                        <li>jquery</li>
+                                                        <li>googling</li>
+                                                        <li>communication</li>
+                                                    </ul>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="doc-overlay para-overlay" style="left: -37px; right: -37px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-overlay section-overlay" style="left: -37px; right: -37px;"><span>&nbsp;</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="CONTAINER_PARENT_2" class="bottom-box"><div id="CONTAINER_3"></div></div>
+    </div>
+</div>

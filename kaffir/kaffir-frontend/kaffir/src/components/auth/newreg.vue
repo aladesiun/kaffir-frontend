@@ -16,7 +16,7 @@
                                 <form method="" class="my-login-validation" @submit.prevent="signup()" >
                                     <div class="form-group">
                                         <label for="name">Name</label>
-                                        <input id="name" type="text" v-model="user.name" class="form-control" name="name" required autofocus>
+                                        <input id="name" type="text" v-model="user.name" class="form-control" name="name" required>
                                         <div class="invalid-feedback">
                                             What's your name?
                                         </div>

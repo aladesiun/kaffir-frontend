@@ -2,35 +2,39 @@
 <div class="profile-holder">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <div class="container-xl">
-        <div class="row mt-4">
+        <div class="row">
             <div class="col-md-12 sx">
                 <div class="card user-card">
                     <div class="card-header">
-                        <div class="user-profile-icon">
-                          <i class="fas fa-user"></i>
+                       
+                        <p class="f-w-600  m-b-10 mt-4 uname">{{user.username}}'s Profile</p>
+                        <div class="anon-link">
+                        <p @click="copy" >
+                            <!-- {{user.anonymous_link}} -->
+                            <input type="text" :value="user.anonymous_link" id="cpy-box">
+                            <i class="far fa-copy copy"></i>
+                        </p>
+
                         </div>
-                        <p class="f-w-600  m-b-10 uname">{{user.username}} Profile</p>
-                        <p @click="copy" id="cpy-box">{{user.anonymous_link}}</p>
-
-
+                        <p class="info-p">share your profile link to get response from your friends. Go to <span>
+                            "View messages"</span>to check out the responses</p>
                     </div>
                     <div class="card-block"> 
-                        <h6 class="f-w-600  m-b-10">{{user.username}}</h6>
                         <div class="btn-act row">
                             <div class=" col-md-12 mt-2 mb-1" v-if="user.anonymous_link ==  ''">
                                 <div class="tt btns view" style="width:90%; margin:auto;">
-                                    <a href="" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="" @click.prevent="generateAnonymousLink()">Generate Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-link"></i></a>
                                 </div>
                             </div>
                             <div class="col-md-12 mt-2 mb-1" v-else>
                                 <div class="tt btns view" style="width:90%; margin:auto;">
-                                <a href="" @click.prevent="disableAnonymousLink()">Delete Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                                <a href="" @click.prevent="disableAnonymousLink()">Delete Link&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="far fa-trash-alt"></i></a>
 
                                 </div>
                             </div> 
                             <div class="col-md-12 mt-2 mb-1">
                                 <div class="tt btns view " style="width:90%;margin:auto;">
-                                    <router-link to="/message">messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></router-link>
+                                    <router-link to="/message">messages&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="far fa-envelope"></i></router-link>
                                 </div>
                             </div>
 
@@ -57,6 +61,7 @@
                                 <router-link to="">share on instagram &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i class="fab fa-instagram"></i></router-link>
                                 </div>
                             </div>
+                              
                         </div>
                         
                     </div>
@@ -160,10 +165,57 @@ export default {
     }
 }
 </script>
-<style  >
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    /* font-family: 'Roboto'; */
+
+}
+p{
+    color: black;
+    margin-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+
+}
+.anon-link{
+    width: 100%;
+}
+.anon-link p{
+    font-size: 13px;
+    color: #000000;
+    font-weight: 300;
+    text-align: center;
+}
+.uname{
+        font-weight: 700;
+    font-size: 23px;
+    text-transform: capitalize;
+    color: #696cfe;
+}
+.info-p{
+        color: #545454;
+    /* font-weight: 800; */
+    font-size: 15px;
+    padding: 5px 5px;
+    text-align: left;
+}
+.info-p span{
+     font-weight: bold!important;
+    color: black;
+    margin-right: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+.btns a{
+    font-size: 17px;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    color: #002f74;
+}
 .profile-holder{
 width: 100vw;
 height: 100vh;
+
 background-image: url('../.././assets/prof/bg.png');
  background-position: center;
     background-size: cover;
@@ -181,7 +233,6 @@ background-image: url('../.././assets/prof/bg.png');
     align-items: center
 }
 .card-header .uname{
-    color: ;
 }
 .card-header .user-profile-icon{
     width: 100px;
@@ -203,5 +254,23 @@ background-image: url('../.././assets/prof/bg.png');
 .user-card{
     max-width: 400px;
     margin: auto;
+    margin-top:20px;
+    padding-bottom: 20px;
+    }
+.btns{
+    width: 90%;
+    margin: auto;
+    border: 2px solid #4f52fe;
+    border-radius: 29px;
+    text-align: center;
+    padding: 11px 8px;
+}
+.user-profile-icon i {
+    font-size: 47px;
+    margin-bottom: 9px;
+    color: #d7d7d7;
+}
+.copy{
+    font-size: 20px;
 }
 </style>

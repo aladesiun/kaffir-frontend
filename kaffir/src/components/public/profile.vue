@@ -9,7 +9,7 @@
                        
                         <p class="f-w-600  m-b-10 mt-4 uname">{{user.username}}'s Profile</p>
                         <div class="anon-link">
-                        <p @click="copy" >
+                        <p @click="copy" v-if="user.anonymous_link">
                             <!-- {{user.anonymous_link}} -->
                             <input type="text" :value="user.anonymous_link" id="cpy-box">
                             <i class="far fa-copy copy"></i>
@@ -210,7 +210,7 @@ p{
     font-size: 17px;
     text-transform: capitalize;
     font-family: 'Roboto', sans-serif;
-    color: #002f74;
+    color: #4f52fe;
 }
 .profile-holder{
 width: 100vw;

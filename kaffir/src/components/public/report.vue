@@ -8,8 +8,11 @@
                 <div class="col-md-12 text-center">
                 <!-- <h3>would you like to us a feedback or report</h3> -->
                     <div class="area">
-                    <input type="text" placeholder="type..." v-model="reporttext">
-                    <input type="submit" value="submit" @click="post">
+                        <form method="post" @submit.prevent="post">
+                            <input type="text" placeholder="type..." v-model="reportcontent.report">
+                            <input type="submit" value="submit">
+                        </form>
+                    
                     </div>
                 </div>
             </div>
@@ -18,19 +21,32 @@
   
 </template>
 <script>
-import axios from 'axios'
 export default {
    data (){
        return{
-           reporttext:''
+           reportcontent:{
+            report:''
+
+           }
        }
    },
    methods:{
        post(){
-            console.log(this.reporttext);
-            axios.post("https://anonymous-report-ff37a-default-rtdb.firebaseio.com/", this.reporttext)
-            .then(function (data){
-                console.log(data);
+           if (this.reportcontent.report == '') {
+               alert('report can not be empty')
+           }
+            this.$store.dispatch('post',{
+                endpoint:'report-offence',
+                details:this.reportcontent
+
+            })
+            .then((data)=>{
+                    console.log(data.data);
+
+                if (data.data) {
+                    alert(' Report sent successfuly, please wait for our response team ');
+                    window.location.href= '/messages'
+                }
             })
             .catch((error)=>{
               console.log(error);

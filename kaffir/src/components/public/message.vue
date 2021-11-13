@@ -123,7 +123,7 @@ import html2canvas from 'html2canvas';
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 *{
-    font-weight: 600;
+    font-weight: 500;
 }
 .color-dark{
     color: #000;
@@ -187,8 +187,9 @@ import html2canvas from 'html2canvas';
  width: 500px;
 }
 #ic-message{
-        color: #7e7e7e;
+    color: #4f52ffba;
     font-weight: 600;
+    padding: 14px 2px;
 }
 .msg-box{
     position: relative;

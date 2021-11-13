@@ -46,7 +46,7 @@ var routes = [
         ]
     },
     {
-        path:'/write-anonymous/:token',
+        path:'/send-anonymous/:token',
         component: sendmsg
     },
     {

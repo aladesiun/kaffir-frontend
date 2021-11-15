@@ -41,6 +41,13 @@ var routes = [
                 path:'/groups',
                 component: groups
             },
+            {
+                path:'/profile',
+                component: profile,
+                meta:{
+                    AuthRequired:true
+                }
+            },
             
            
         ]
@@ -49,13 +56,7 @@ var routes = [
         path:'/send-anonymous/:token',
         component: sendmsg
     },
-    {
-        path:'/profile',
-        component: profile,
-        meta:{
-            AuthRequired:true
-        }
-    },
+   
     {
         path:'/message',
         component: message,

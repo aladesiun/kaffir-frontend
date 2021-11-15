@@ -8,10 +8,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="/">Home</a>
-                    <a class="nav-link" href="#about">About us</a>
-                    <a class="nav-link" href="/profile">profile</a>
-                    <a class="sign-btn" href="/register" tabindex="-1" aria-disabled="true">sign up</a>
+                    <router-link class="nav-link" to="/">Home</router-link>
+                    <router-link class="nav-link" to="#about">About us</router-link>
+                    <router-link class="nav-link" to="/profile">profile</router-link>
+                    <router-link class="sign-btn" to="/login" tabindex="-1" aria-disabled="true" v-if="user == null ">sign up</router-link>
+                    <a class="sign-btn" @click="logout" v-else>log out</a>
+
                 </div>
             </div>
         </div>
@@ -23,7 +25,25 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 export default {
+  data(){
+    return{
+       
+    }
+  },
+  methods:{
+    logout(){
+            this.authenticated= false
+
+            this.$store.commit('logout')
+        }
+  },
+  computed:{
+    ...mapState({
+            user: (state)=> state.user
+        })
+  }
 
 }
 </script>
@@ -36,13 +56,6 @@ export default {
     overflow: visible!important;
 }
     }
-
-
-
-
-
-
-
 
     body {
   font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

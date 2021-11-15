@@ -5,6 +5,7 @@
                 <div class="login100-pic js-tilt" data-tilt>
                     <img src="images/img-01.png" alt="IMG">
                 </div>
+                <notification/>
                 <form method="POST" novalidate="" @submit.prevent="login()" class="login100-form validate-form">
                     <div class="bck">
                         <router-link to="/"><i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i> </router-link>
@@ -47,7 +48,9 @@
 </template>
 
 <script>
+import notification from '../layouts/notification.vue';
 export default {
+  components: { notification },
     data(){
         return {
             user:{
@@ -82,6 +85,8 @@ export default {
                     window.location.href = "/profile";
                     
                 }else{
+                this.loading = false;
+
                     var e_msg = data.data.message;
                     console.log(e_msg);
                     this.$store.commit('setNotification',{type:2, message: e_msg})

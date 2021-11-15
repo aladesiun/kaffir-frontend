@@ -5,13 +5,13 @@ import routes from './routes.js'
 import store from './store/index'
 import notification from './components/layouts/notification'
 // import VueEcho from 'vue-echo-laravel'
-import Pusher from 'pusher-js'
+// import Pusher from 'pusher-js'
 import Echo from "laravel-echo"
 Vue.config.productionTip = false
 Vue.component('notification', notification);
 
 Vue.use(Vuex);
-console.log(Pusher)
+// console.log(Pusher)
 // Vue.use(VueEcho, {
 //     broadcaster: 'Pusher',
 //     host: 'http://127.0.0.1:8000',

@@ -24,9 +24,13 @@ export default{
     },
 
     logout(state){
+        state.authenticated = false
+        this.authstatus = false
         window.localStorage.removeItem('user');
         state.user = {};
         state.token = null;
-        window.location.href = '/login';
-    }
+        window.location.href = '/';
+
+
+    },
 }

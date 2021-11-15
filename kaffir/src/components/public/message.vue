@@ -85,7 +85,6 @@ import html2canvas from 'html2canvas';
                 .then((data) => {
                     if(data.data.status){
                         this.messages = data.data.data;
-                        console.log(this.messages);
                         this.ismessage = false
                     }
                 }).catch((error) =>{

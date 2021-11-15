@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+  
     <router-view></router-view>
   </div>
 </template>
@@ -10,9 +11,9 @@
 export default {
   
   components: {
-    
   },
-  created(){
+  created
+    (){
 
     var token = localStorage.getItem('token');
     var userr=localStorage.getItem('user');

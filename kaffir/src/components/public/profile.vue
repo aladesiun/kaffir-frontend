@@ -209,8 +209,8 @@ p{
 .btns a{
     font-size: 17px;
     text-transform: capitalize;
+    color:inherit;
     font-family: 'Roboto', sans-serif;
-    color: #4f52fe;
 }
 .profile-holder{
 width: 100vw;
@@ -234,18 +234,7 @@ background-image: url('../.././assets/prof/bg.png');
 }
 .card-header .uname{
 }
-.card-header .user-profile-icon{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-image: url('../.././assets/prof/bg.png');
-    background-position: center;
-    background-size: contain;
-    display: flex;
-    color: lightgrey;
-     justify-content: center;
-    align-items: center
-}
+
 .card-header .user-profile-icon i {
     font-size: 90px;
 
@@ -254,7 +243,7 @@ background-image: url('../.././assets/prof/bg.png');
 .user-card{
     max-width: 400px;
     margin: auto;
-    margin-top:20px;
+    margin-top:100px;
     padding-bottom: 20px;
     }
 .btns{
@@ -263,8 +252,16 @@ background-image: url('../.././assets/prof/bg.png');
     border: 2px solid #4f52fe;
     border-radius: 29px;
     text-align: center;
+    color: #4f52fe;
+    transition:  .2s;
     padding: 11px 8px;
 }
+
+.btns:hover  {
+background-color: #4f52fe;
+color: white  !important;;
+}
+ 
 .user-profile-icon i {
     font-size: 47px;
     margin-bottom: 9px;

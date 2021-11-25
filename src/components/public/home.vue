@@ -186,36 +186,18 @@
 </div>
 
 </template>
+
 <script>
+import {testmixin} from '../mixins/testmixins'
 
-window.addEventListener("scroll", function(){ 
- const scrollnav= document.querySelector('nav');
-    scrollnav.style.transition= 'all .8s';
-   scrollnav.classList.toggle('scroll', window.scrollY >200);
-})
+export default {
+    data(){
+        return{
 
-const icons = Array.from(document.querySelectorAll('.icon'))
-icons.forEach((icon) => {
-  icon.addEventListener('click', () => {
-    icons.forEach((i) => {
-      i.classList.remove('icon--expanded');
-    });
-    icon.classList.add('icon--expanded')
-  })
-})
-
-
-
-// var elem = document.querySelector('.grid-slider-wrap');
-// var t= new Flickity( elem, {
-//   // options
-//   cellAlign: 'left',
-//   autoPlay:true,
-// //   autoPlay: 1500,
-//   contain: true
-// });
-
-
+        }
+    },
+    mixins:[testmixin]
+}
 </script>
 
 <style scoped>

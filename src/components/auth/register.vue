@@ -53,9 +53,10 @@
         </div>
 </template>
 <script>
+import notification from '../layouts/notification.vue';
 export default {
+    components: { notification },
     data(){
-
         return {
             user:{
                 name: '',
@@ -99,6 +100,7 @@ export default {
             })
             .catch((error) => {
                 console.log(error)
+                this.loading = false;
             })
         }
     }

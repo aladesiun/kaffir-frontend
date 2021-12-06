@@ -34,7 +34,7 @@
                     </div>
                     <div class="text-center p-t-12">
                         <span class="txt1">Forgot </span>
-                        <router-link class="txt2" to="/reset"> Password?</router-link>
+                        <router-link class="txt2" to="/forgot-password"> Password?</router-link>
                     </div>
                     <div class="text-center p-t-60">
                         <router-link to="/register" class="txt2">Dont have an account, Create One?

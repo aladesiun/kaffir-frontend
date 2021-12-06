@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import layout from './components/layouts/layout'
 import home from './components/public/home'
 import login from './components/auth/login'
-import forget from './components/auth/forget'
+import forgotPassword from './components/auth/forgot-password'
+import resetPassword from './components/auth/reset-password'
 import register from './components/auth/register'
 import contact from './components/public/contact'
 import profile from './components/public/profile'
@@ -77,8 +78,12 @@ var routes = [
         component: register
     },
     {
-        path: '/reset',
-        component: forget
+        path: '/forgot-password',
+        component: forgotPassword
+    },
+    {
+        path: '/reset-password',
+        component: resetPassword
     },
     {
         path: '/share',

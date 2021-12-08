@@ -5,7 +5,6 @@
                 <div class="login100-pic js-tilt" data-tilt>
                     <img src="images/img-01.png" alt="IMG">
                 </div>
-                <notification/>
                 <form method="POST" novalidate="" @submit.prevent="login()" class="login100-form validate-form">
                     <div class="bck">
                         <router-link to="/"><i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i> </router-link>

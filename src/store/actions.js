@@ -15,6 +15,7 @@ export default{
         }
         else if (error.request.status == 303) {
             resp = JSON.parse(error.request.response);
+            console.log(resp);
             context.commit('setNotification', { type: 2, message: resp.error });
         } 
         else if (error.request.status == 404) {

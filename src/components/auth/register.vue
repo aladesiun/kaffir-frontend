@@ -14,7 +14,7 @@
                         </span>
                         <notification/>
                         <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                            <input class="input100" type="text" name="name" placeholder="username" v-model="user.name" autofocus required>
+                            <input class="input100" type="text" name="name" placeholder="username" v-model="user.username" autofocus required>
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">
                                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -53,12 +53,13 @@
         </div>
 </template>
 <script>
+import notification from '../layouts/notification.vue';
 export default {
+    components: { notification },
     data(){
-
         return {
             user:{
-                name: '',
+                username: '',
                 email: '',
                 password: '',
             },
@@ -71,7 +72,10 @@ export default {
     methods:{
 
         signup(){
-            if(this.user.name.length == 0 || this.user.email.length == 0 || this.user.password.length == 0 ){
+            if(this.user.username.length == 0 || this.user.email.length == 0 || this.user.password.length == 0 ){
+                console.log(this.user.username)
+                console.log(this.user.email)
+                console.log(this.user.password)
                 setTimeout(function () {
                     this.$store.commit('setNotification',{type:2, message: 'Email and Password fields are required'});
                 }, 3000
@@ -92,13 +96,15 @@ export default {
                     localStorage.setItem('token', data.data.token);
                     result.token=data.data.token;
                     this.$store.commit('setUser', result);
-                    this.$store.commit('setNotification',{type:1, message:'Registration Successful'});
                     window.location.href = '/profile';
+                    this.$store.commit('setNotification',{type:1, message:'Registration Successful'});
+                    // window.location.href = '/profile';
                 }
                 this.loading = false;
             })
             .catch((error) => {
                 console.log(error)
+                this.loading = false;
             })
         }
     }

@@ -9,49 +9,55 @@
                     <p class="color-dark">messages you recieve will appear here</p>
 
                 </div>
-                <div class="row " v-if="messages.length == 0">
+                <div></div>
+                <div class="row " v-if="loading">
                     <div class="col-md-12 text-center">
-                        <h4>you have no messages yet</h4>   
-                    <router-link to="/profile">Go back</router-link>
-
+                        <p>Loading messages...</p>   
                     </div>
                 </div>
-                <div class="msg-holder" style="display: flex;
-                        flex-direction: column-reverse;">
-                    <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
-                    <div class="rap-msg mb-2">
-                        <p>Message:</p>
-                        <p id="ic-message" class="pb-2">{{message.anonymous_msg}}</p>
-                        <p class="pb-0">-Anonymous[{{message.created_at}}]</p>
+                <div v-else>
+                    <div class="row " v-if="messages.length == 0">
+                        <div class="col-md-12 text-center">
+                            <h4>you have no messages yet</h4>   
+                            <router-link to="/profile">Go back</router-link>
+                        </div>
+                    </div>
+                    <div class="msg-holder" style="display: flex;
+                            flex-direction: column-reverse;">
+                        <div class="msg-box col-md-12" v-for="(message, index) in messages" :key="index">
+                            <div class="rap-msg mb-2">
+                                <p>Message:</p>
+                                <p id="ic-message" class="pb-2">{{message.anonymous_msg}}</p>
+                                <p class="pb-0">-Anonymous[{{message.created_at}}]</p>
 
-                        <!-- <p>{{message.anonymous_msg.count()}}</p> -->
-                        <div :class="'lk-cont lk-cont-'+index">
-                            <!-- @mouseleave="hidssh"  -->
-                            <!-- <a  @click.prevent="printThis(index)" ><i class="fas fa-share-square"></i>share
-                                <div class="ssh">
-                                    <span v-if="showshare" @mouseleave="hidssh">You can make a screenshot of your messages to share with friends</span>
+                                <!-- <p>{{message.anonymous_msg.count()}}</p> -->
+                                <div :class="'lk-cont lk-cont-'+index">
+                                    <!-- @mouseleave="hidssh"  -->
+                                    <!-- <a  @click.prevent="printThis(index)" ><i class="fas fa-share-square"></i>share
+                                        <div class="ssh">
+                                            <span v-if="showshare" @mouseleave="hidssh">You can make a screenshot of your messages to share with friends</span>
+                                        </div>
+                                    </a> -->
+                                    
+                                    <router-link to="/report" ><i  class="fas fa-flag"></i>Report</router-link>
+                                    <!-- <a href="#">share</a> -->
                                 </div>
-                            </a> -->
-                            
-                             <router-link to="/report" ><i  class="fas fa-flag"></i>Report</router-link>
-                            <!-- <a href="#">share</a> -->
-                        </div>
-                    </div>
-                    <div class="rap-msg mb-2 mt-2 rap-png prr" :id="'msgImg'+index" :ref="'printcontent'+index">
-                        <div class="top-nav">
-                            <p>kaffir Anonymous</p>
-                        </div>
-                        <div class="bbrr">
-                            <p>Message:</p>
-                            <p id="ic-message pr-ic" class="pb-2">{{message.anonymous_msg}}</p>
-                        </div>
+                            </div>
+                            <div class="rap-msg mb-2 mt-2 rap-png prr" :id="'msgImg'+index" :ref="'printcontent'+index">
+                                <div class="top-nav">
+                                    <p>kaffir Anonymous</p>
+                                </div>
+                                <div class="bbrr">
+                                    <p>Message:</p>
+                                    <p id="ic-message pr-ic" class="pb-2">{{message.anonymous_msg}}</p>
+                                </div>
+                                
+                                <!-- <p class="pb-0">Recieved At: {{message.created_at}}</p> -->
+                            </div>
                         
-                        <!-- <p class="pb-0">Recieved At: {{message.created_at}}</p> -->
+                        </div>
                     </div>
-                
                 </div>
-                </div>
-               
             </div>
         </div>
     </div>
@@ -67,7 +73,8 @@ import html2canvas from 'html2canvas';
             return {
                 ismessage:true,
                 messages: [],
-                showshare:false
+                showshare:false,
+                loading: false
             }
         },
         methods:{
@@ -81,14 +88,17 @@ import html2canvas from 'html2canvas';
                 this.showshare = true
             },
             getMessages(){
+                this.loading = true;
                 this.$store.dispatch('get', 'messages')
                 .then((data) => {
                     if(data.data.status){
                         this.messages = data.data.data;
-                        this.ismessage = false
+                        this.ismessage = false;
+                        this.loading = false;
                     }
                 }).catch((error) =>{
                     console.log(error);
+                    this.loading=false;
                 });
             },
             async printThis(id) {

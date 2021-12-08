@@ -3,12 +3,12 @@ import Vuex from 'vuex'
 import App from './App.vue'
 import routes from './routes.js'
 import store from './store/index'
-import notification from './components/layouts/notification'
+// import notification from './components/layouts/notification'
 // import VueEcho from 'vue-echo-laravel'
 // import Pusher from 'pusher-js'
 import Echo from "laravel-echo"
 Vue.config.productionTip = false
-Vue.component('notification', notification);
+// Vue.component('notification', notification);
 
 Vue.use(Vuex);
 // console.log(Pusher)

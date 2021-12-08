@@ -12,6 +12,7 @@
             <span class="login100-form-title">
                 Get Back Online!!
             </span>
+            <notification/>
             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                 <input class="input100" type="email" name="email" placeholder="Email" v-model="user.email" autofocus />
                 <span class="focus-input100"></span>
@@ -21,7 +22,8 @@
             </div>
             <div class="container-login100-form-btn">
                 <button class="sub-btn login100-form-btn">
-                    Continue
+                    <span v-if="!loading">Continue</span>
+                    <span v-else>Loading...</span>
                 </button>
             </div>
             <!-- <div class="text-center p-t-12">
@@ -48,7 +50,9 @@
 </template>
 
 <script>
+import notification from '../layouts/notification.vue';
 export default {
+  components: { notification },
     data(){
         return {
             user:{
@@ -59,15 +63,25 @@ export default {
     },
     methods:{
         forgotPassword(){
+            this.loading = true;
             this.$store.dispatch('post', {
                 endpoint: 'forgot-password',
                 details: this.user
             })
             .then((data) => {
                 console.log(data);
+                if(data.data.status){
+                    this.$store.commit('setNotification',{type:1, message: data.data.message});
+                }
+                else{
+                    this.$store.commit('setNotification',{type:2, message: data.data.message});
+                }
+            
+                this.loading = false
             })
             .catch((error) => {
                 console.log(error);
+                this.$store.commit('setNotification',{type:1, message:error.error.message});
             })
         }
     }

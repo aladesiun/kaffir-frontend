@@ -82,7 +82,7 @@ var routes = [
         component: forgotPassword
     },
     {
-        path: '/reset-password',
+        path: '/reset-password/:token',
         component: resetPassword
     },
     {

@@ -37,7 +37,9 @@
 </template>
 
 <script>
+import notification from '../layouts/notification.vue';
     export default {
+  components: { notification },
         data(){
             return {
                 anonymous: {

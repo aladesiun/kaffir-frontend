@@ -6,6 +6,10 @@
             <div class="row msg-row">
                 <div class="col-md-12 text-center head-mm">
                     <h1>Responses</h1>
+                    <ul class="d-flex mini-nav">
+                        <li><router-link to="/">Home</router-link></li>
+                        <li><router-link to="/profile">profile</router-link></li>
+                    </ul>
                     <p class="color-dark">messages you recieve will appear here</p>
 
                 </div>
@@ -219,6 +223,18 @@ import html2canvas from 'html2canvas';
 }
 .prr{
     padding:25px 20px;
+}
+.mini-nav{
+    color: black;
+    font-size: 15px;
+    justify-content: center;
+
+}
+.mini-nav a{
+    color: black;
+}
+.mini-nav:first-child(1){
+    border-right: 1px solid blue;
 }
 @media screen and (max-width:700px)  {
     .msg-row{

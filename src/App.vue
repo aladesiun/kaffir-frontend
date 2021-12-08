@@ -1,19 +1,14 @@
 <template>
   <div id="app">
-  
     <router-view></router-view>
   </div>
 </template>
-
 <script>
-
-
 export default {
   
   components: {
   },
-  created
-    (){
+  created(){
 
     var token = localStorage.getItem('token');
     var userr=localStorage.getItem('user');
@@ -22,6 +17,8 @@ export default {
         this.$store.state.token = token;
         var user = decodeURIComponent(userr);
         this.$store.state.user = JSON.parse(user);
+    }else{
+      this.$router.push('/login')
     }
 
     if(this.$route.meta.AuthRequired || this.$route.matched.find((d)=>d.meta.AuthRequired)){

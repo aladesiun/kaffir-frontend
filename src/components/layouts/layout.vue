@@ -10,8 +10,8 @@
                 <div class="navbar-nav">
                     <router-link class="nav-link" to="/">Home</router-link>
                     <router-link class="nav-link" to="#about">About us</router-link>
-                    <router-link class="nav-link" to="/profile">profile</router-link>
-                    <router-link class="sign-btn" to="/login" tabindex="-1" aria-disabled="true" v-if="user == null ">sign up</router-link>
+                    <router-link class="nav-link" to="/profile" v-if="user == !null ">profile</router-link>
+                    <router-link class="sign-btn" to="/login" tabindex="-1" aria-disabled="true" v-if="user == null ">sign in</router-link>
                     <a class="sign-btn" @click="logout" v-else>log out</a>
 
                 </div>

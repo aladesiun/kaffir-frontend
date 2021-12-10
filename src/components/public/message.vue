@@ -7,7 +7,7 @@
                 <div class="col-md-12 text-center head-mm">
                     <h1>Responses</h1>
                     <ul class="d-flex mini-nav">
-                        <li><router-link to="/">Home</router-link></li>
+                        <li><router-link to="/" class="to-home">Home</router-link></li>
                         <li><router-link to="/profile">profile</router-link></li>
                     </ul>
                     <p class="color-dark">messages you recieve will appear here</p>
@@ -16,9 +16,10 @@
                 <div></div>
                 <div class="row " v-if="loading">
                     <div class="col-md-12 text-center">
-                        <p>Loading messages...</p>   
+                        <p>Loading messages...</p> 
+                        <p><i class="fas fa-spinner loader-spin"></i></p>  
                     </div>
-                </div>
+                </div> 
                 <div v-else>
                     <div class="row " v-if="messages.length == 0">
                         <div class="col-md-12 text-center">
@@ -225,13 +226,14 @@ import html2canvas from 'html2canvas';
     padding:25px 20px;
 }
 .mini-nav{
-    color: black;
-    font-size: 15px;
+    font-size: 18px;
     justify-content: center;
 
 }
 .mini-nav a{
-    color: black;
+    color: #4f52ff;
+    font-weight: 500;
+    padding: 5px;
 }
 .mini-nav:first-child(1){
     border-right: 1px solid blue;

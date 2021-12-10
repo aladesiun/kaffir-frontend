@@ -131,7 +131,7 @@
                     </div>
                     <div id="collapsetwo" class="accordion-collapse collapse" aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p>you can not be detected if you use our voicenote because after your voice has be recorded you will be ask to choose a robotic voice that disguise your voice from been detected its you</p>
+                            <p>you can not be detected if you use our voicenote because after your voice has be recorded you will be ask to choose a robotic voice that disguise your voice from been detected its you This feature will available on future version</p>
                             <!-- <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity</p> -->
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                     </div>
                     <div id="collapsethree" class="accordion-collapse collapse" aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p>definietly you can create a room, Every user is entitled to create a room/group chat for friends and family</p>
+                            <p>definietly you can create a room, Every user is entitled to create a room/group chat for friends and family. This feature will available on future version</p>
                             <!-- <p>You will surely know you are anonymous all users are just given a generic coded no that are generated from the server not even known to us. Therefore we assure you of anononymity</p> -->
                         </div>
                     </div>

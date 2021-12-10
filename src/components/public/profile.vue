@@ -84,6 +84,7 @@ export default {
     },
     data(){
         return{
+            // user:this.user,
             anonymous_link: '',
             anonymous: false,
             twitter_url:'https://twitter.com/home',
@@ -92,15 +93,16 @@ export default {
         }
     },
     methods:{
+        // checkuser(user){
+        //     if(this.$route.meta.AuthRequired || this.$route.matched.find((d)=>d.meta.AuthRequired)){
+        //         if(!user){ this.$router.push('/login'); return false; }     
+        //     }
+        // },
         copy(){
             var copyText = document.getElementById("cpy-box");
-
-            /* Select the text field */
                 copyText.select();
-                copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-            /* Copy the text inside the text field */
-            document.execCommand("copy") ? alert("Copied the text: " + copyText.value) : alert("try again")
+                copyText.setSelectionRange(0, 99999);
+                document.execCommand("copy") ? alert("Copied the text: " + copyText.value) : alert("try again")
   
         },
         generateAnonymousLink(){

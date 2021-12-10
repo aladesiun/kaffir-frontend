@@ -4,10 +4,12 @@
   </div>
 </template>
 <script>
+// import testmixin from './components/mixins/testmixins'
 export default {
   
   components: {
   },
+  // mixins:[testmixin],
   created(){
 
     var token = localStorage.getItem('token');

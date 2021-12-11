@@ -67,7 +67,7 @@ export default {
     methods:{
         verifyAccount(){ 
             this.loading=true;
-            // this.$store.commit('setNotification',{type:0,msg:''});
+            this.$store.commit('setNotification',{type:0,msg:'invalid link....try again'});
             this.$store.dispatch('get','verify-reset-token?code='+this.$route.params.token)
             .then((data)=>{
                 this.loading=false;

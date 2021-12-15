@@ -174,10 +174,9 @@
    <footer class="footer-area p_30">
     <div class="container-lg">
         <div class="row footer-bottom d-flex justify-content-between align-items-center">
-            <p class="col-lg-6 col-md-6 footer-text m-0">
-                Copyright © 2021 - kaffir <b>|</b> 
-                <br />
-            </p>
+            <div class="col-md-6 footer-text m-0">
+                <p class=" copy-r footer-text">Copyright © 2021 - kaffir  </p>
+            </div>
             <div class="col-md-6 footer-text"> 
                 <p class="mb-0 reach-us">Reach us at kaffirconcept@gmail.com</p>
             </div>

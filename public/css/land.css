@@ -4042,13 +4042,28 @@ Version      : 1.0
   .nav.nav-tabs{
     display: none;
   }
+  
   }
   @media only screen and (max-width: 600px){
+    footer{
+      text-align: center!important;
+    }
+   
+    .copy-r{
+      font-size: 12px;
+      text-align: center;
+    }
     .header{
       height: 76px;
     }
     .header_bottom{
       top: 32px;
+    }
+  }
+  @media only screen and (max-width: 769px){
+    .faq .row{
+      flex-direction: column-reverse;
+      align-items: center;
     }
   }
   .loader-spin{
